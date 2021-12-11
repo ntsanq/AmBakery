@@ -29,7 +29,7 @@ header{
   width: 100%;
   font-family: inherit;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   font-size: 1.5rem;
   padding-bottom: 1rem;
@@ -100,20 +100,11 @@ a{
   border: 1px solid rgba(204, 204, 204, 0.555);
   padding: 1rem 2rem;
 }
-.header__middle{
-  flex: 0 0 33.33333%;
+.header__right{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.header__right{
-  flex: 0 0 33.33333%;
-
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   gap: 0 3rem;
-
 }
 /* .header__submit span{
   text-transform: uppercase;

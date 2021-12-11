@@ -110,7 +110,7 @@ a{
   flex: 0 0 33.33333%;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 0 3rem;
 
