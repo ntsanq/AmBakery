@@ -29,7 +29,8 @@
             </p>
             <p>
                 <label >Password:</label>
-                <input type="password" name="pass" id="pass">
+                <input type="password" name="pass" id="pass" style="
+                margin-left: 6px ">
             </p>
             <p>
                 <input type="submit" id="btn" value="Login">
