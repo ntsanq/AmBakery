@@ -271,8 +271,6 @@ footer{
 }
 .social__contact .fab:hover{
 cursor: pointer;
-color:  #fe8777 ;
-
 }
 
 .footer__nav{
@@ -287,13 +285,8 @@ color:  #fe8777 ;
   font-size: 1.8rem;
 
 }
-.nav__list-item{
-  transition: 0 .3s;
-}
 .nav__list-item:hover{
   cursor: pointer;
-  color:  #fe8777 ;
-
 }
 footer span{
   font-size: 1.2rem;

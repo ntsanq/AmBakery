@@ -49,17 +49,11 @@ a{
   border: none;
   background-color: transparent;
 }
-.header__left{
-  align-self: stretch;
-  position: relative;
-}
 .header__search{
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 }
 .header__left input{
   width: 20rem;
@@ -271,8 +265,6 @@ footer{
 }
 .social__contact .fab:hover{
 cursor: pointer;
-color:  #fe8777 ;
-
 }
 
 .footer__nav{
@@ -287,13 +279,8 @@ color:  #fe8777 ;
   font-size: 1.8rem;
 
 }
-.nav__list-item{
-  transition: 0 .3s;
-}
 .nav__list-item:hover{
   cursor: pointer;
-  color:  #fe8777 ;
-
 }
 footer span{
   font-size: 1.2rem;
