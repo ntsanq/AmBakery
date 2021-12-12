@@ -23,6 +23,7 @@
 	$row = mysqli_fetch_array($result);
 	if ($row['username'] == $username && $row['password'] == $password) {
 		echo "Login success! Welcome ".$row['username'];
+		header("Location: dashboard/index.php");
 	}else {
 		echo "Failed to login!";
 	}
