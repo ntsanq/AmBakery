@@ -24,16 +24,15 @@
 
         <form action="process.php" method="POST">
             <p>
-                <label >Username:</label>
-                <input type="text" name="user" id="user">
+                <label for="ma">Mã NV:</label>
+                <input type="text" name="ma" id="ma" style=" margin-left: 24px;">
             </p>
             <p>
-                <label >Password:</label>
-                <input type="password" name="pass" id="pass" style="
-                margin-left: 6px ">
+                <label for="mat_khau" >Mật khẩu:</label>
+                <input type="password" name="mat_khau" id="mat_khau" style=" margin-left: 5px;">
             </p>
             <p>
-                <input type="submit" id="btn" value="Login">
+                <input type="submit" id="btn" value="Đăng nhập">
             </p>
         </form>
     </div>

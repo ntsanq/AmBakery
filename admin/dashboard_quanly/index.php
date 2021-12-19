@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Dashboard</title>
+	<title>Dashboard Quản lý</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
@@ -17,31 +17,43 @@
 		<div class="sidebar">
 			<ul class="nav__list">
 				<li class="nav__list--item">
-					<a href="#">
+					<a href="index.php">
 						<i class="fas fa-home nav__icon"></i>
 						<span>Trang chủ</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="#">
-						<i class="fas fa-tshirt product-logo nav__icon"></i>
+					<a href="ql_nhanvien.php">
+						<i class="fas fa-male nav__icon"></i>
+						<span>Quản lý nhân viên</span>
+					</a>
+				</li>
+				<li class="nav__list--item">
+					<a href="ql_sanpham.php">
+						<i class="fas fa-bread-slice nav__icon"></i>
 						<span>Quản lý sản phẩm</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="#">
+					<a href="ql_donhang.php">
 						<i class="fas fa-shopping-bag nav__icon"></i>
 						<span>Quản lý đơn hàng</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="#">
+					<a href="ql_theloai.php">
+						<i class="fas fa-tasks nav__icon"></i>
+						<span>Danh mục thể loại</span>
+					</a>
+				</li>
+				<li class="nav__list--item">
+					<a href="ql_khachhang.php">
 						<i class="fas fa-users nav__icon"></i>
 						<span>Khách hàng</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="#">
+					<a href="../login.php">
 						<i class="fas fa-sign-out-alt nav__icon"></i>
 						<span>Log out</span>
 					</a>
@@ -49,8 +61,16 @@
 			</ul>
 		</div>
 		<main >
-			<div >
-
+			<div class="main_top">
+					<div class="main_top_left">
+						xin chào admin
+					</div>
+					<div class="main_top_right">
+						admin's name
+					</div>
+			</div>
+			<div class="main_content">
+				đây là trang chủ
 			</div>
 		</main>
 	</div>

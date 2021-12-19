@@ -1,29 +1,30 @@
 <?php 
 	//get values
-	$username = $_POST['user'];
-	$password = $_POST['pass'];
+	$ma = $_POST['ma'];
+	$mat_khau = $_POST['mat_khau'];
 
 	//to prevent mysql injection
-	$username = stripcslashes($username);
-	$password = stripcslashes($password);
+	$ma = stripcslashes($ma);
+	$mat_khau = stripcslashes($mat_khau);
 	//connect to server database
-	$connect = mysqli_connect('localhost', 'root', '', 'login');
-	mysqli_set_charset($connect, 'utf8');
+	include  'connect.php' ;
 
 
-	$username = mysqli_real_escape_string($connect, $username);
-	$password = mysqli_real_escape_string($connect,$password);
+	$ma = mysqli_real_escape_string($connect, $ma);
+	$mat_khau = mysqli_real_escape_string($connect,$mat_khau);
 
 
-	$sql = "select * from users WHERE username = '$username' and password = '$password' ";
+	$sql = "select * from nhan_vien WHERE ma = '$ma' and mat_khau = '$mat_khau' ";
 
 	//Query the database for user
 	$result = mysqli_query($connect, $sql)
 		or die("Fail to query database ".mysqli_error());
 	$row = mysqli_fetch_array($result);
-	if ($row['username'] == $username && $row['password'] == $password) {
-		echo "Login success! Welcome ".$row['username'];
-		header("Location: dashboard/index.php");
+	if ($row['ma'] == $ma && $row['mat_khau'] == $mat_khau) {
+		// echo "Login success! Welcome ".$row['ma'];
+		header("Location: dashboard_quanly/index.php");
 	}else {
 		echo "Failed to login!";
 	}
+?>
+<a href="login.php">Thử đăng nhập lại</a>

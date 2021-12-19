@@ -40,7 +40,7 @@ body{
 	border-radius: 5px;
 	margin: 100px auto;
 	background: white;
-	padding: 50px;
+	padding: 30px;
 
 }
 #btn{
@@ -67,7 +67,7 @@ body{
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-  margin-left: 69%;
+  margin-left: 55%;
 }
 
 #btn:hover {
