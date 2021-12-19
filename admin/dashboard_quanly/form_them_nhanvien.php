@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<form action="reg_nhanvien_process.php" method="POST">
+		<form action="them_nhanvien_process.php" method="POST">
 			<div class="fnv_container">
 				<h1>Đăng ký nhân viên mới</h1>
 				<p>Điền thông tin vào các ô trống;</p>
@@ -30,7 +30,7 @@
 				<label for="mat_khau">Password: </label>
 				<input type="password" name="mat_khau">
 				<br>
-				 <input type="submit" id="reg_nhanvien_btn" value="Đăng ký">
+				 <input type="submit" id="them_nhanvien_btn" value="Đăng ký">
 			</div>
 		</form>
 	</div>
