@@ -22,7 +22,7 @@
 				<input type="radio" name="gioi_tinh" value="nam">
 				<label for="nam">Nam </label>
 				<input type="radio" name="gioi_tinh" value="nu">
-				<label for="nư">Nữ </label>
+				<label for="nu">Nữ </label>
 
 				<br>
 				<label for="ngay_sinh">Ngày sinh: </label>
