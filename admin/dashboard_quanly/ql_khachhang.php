@@ -71,6 +71,7 @@
 			</div>
 			<div class="main_content">
 				đây là trang khách hàng
+				<a href="form_them_khachhang.php">Thêm khách hàng</a>
 			</div>
 		</main>
 	</div>

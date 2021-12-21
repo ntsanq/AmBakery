@@ -8,7 +8,7 @@
 <body>
 	<div>
 		<form action="them_sanpham_process.php" method="POST">
-			<div class="fnv_container">
+			<div >
 				<h1>Thêm sản phẩm mới</h1>
 				<p>Điền thông tin vào các ô trống;</p>
 				

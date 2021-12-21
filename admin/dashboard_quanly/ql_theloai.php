@@ -71,6 +71,7 @@
 			</div>
 			<div class="main_content">
 				đây là trang thể loại
+				<a href="form_them_theloai.php">Thêm thể loại</a>
 			</div>
 		</main>
 	</div>
