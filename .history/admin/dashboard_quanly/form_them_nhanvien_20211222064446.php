@@ -45,13 +45,12 @@
 				<input class="input--form" type="password" name="mat_khau">
 				<br>
 				<label for="cap_do">Là nhân viên hay là quản lí?  </label>
-				<br>
 				<input type="radio" name="cap_do" value="0">
 				<label for="nhan_vien">Nhân viên </label>
 				<input type="radio" name="cap_do" value="1">
 				<label for="quan_li">Quản lí </label>
 				<br>
-				<input  type="submit" id="them_nhanvien_btn" value="Đăng ký">
+				<input type="submit" id="them_nhanvien_btn" value="Đăng ký">
 			
 		</form>
 	</div>

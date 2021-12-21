@@ -51,7 +51,7 @@
 				<input type="radio" name="cap_do" value="1">
 				<label for="quan_li">Quản lí </label>
 				<br>
-				<input  type="submit" id="them_nhanvien_btn" value="Đăng ký">
+				<input type="submit" id="them_nhanvien_btn" value="Đăng ký">
 			
 		</form>
 	</div>
