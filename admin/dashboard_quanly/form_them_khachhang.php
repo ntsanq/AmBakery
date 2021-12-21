@@ -18,16 +18,20 @@
 				<label for="ten">Tên khách hàng: </label>
 				<input type="text" name="ten">
 				<br>
-				<label for="dia_chi">Địa chỉ: </label>
-				<input type="text" name="dia_chi">
+				<label for="gioi_tinh">Giới tính: </label>
+				<input type="radio" name="gioi_tinh" value="nam">
+				<label for="nam">Nam </label>
+				<input type="radio" name="gioi_tinh" value="nu">
+				<label for="nư">Nữ </label>
+
 				<br>
-				<label for="sdt">Số điện thoại: </label>
-				<input type="text" name="sdt">
+				<label for="ngay_sinh">Ngày sinh: </label>
+				<input type="date" name="ngay_sinh">
 				<br>
 				<label for="email">Email: </label>
 				<input type="text" name="email">
 				<br>
-				<label for="mat_khau">Password: </label>
+				<label for="mat_khau">Mật khẩu	: </label>
 				<input type="password" name="mat_khau">
 				<br>
 				 <input type="submit" id="them_khachhang_btn" value="Đăng ký">

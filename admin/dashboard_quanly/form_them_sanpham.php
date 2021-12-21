@@ -12,14 +12,14 @@
 				<h1>Thêm sản phẩm mới</h1>
 				<p>Điền thông tin vào các ô trống;</p>
 				
-				<label for="ma">Mã sản phẩm: </label>
+				<!-- <label for="ma">Mã sản phẩm: </label>
 				<input type="text" name="ma">
-				<br>
+				<br> -->
 				<label for="ten_san_pham">Tên sản phẩm: </label>
 				<input type="text" name="ten_san_pham">
 				<br>
 				<label for="mo_ta">Mô tả sản phẩm: </label>
-				<input type="text" name="mo_ta">
+				<input type="text area" name="mo_ta">
 				<br>
 				<label for="anh">Ảnh: </label>
 				<input type="text" name="anh">
