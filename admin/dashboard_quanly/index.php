@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dashboard Quản lý</title>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -30,31 +30,31 @@
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="ql_nhanvien.php">
+					<a href="nhanvien/ql_nhanvien.php">
 						<i class="fas fa-male nav__icon"></i>
 						<span>Quản lý nhân viên</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="ql_sanpham.php">
+					<a href="sanpham/ql_sanpham.php">
 						<i class="fas fa-bread-slice nav__icon"></i>
 						<span>Quản lý sản phẩm</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="ql_donhang.php">
+					<a href="donhang/ql_donhang.php">
 						<i class="fas fa-shopping-bag nav__icon"></i>
 						<span>Quản lý đơn hàng</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="ql_theloai.php">
+					<a href="theloai/ql_theloai.php">
 						<i class="fas fa-tasks nav__icon"></i>
 						<span>Danh mục thể loại</span>
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="ql_khachhang.php">
+					<a href="khachhang/ql_khachhang.php">
 						<i class="fas fa-users nav__icon"></i>
 						<span>Khách hàng</span>
 					</a>
@@ -72,6 +72,11 @@
 					<div class="main_top_left">
 					</div>
 					<div class="main_top_right">
+						<!-- <?php  
+							include  '../connect.php' ;
+							$sql = "select ";
+							echo $bai_tin_tuc['tieu_de'] 
+						?> -->
 						admin's name
 					</div>
 			</div>

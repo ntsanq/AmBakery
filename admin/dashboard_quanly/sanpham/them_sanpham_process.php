@@ -1,6 +1,6 @@
 <?php 
 		
-		include  '../connect.php' ;
+		include  '../../connect.php' ;
 
 		// $ma= $_POST['ma'];
 		$ten_san_pham = $_POST['ten_san_pham'];
@@ -12,6 +12,7 @@
 		$sql = "insert into san_pham (ten_san_pham,mo_ta,anh,gia,ma_the_loai) values ('$ten_san_pham','$mo_ta','$anh','$gia', '$ma_the_loai')";
 		mysqli_query($connect, $sql);
 
-		echo "Bạn đã thêm sản phẩm thành công!";
+		echo "Bạn đã thêm sản phẩm $ten_san_pham thành công!";
+		mysqli_close($connect);
 ?>
 <a href="index.php">Go back<<</a>

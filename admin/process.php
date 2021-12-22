@@ -29,7 +29,7 @@
 		// echo "Login success! Welcome ".$row['email'];
 		header("Location: dashboard_quanly/index.php");
 	}else if ($row_KH['email'] == $email && $row_KH['mat_khau'] == $mat_khau) {
-		header("Location: ../khachhang/index.html");
+		header("Location: ../khachhang/index.php");
 	}else {
 		echo "Failed to login!";
 	}

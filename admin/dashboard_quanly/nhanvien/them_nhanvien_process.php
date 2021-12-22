@@ -1,6 +1,6 @@
 <?php 
 		
-		include  '../connect.php' ;
+		include  '../../connect.php' ;
 
 		$ten = $_POST['ten'];
 		$dia_chi = $_POST['dia_chi'];
@@ -13,5 +13,6 @@
 		mysqli_query($connect, $sql);
 
 		echo "Bạn đã đăng ký cho nhân viên $ten thành công!";
+		mysqli_close($connect);
 ?>
 <a href="index.php">Go back<<</a>

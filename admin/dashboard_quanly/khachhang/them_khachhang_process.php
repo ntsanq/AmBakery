@@ -1,6 +1,6 @@
 <?php 
 		
-		include  '../connect.php' ;
+		include  '../../connect.php' ;
 
 		// $ma= $_POST['ma'];
 		$ten = $_POST['ten'];
@@ -13,5 +13,6 @@
 		mysqli_query($connect, $sql);
 		// die($sql);
 		echo "Bạn đã thêm khách hàng $ten thành công!";
+		mysqli_close($connect);
 ?>
 <a href="index.php">Go back<<</a>
