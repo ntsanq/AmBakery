@@ -80,11 +80,74 @@
 				</div>
 			</div>
 			<div class="main_content">
-				đây là trang nhân viên
 				<a href="form_them_nhanvien.php">Thêm nhân viên</a>
-			</div>
-		</main>
-	</div>
+				<?php 
+				include  '../../connect.php' ;
+				$sql = "select * from nhan_vien";
+				$result= mysqli_query($connect, $sql);
+				?>
+				<table border="1" width="100%">
+					<tr>
+						<th>
+							Mã
+						</th>
+						<th>
+							Tên nhân viên
+						</th>
+						<th>
+							Địa chỉ
+						</th>
+						<th>
+							Sđt
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Chức vụ
+						</th>
+						<th>
+							Sửa
+						</th>
+						<th>
+							Xóa
+						</th>
+					</tr>
+					<?php foreach ($result as $tung_nhan_vien  ) {?>
+						<tr>
+							<td>
+								<?php echo $tung_nhan_vien['ma'] ?>
+							</td>
+							<td>
+								<?php echo $tung_nhan_vien['ten'] ?>
+							</td>
+							<td>
+								<?php echo $tung_nhan_vien['dia_chi'] ?>
+							</td>
+							<td>
+								<?php echo $tung_nhan_vien['sdt'] ?>
+							</td>
+							<td>
+								<?php echo $tung_nhan_vien['email'] ?>
+							</td>
+							<td>
+								<?php echo $tung_nhan_vien['cap_do'] ?>
+							</td>
+							<td>
+								<a href="form_sua_nhanvien.php?ma=<?php echo $tung_nhan_vien['ma']?>">Sửa</a>
+							</td>
+							<td>
+								<a href="xoa_nhanvien_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
+									>Xóa</a>
 
-</body>
-</html>
+								</td>
+							</tr>
+						<?php } ?>
+					</table>
+
+				</div>
+			</main>
+		</div>
+
+	</body>
+	</html>

@@ -71,25 +71,26 @@
 			<div class="main_top">
 				<div class="main_top_left">
 					<form>
-					<input type="search" placeholder="Tìm kiếm..." name="tim_kiem">
-					<button type="submit"><i class="fa fa-search"></i></button>
+						<input type="search" placeholder="Tìm kiếm..." name="tim_kiem">
+						<button type="submit"><i class="fa fa-search"></i></button>
 					</form>
 				</div>
-
 				<div class="main_top_right">
+					admin's name
 						<!-- <?php  
 							include  '../connect.php' ;
-							$sql = "select ";
-							echo $bai_tin_tuc['tieu_de'] 
+							$sql = "select * from nhan_vien";
+							$ten_nv = mysqli_query($connect, $sql);
+							echo $ten_nv['ten'];
 						?> -->
-						admin's name
-					</div>
 				</div>
-				<div class="main_content">
-					đây là trang chủ
-				</div>
-			</main>
-		</div>
+			</div>	
+			<div class="main_content">
+				đây là trang chủ
+				<img src="../image/bg.jpg">
+			</div>
+		</main>
+	</div>
 
-	</body>
-	</html>
+		</body>
+		</html>
