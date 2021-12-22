@@ -19,7 +19,6 @@
 		<form action="them_nhanvien_process.php" method="POST">
 			<div class="form__heading">
 				<h1>Đăng ký nhân viên mới</h1>
-				<p>Điền	 tin vào các ô trống;</p>
 				</div>
 				<!-- <label for="ma">Mã nhân viên: </label>
 				<input type="text" name="ma">

@@ -36,6 +36,8 @@ p{
 }
 .header__logo span{
 	font-size: 2.5rem;
+
+  text-align: center;
 }
 .container{
   width: 40rem;
@@ -44,7 +46,7 @@ p{
 
 }
 .container form{
-  margin: 0 auto;
+  margin-top: 40px;
   padding: 1.5rem;
   border: 1px solid #ccc;
 	width: 100%;
@@ -52,6 +54,7 @@ p{
 }
 form div h1{
   font-size: 2rem;
+  text-align: center;
 }
 form .input--form{
 	width: 100%;
@@ -83,6 +86,7 @@ label{
   font-family: inherit;
   font-weight: 500;
 	width: 100%;
+	margin-top: 20px;
 
 }
 #them_nhanvien_btn:hover{
