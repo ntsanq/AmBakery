@@ -49,12 +49,18 @@ p{
   margin-top: 40px;
   padding: 1.5rem;
   border: 1px solid #ccc;
+	border-radius: 1rem;
 	width: 100%;
+	background-color: rgba(230, 228, 228, 0.096);
 
 }
 form div h1{
   font-size: 2rem;
+<<<<<<< HEAD
   text-align: center;
+=======
+	text-align: center;
+>>>>>>> c3c0f134fbc32c4c54c94eb306f2e38282d94980
 }
 form .input--form{
 	width: 100%;
@@ -62,7 +68,8 @@ form .input--form{
 	border: none;
 	padding-bottom: 0.5rem;
 	border-bottom: solid 1px #ccc;
-	background-color: rgba(230, 230, 230, 0.486);
+	background-color: #fff;
+	border-radius: 1rem;
 }
 .input--form:focus{
 	outline: none;
@@ -78,7 +85,8 @@ label{
 	display:inline-block;
 }
 
-#them_nhanvien_btn{
+#them_nhanvien_btn,
+#btn{
   border: 1px solid #ccc;
   border-radius: 1rem;
   padding: 0.5rem 1rem;
@@ -86,10 +94,16 @@ label{
   font-family: inherit;
   font-weight: 500;
 	width: 100%;
+<<<<<<< HEAD
 	margin-top: 20px;
+=======
+	margin-top: 1rem;
+
+>>>>>>> c3c0f134fbc32c4c54c94eb306f2e38282d94980
 
 }
-#them_nhanvien_btn:hover{
+#them_nhanvien_btn:hover,
+#btn:hover{
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0px 5px .5rem 0px rgba(0, 0, 0, 0.39);

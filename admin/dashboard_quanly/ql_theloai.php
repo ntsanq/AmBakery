@@ -12,6 +12,13 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+	<header>
+		<div id="header">
+			<a href="#" class="header__logo" >
+				<span><b>am</b>bakery</span>
+			</a>
+		</div>
+	</header>
 	<div class="container">
 		
 		<div class="sidebar">
@@ -62,15 +69,14 @@
 		</div>
 		<main >
 			<div class="main_top">
-					<div class="main_top_left">
-						xin chào admin
-					</div>
-					<div class="main_top_right">
-						admin's name
-					</div>
+				<div class="main_top_left">
+					xin chào admin
+				</div>
+				<div class="main_top_right">
+					admin's name
+				</div>
 			</div>
 			<div class="main_content">
-				đây là trang thể loại
 				<a href="form_them_theloai.php">Thêm thể loại</a>
 			</div>
 		</main>

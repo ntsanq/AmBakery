@@ -18,14 +18,14 @@
     </header>
     <div id="frm">
         <p href="" align="center">
-            <img src="./image/adicon.jpg" height="30px" >
+            <img src="./image/adicon.png" height="30px" >
         </p>
         <p id="login">LOGIN</p>        
 
         <form action="process.php" method="POST">
             <p>
                 <label for="email">Email:</label>
-                <input type="text" name="email" id="email" style=" margin-left: 31px;" >
+                <input type="text" name="email" id="email" style=" margin-left: 30px;" >
             </p>
             <p>
                 <label for="mat_khau" >Mật khẩu:</label>

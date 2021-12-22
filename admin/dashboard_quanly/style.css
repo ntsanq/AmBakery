@@ -13,8 +13,34 @@ body{
 	font-size: 1.6rem;
 	height:90rem;
 	font-weight: 400;
-
 }
+header{
+	width: 100%;
+	height: 50px;
+	font-family: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid rgb(187, 179, 179);
+	position: relative; 
+	background-color: white;
+}
+a.header__logo{
+	text-decoration: none;
+	color: black;
+}
+p.header__logo{
+	margin-bottom: 0%;
+}
+.header__logo span{
+	font-size: 2.5rem;
+
+  text-align: center;
+}
+
+
 .container{
 	width: 100%;
 	display:  flex;
@@ -25,8 +51,9 @@ body{
 	display: flex;
 	justify-content: center;
 	flex-basis: 20% ;
-	background-color: black;
+	background-color: white;
 	/*font-weight: 700;*/
+	border-radius: black;
 
 }
 .nav__list{
@@ -37,8 +64,6 @@ body{
 	list-style: none;
 	gap: 1.5rem 0;
 	width: 100%;
-
-
 }
 
 .nav__list--item{
@@ -57,13 +82,17 @@ body{
 }
 .nav__list--item a:link,
 .nav__list--item a:visited{
-	color: #fff;
+	color: black;
 	text-decoration: none;
 
 }
 .nav__list--item:hover{
-	background-color: grey;
-	color: #fff;
+	background-color: white;
+	color: black;
+	text-decoration: underline;
+	cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 5px .5rem 0px rgba(0, 0, 0, 0.39);
 }
 .container main{
 	height: 1000px;
