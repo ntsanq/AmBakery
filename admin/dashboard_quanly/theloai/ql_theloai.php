@@ -81,6 +81,35 @@
 			</div>
 			<div class="main_content">
 				<a href="form_them_theloai.php">Thêm thể loại</a>
+				<?php 
+				include  '../../connect.php' ;
+				$sql = "select * from the_loai";
+				$result= mysqli_query($connect, $sql);
+				?>
+				<table border="1" width="100%">
+					<tr>
+						<th>Mã</th>
+						<th>Tên thể loại</th>
+						<th>Sửa</th>
+						<th>Xóa</th>
+					</tr>
+					<?php foreach ($result as $tung_the_loai) { ?>
+						<tr>
+							<td>
+								<?php echo $tung_the_loai['ma'] ?>
+							</td>
+							<td>
+								<?php echo $tung_the_loai['ten_the_loai'] ?>
+							</td>
+							<td>
+								<a href="form_sua_theloai.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
+							</td>
+							<td>
+								<a href="xoa_theloai_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+							</td>
+						</tr>
+					<?php } ?>
+				</table>
 			</div>
 		</main>
 	</div>

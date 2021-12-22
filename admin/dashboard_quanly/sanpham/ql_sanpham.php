@@ -140,7 +140,7 @@
 								<a href="form_sua_sanpham.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
 							</td>
 							<td>
-								<a href="xoa_sanpham_process.php?ma=<?php echo $tung_san_pham['ma']?>">Xóa</a>
+								<a href="xoa_sanpham_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
 							</td>
 						</tr>
 					<?php } ?>
