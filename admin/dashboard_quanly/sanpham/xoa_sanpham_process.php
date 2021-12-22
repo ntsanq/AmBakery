@@ -1,6 +1,6 @@
 <?php 
 	include  '../../connect.php' ;
-	$ma= $_POST['ma'];
+	$ma = $_GET['ma'];
 	$sql = "delete from san_pham where ma = $ma";
 	mysqli_query($connect, $sql);
 			// die($sql);
