@@ -15,4 +15,4 @@
 		echo "Bạn đã đăng ký cho nhân viên $ten thành công!";
 		mysqli_close($connect);
 ?>
-<a href="index.php">Go back<<</a>
+<a href="ql_nhanvien.php">Go back<<</a>

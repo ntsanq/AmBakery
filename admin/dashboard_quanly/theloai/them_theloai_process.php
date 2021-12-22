@@ -11,4 +11,4 @@
 		echo "Bạn đã thêm thể loại $ten_the_loai thành công!";
 		mysqli_close($connect);
 ?>
-<a href="index.php">Go back<<</a>
+<a href="ql_theloai.php">Go back<<</a>
