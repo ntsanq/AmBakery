@@ -59,20 +59,17 @@ form .input--form{
 	border: none;
 	padding-bottom: 0.5rem;
 	border-bottom: solid 1px #ccc;
-	background-color: rgba(230, 230, 230, 0.486);
+	background-color: rgba(230, 230, 230, 0.377);
 }
 .input--form:focus{
 	outline: none;
 	background-color: rgba(230, 230, 230, 0.322);
 }
 
-label{
+form ~ label{
 	display: block;
 	padding-top: 1.5rem;
 
-}
-.label--radio{
-	display:inline-block;
 }
 
 #them_nhanvien_btn{

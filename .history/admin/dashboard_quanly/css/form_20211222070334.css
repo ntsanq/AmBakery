@@ -66,13 +66,10 @@ form .input--form{
 	background-color: rgba(230, 230, 230, 0.322);
 }
 
-label{
+form ~ label{
 	display: block;
 	padding-top: 1.5rem;
 
-}
-.label--radio{
-	display:inline-block;
 }
 
 #them_nhanvien_btn{
