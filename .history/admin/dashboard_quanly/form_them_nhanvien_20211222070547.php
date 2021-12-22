@@ -41,9 +41,9 @@
 				<br>
 				<label for="cap_do">Là nhân viên hay là quản lí?  </label>
 				<input type="radio" name="cap_do" value="0">
-				<label class="label--radio"for="nhan_vien">Nhân viên </label>
+				<label for="nhan_vien">Nhân viên </label>
 				<input type="radio" name="cap_do" value="1">
-				<label class="label--radio" for="quan_li">Quản lí </label>
+				<label for="quan_li">Quản lí </label>
 				<br>
 				<input  type="submit" id="them_nhanvien_btn" value="Đăng ký">
 			

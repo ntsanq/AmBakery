@@ -25,7 +25,7 @@
         <form action="process.php" method="POST">
             <p>
                 <label for="ma">Mã NV:</label>
-                <input type="text" name="ma" id="ma" style=" margin-left: 24px;" size="20">
+                <input type="text" name="ma" id="ma" style=" margin-left: 24px;" size="30">
             </p>
             <p>
                 <label for="mat_khau" >Mật khẩu:</label>
