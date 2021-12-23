@@ -42,7 +42,7 @@
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="../ql_donhang.php">
+					<a href="../donhang/ql_donhang.php">
 						<i class="fas fa-shopping-bag nav__icon"></i>
 						<span>Quản lý đơn hàng</span>
 					</a>
