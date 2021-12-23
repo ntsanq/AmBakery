@@ -82,6 +82,73 @@
 			<div class="main_content">
 				đây là trang khách hàng
 				<a href="form_them_khachhang.php">Thêm khách hàng</a>
+				<?php 
+				include  '../../connect.php' ;
+				$sql = "select * from khach_hang";
+				$result= mysqli_query($connect, $sql);
+				?>
+				<table border="1" width="100%">
+					<tr>
+						<th>
+							Mã
+						</th>
+						<th>
+							Tên khách hàng
+						</th>
+						<th>
+							Giới tính
+						</th>
+						<th>
+							Ngày sinh
+						</th>
+						<th>
+							Email
+						</th>
+						<th>
+							Mật khẩu
+						</th>
+						<th>
+							Loại khách hàng
+						</th>
+						<th>
+							Sửa
+						</th>
+						<th>
+							Xóa
+						</th>
+					</tr>
+					<?php foreach ($result as $tung_khach_hang) { ?>
+						<tr>
+						<td>
+							<?php echo $tung_khach_hang['ma'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['ten'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['gioi_tinh'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['ngay_sinh'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['email'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['mat_khau'] ?>
+						</td>
+						<td>
+							<?php echo $tung_khach_hang['cap_do'] ?>
+						</td>
+						<td>
+							<a href="form_sua_khachhang.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
+						</td>
+						<td>
+							<a href="">Xóa</a>
+						</td>
+					</tr>
+					<?php } ?>
+				</table>	
 			</div>
 		</main>
 	</div>
