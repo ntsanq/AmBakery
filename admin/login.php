@@ -3,7 +3,7 @@
 <head >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login page</title>
+    <title>Đăng nhập</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
@@ -14,6 +14,9 @@
             <a href="#" class="header__logo" >
                 <span><b>am</b>bakery</span>
             </a>
+        </div>
+        <div class="header_chuyen_KH">
+            <a href="../khachhang/index.php">to trang khách hàng</a>
         </div>
     </header>
     <div id="frm">
@@ -34,6 +37,7 @@
             <p>
                 <input type="submit" id="btn" value="Đăng nhập">
             </p>
+            <a href="">Đăng ký</a>
         </form>
     </div>
 </body>
