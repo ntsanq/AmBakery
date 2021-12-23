@@ -15,9 +15,9 @@
                 <span><b>am</b>bakery</span>
             </a>
         </div>
-        <div class="header_chuyen_KH">
+      <!--   <div class="header_chuyen_KH">
             <a href="../khachhang/index.php">to trang khách hàng</a>
-        </div>
+        </div> -->
     </header>
     <div id="frm">
         <p href="" align="center">
@@ -35,9 +35,9 @@
                 <input type="password" name="mat_khau" id="mat_khau" style=" margin-left: 5px;">
             </p>
             <p>
-                <input type="submit" id="btn" value="Đăng nhập">
+                <input type="submit" id="btn" value="Đăng nhập" >
             </p>
-            <a href="">Đăng ký</a>
+            <a href="dangky_khachhang/signup.php" style="font-size: 15px;">>>Đăng ký khách hàng mới</a>
         </form>
     </div>
 </body>

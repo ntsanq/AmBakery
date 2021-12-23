@@ -11,7 +11,10 @@ header{
 	position: relative; 
 	background-color: white;
 }
-
+.header_chuyen_KH a{
+	text-decoration: none;
+	color: red;
+}
 a{
 	text-decoration: none;
 	color: black;
@@ -71,6 +74,7 @@ body{
   white-space: nowrap;
   word-wrap: break-word;
   margin-left: 55%;
+  margin-bottom: 20px;
 }
 
 #btn:hover {
