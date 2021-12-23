@@ -87,12 +87,15 @@
 				$result= mysqli_query($connect, $sql);
 				?>
 				<table border="1" width="100%">
+					<thead class="thead-dark">
 					<tr>
 						<th>Mã</th>
 						<th>Tên thể loại</th>
 						<th>Sửa</th>
 						<th>Xóa</th>
 					</tr>
+					</thead>
+					<tbody>
 					<?php foreach ($result as $tung_the_loai) { ?>
 						<tr>
 							<td>
@@ -109,6 +112,7 @@
 							</td>
 						</tr>
 					<?php } ?>
+					</tbody>
 				</table>
 			</div>
 		</main>

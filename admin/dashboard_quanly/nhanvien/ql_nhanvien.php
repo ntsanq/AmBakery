@@ -87,6 +87,7 @@
 				$result= mysqli_query($connect, $sql);
 				?>
 				<table border="1" width="100%">
+					<thead class="thead-dark">
 					<tr>
 						<th>
 							Mã
@@ -113,6 +114,8 @@
 							Xóa
 						</th>
 					</tr>
+					</thead>
+					<tbody>
 					<?php foreach ($result as $tung_nhan_vien  ) {?>
 						<tr>
 							<td>
@@ -143,6 +146,7 @@
 								</td>
 							</tr>
 						<?php } ?>
+						</tbody>
 					</table>
 
 				</div>
