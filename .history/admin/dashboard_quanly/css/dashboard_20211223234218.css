@@ -40,7 +40,6 @@ table{
     color: #212529;
 		text-align: center;
 		border: none;
-		padding: 0 1.5rem;
 }
 thead {
 	display: table-header-group;
@@ -57,6 +56,7 @@ table .thead-dark th{
 	padding: 30px 0;
 	font-size: 14px;
 
+	vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
 }
 
