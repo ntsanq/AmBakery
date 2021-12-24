@@ -78,19 +78,19 @@
 				<div class="main_top_right">
 					admin's name
 						<!-- <?php  
-							include  '../connect.php' ;
-							$sql = "select * from nhan_vien";
-							$ten_nv = mysqli_query($connect, $sql);
-							echo $ten_nv['ten'];
+							// include  '../connect.php' ;
+							// $sql = "select * from nhan_vien";
+							// $ten_nv = mysqli_query($connect, $sql);
+							// echo $ten_nv['ten'];
 						?> -->
+						<i class="fas fa-user-alt"></i>
+					</div>
+				</div>	
+				<div class="main_content">
+					đây là trang chủ
 				</div>
-			</div>	
-			<div class="main_content">
-				đây là trang chủ
-				<img src="../image/bg.jpg">
-			</div>
-		</main>
-	</div>
+			</main>
+		</div>
 
-		</body>
-		</html>
+	</body>
+	</html>
