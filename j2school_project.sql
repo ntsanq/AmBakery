@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2021 at 09:17 AM
+-- Generation Time: Dec 24, 2021 at 10:44 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -48,7 +48,7 @@ INSERT INTO `giam_gia` (`phan_tram`, `ma_cap_do`) VALUES
 CREATE TABLE `hoa_don` (
   `ma` int(11) NOT NULL,
   `ma_khach_hang` int(11) NOT NULL,
-  `thoi_gian_dat` date NOT NULL,
+  `thoi_gian_dat` timestamp NOT NULL DEFAULT current_timestamp(),
   `ten_nguoi_nhan` varchar(100) NOT NULL,
   `sdt_nguoi_nhan` varchar(20) NOT NULL,
   `dia_chi_giao_hang` varchar(100) NOT NULL,
@@ -77,7 +77,7 @@ CREATE TABLE `khach_hang` (
   `ma` int(11) NOT NULL,
   `ten` varchar(100) NOT NULL,
   `gioi_tinh` tinyint(1) NOT NULL,
-  `ngay_sinh` int(11) NOT NULL,
+  `ngay_sinh` date NOT NULL,
   `email` varchar(100) NOT NULL,
   `mat_khau` varchar(50) NOT NULL,
   `cap_do` int(11) NOT NULL
@@ -88,8 +88,8 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`) VALUES
-(16, 'Nguyễn Thanh Sang', 0, 2000, 'sangkh@gmail.com', '123', 1),
-(18, 'Huỳnh Thị Mai', 0, 2021, 'chomai@gg.com', '123', 1);
+(16, 'Nguyễn Thanh Sang', 0, '2011-12-13', 'sangkh@gmail.com', '123', 1),
+(18, 'Huỳnh Thị Mai', 0, '2014-10-08', 'chomai@gg.com', '123', 1);
 
 -- --------------------------------------------------------
 
