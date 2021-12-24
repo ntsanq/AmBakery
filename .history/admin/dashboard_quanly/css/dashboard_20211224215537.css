@@ -53,8 +53,8 @@ table .thead-dark th{
 
 
 	border: none;
-	padding: 1.5rem 0;
-	font-size: 1.4rem;
+	padding: 30px 0;
+	font-size: 14px;
 
     border-bottom: 2px solid #dee2e6;
 }
@@ -164,6 +164,7 @@ p.header__logo{
 .main_top_left{
 	height: 100%;
 	width: 70%;
+	background-color: orangered;
 	float: left;
 	display: flex;
 	align-items: center;
