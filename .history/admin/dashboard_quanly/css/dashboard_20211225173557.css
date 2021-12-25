@@ -112,14 +112,13 @@ p.header__logo{
 	display: flex;
 	justify-content: center;
 	flex-basis: 20% ;
-	background-color: white;
+	background-color: orangered;
 	/*font-weight: 700;*/
 	border-radius: black;
 	position: fixed;
 	top: 3rem;
 	left: 0;
 	overflow: hidden;
-	height: 100%;
 
 }
 .nav__list{
