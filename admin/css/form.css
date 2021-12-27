@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%; /*10px*/
+}
+
+body{
+	font-family: "Poppins", sans-serif;
+	font-size: 1.6rem;
+	height:90rem;
+	font-weight: 400;
+}
+header{
+	width: 100%;
+	height: 50px;
+	font-family: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px solid rgb(187, 179, 179);
+	position: relative; 
+	background-color: white;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+p{
+	margin-bottom: 0%;
+}
+.header__logo span{
+	font-size: 2.5rem;
+
+  text-align: center;
+}
+.container{
+  width: 40rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+
+}
+.container form{
+  margin-top: 40px;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+	border-radius: 1rem;
+	width: 100%;
+	background-color: rgba(230, 228, 228, 0.096);
+
+}
+form div h1{
+  font-size: 2rem;
+<<<<<<< HEAD
+  text-align: center;
+=======
+	text-align: center;
+>>>>>>> c3c0f134fbc32c4c54c94eb306f2e38282d94980
+}
+form .input--form{
+	width: 100%;
+	height: 20px;
+	border: none;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ccc;
+	background-color: #fff;
+	border-radius: 1rem;
+}
+.input--form:focus{
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.322);
+}
+
+label{
+	display: block;
+	padding-top: 1.5rem;
+
+}
+.label--radio{
+	display:inline-block;
+}
+
+#them_nhanvien_btn,
+#btn{
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: 500;
+	width: 100%;
+	margin-top: 12px;
+<<<<<<< HEAD
+	margin-top: 20px;
+=======
+	margin-top: 1rem;
+
+>>>>>>> c3c0f134fbc32c4c54c94eb306f2e38282d94980
+
+}
+#them_nhanvien_btn:hover,
+#btn:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0px 5px .5rem 0px rgba(0, 0, 0, 0.39);
+}

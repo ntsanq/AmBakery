@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  <?php 
+  include  '../admin/connect.php' ;
+  $sql = "select * from san_pham";
+  $result = mysqli_query($connect, $sql);
+  $tung_san_pham = mysqli_fetch_array($result);
+  ?>
   <header>
     <div class="header__left">
       <div class="header__search">
@@ -221,7 +227,7 @@
               <div class="product__card--body">
                 <div class="product__photo">
                   <a href="#">
-                    <img src="img/product-1.jpg" alt="">
+                    <img src="img/product-1.jpg" alt=""> 
                   </a>
                 </div>
                 <div class="product__info">

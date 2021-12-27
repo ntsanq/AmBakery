@@ -37,7 +37,7 @@
             <p>
                 <input type="submit" id="btn" value="Đăng nhập" >
             </p>
-            <a href="dangky_khachhang/signup.php" style="font-size: 15px;">>>Đăng ký khách hàng mới</a>
+            <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Đăng ký khách hàng mới</a>
         </form>
     </div>
 </body>
