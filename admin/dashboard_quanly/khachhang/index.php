@@ -37,7 +37,7 @@
 			</div>
 			<div class="main_content">
 				đây là trang khách hàng
-				<a href="form_them_khachhang.php">Thêm khách hàng</a>
+				<a href="form_them.php">Thêm khách hàng</a>
 				<?php 
 				include  '../../connect.php' ;
 				$sql = "select * from khach_hang";
@@ -100,7 +100,7 @@
 									<?php echo $tung_khach_hang['cap_do'] ?>
 								</td>
 								<td>
-									<a href="form_sua_khachhang.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
+									<a href="form_sua.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
 								</td>
 								<td>
 									<a href="">Xóa</a>

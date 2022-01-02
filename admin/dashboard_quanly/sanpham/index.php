@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			<div class="main_content">
-				<a href="form_them_sanpham.php">Thêm sản phẩm</a>
+				<a href="form_them.php">Thêm sản phẩm</a>
 
 
 				<!-- ---------------------------------------------------------------------------------- -->
@@ -103,10 +103,10 @@
 								 ?>
 							</td>
 							<td>
-								<a href="form_sua_sanpham.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
+								<a href="form_sua.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
 							</td>
 							<td>
-								<a href="xoa_sanpham_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+								<a href="xoa_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
 							</td>
 						</tr>
 					<?php } ?>

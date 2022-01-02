@@ -24,4 +24,4 @@
 		echo "Bạn đã sửa thông tin nhân viên $ten thành công!";
 		mysqli_close($connect);
 ?>
-<a href="ql_nhanvien.php">Go back<<</a>
+<a href="index.php">Go back<<</a>

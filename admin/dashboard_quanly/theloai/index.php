@@ -36,7 +36,7 @@
 				</div>
 			</div>
 			<div class="main_content">
-				<a href="form_them_theloai.php">Thêm thể loại</a>
+				<a href="form_them.php">Thêm thể loại</a>
 				<?php 
 				include  '../../connect.php' ;
 				$sql = "select * from the_loai";
@@ -61,10 +61,10 @@
 								<?php echo $tung_the_loai['ten_the_loai'] ?>
 							</td>
 							<td>
-								<a href="form_sua_theloai.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
+								<a href="form_sua.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
 							</td>
 							<td>
-								<a href="xoa_theloai_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+								<a href="xoa_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
 							</td>
 						</tr>
 					<?php } ?>

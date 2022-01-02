@@ -15,4 +15,4 @@
 		echo "Bạn đã thêm khách hàng $ten thành công!";
 		mysqli_close($connect);
 ?>
-<a href="ql_khachhang.php">Go back<<</a>
+<a href="index.php">Go back<<</a>

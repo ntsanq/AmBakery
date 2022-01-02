@@ -16,7 +16,7 @@
         </div>
     </header>
 	<div class="container">
-		<form action="them_sanpham_process.php" method="POST">
+		<form action="them_process.php" method="POST">
 			<div >
 				<h1>Thêm sản phẩm mới</h1>
 				

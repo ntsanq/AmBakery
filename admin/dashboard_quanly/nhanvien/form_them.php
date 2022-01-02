@@ -16,7 +16,7 @@
         </div>
     </header>
 	<div class="container">
-		<form action="them_nhanvien_process.php" method="POST">
+		<form action="them_process.php" method="POST">
 			<div class="form__heading">
 				<h1>Đăng ký nhân viên mới</h1>
 				</div>
@@ -44,7 +44,7 @@
 				<input type="radio" name="cap_do" value="1">
 				<label class="label--radio" for="quan_li">Quản lí </label>
 				<br>
-				<input  type="submit" id="them_nhanvien_btn" value="Đăng ký">
+				<input  type="submit" id="btn" value="Đăng ký">
 			
 		</form>
 	</div>

@@ -23,7 +23,7 @@
 		$nhan_vien = mysqli_fetch_array($result);
 	?>
 	<div class="container">
-		<form action="sua_nhanvien_process.php" method="POST">
+		<form action="sua_process.php" method="POST">
 			<input type="hidden" name="ma" value="<?php echo $ma ?>">	
 			<div class="form__heading">
 				<h1>Sửa thông tin cho nhân viên</h1>

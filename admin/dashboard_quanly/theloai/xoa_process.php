@@ -5,4 +5,4 @@
 	mysqli_query($connect, $sql);
 			// die($sql);
 	mysqli_close($connect);
-	header("Location: ql_theloai.php");
+	header("Location: index.php");

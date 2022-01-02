@@ -16,7 +16,7 @@
         </div>
     </header>
 	<div class="container">
-		<form action="them_khachhang_process.php" method="POST">
+		<form action="them_process.php" method="POST">
 			<div >
 				<h1>Đăng ký khách hàng mới</h1>
 				

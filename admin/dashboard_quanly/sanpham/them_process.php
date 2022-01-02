@@ -15,4 +15,4 @@
 		echo "Bạn đã thêm sản phẩm $ten_san_pham thành công!";
 		mysqli_close($connect);
 ?>
-<a href="ql_sanpham.php">Go back<<</a>
+<a href="index.php">Go back<<</a>

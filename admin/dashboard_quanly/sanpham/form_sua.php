@@ -26,7 +26,7 @@
 		<!-- Đưa mã sản phẩm theo nhưng ẩn -->
 		
 
-		<form action="sua_sanpham_process.php" method="POST">
+		<form action="sua_process.php" method="POST">
 			<input type="hidden" name="ma" value="<?php echo $ma ?>">	
 			<div >
 				<h1>Sửa thông tin sản phẩm</h1>

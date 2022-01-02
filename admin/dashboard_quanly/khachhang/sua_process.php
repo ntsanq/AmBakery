@@ -19,4 +19,4 @@ include  '../../connect.php' ;
 		mysqli_query($connect, $sql);
 		// die($sql);
 		mysqli_close($connect);
-		header("Location: ql_khachhang.php");
+		header("Location: index.php");
