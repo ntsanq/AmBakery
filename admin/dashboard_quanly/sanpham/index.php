@@ -64,7 +64,7 @@
 							Giá
 						</th>
 						<th>
-							Mã thể loại
+							Thể loại
 						</th>
 						<th>
 							Sửa
@@ -93,7 +93,14 @@
 								<?php echo $tung_san_pham['gia'] ?>đ
 							</td>
 							<td>
-								<?php echo $tung_san_pham['ma_the_loai'] ?>
+								<?php 
+								$tungsp = $tung_san_pham['ma_the_loai'];
+								$sql_the_loai = "select * from the_loai where ma = $tungsp";
+								$kq_the_loai = mysqli_query($connect, $sql_the_loai);
+								$ten_kq = mysqli_fetch_assoc($kq_the_loai);
+								echo $ten_kq['ten_the_loai'];
+
+								 ?>
 							</td>
 							<td>
 								<a href="form_sua_sanpham.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
