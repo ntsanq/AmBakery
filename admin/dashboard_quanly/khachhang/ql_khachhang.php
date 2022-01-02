@@ -20,53 +20,9 @@
 		</div>
 	</header>
 	<div class="container">
-		
-		<div class="sidebar">
-			<ul class="nav__list">
-				<li class="nav__list--item">
-					<a href="../index.php">
-						<i class="fas fa-home nav__icon"></i>
-						<span>Trang chủ</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="../nhanvien/ql_nhanvien.php">
-						<i class="fas fa-male nav__icon"></i>
-						<span>Quản lý nhân viên</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="../sanpham/ql_sanpham.php">
-						<i class="fas fa-bread-slice nav__icon"></i>
-						<span>Quản lý sản phẩm</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="../ql_donhang.php">
-						<i class="fas fa-shopping-bag nav__icon"></i>
-						<span>Quản lý đơn hàng</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="../theloai/ql_theloai.php">
-						<i class="fas fa-tasks nav__icon"></i>
-						<span>Danh mục thể loại</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="ql_khachhang.php">
-						<i class="fas fa-users nav__icon"></i>
-						<span>Khách hàng</span>
-					</a>
-				</li>
-				<li class="nav__list--item">
-					<a href="../../login.php">
-						<i class="fas fa-sign-out-alt nav__icon"></i>
-						<span>Log out</span>
-					</a>
-				</li>
-			</ul>
-		</div>
+		<?php 	
+		include '../sidebar_part.php';
+		?>
 		<main >
 			<div class="main_top">
 				<div class="main_top_left">
@@ -89,68 +45,68 @@
 				?>
 				<table border="1" width="100%">
 					<thead class="thead-dark">
-					<tr>
-						<th>
-							Mã
-						</th>
-						<th>
-							Tên khách hàng
-						</th>
-						<th>
-							Giới tính
-						</th>
-						<th>
-							Ngày sinh
-						</th>
-						<th>
-							Email
-						</th>
-						<th>
-							Mật khẩu
-						</th>
-						<th>
-							Loại khách hàng
-						</th>
-						<th>
-							Sửa
-						</th>
-						<th>
-							Xóa
-						</th>
-					</tr>
+						<tr>
+							<th>
+								Mã
+							</th>
+							<th>
+								Tên khách hàng
+							</th>
+							<th>
+								Giới tính
+							</th>
+							<th>
+								Ngày sinh
+							</th>
+							<th>
+								Email
+							</th>
+							<th>
+								Mật khẩu
+							</th>
+							<th>
+								Loại khách hàng
+							</th>
+							<th>
+								Sửa
+							</th>
+							<th>
+								Xóa
+							</th>
+						</tr>
 					</thead>
 					<tbody>
-					<?php foreach ($result as $tung_khach_hang) { ?>
-						<tr>
-						<td>
-							<?php echo $tung_khach_hang['ma'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['ten'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['gioi_tinh'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['ngay_sinh'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['email'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['mat_khau'] ?>
-						</td>
-						<td>
-							<?php echo $tung_khach_hang['cap_do'] ?>
-						</td>
-						<td>
-							<a href="form_sua_khachhang.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
-						</td>
-						<td>
-							<a href="">Xóa</a>
-						</td>
-					</tr>
-					<?php } ?>
+						<?php foreach ($result as $tung_khach_hang) { ?>
+							<tr>
+								<td>
+									<?php echo $tung_khach_hang['ma'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['ten'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['gioi_tinh'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['ngay_sinh'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['email'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['mat_khau'] ?>
+								</td>
+								<td>
+									<?php echo $tung_khach_hang['cap_do'] ?>
+								</td>
+								<td>
+									<a href="form_sua_khachhang.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
+								</td>
+								<td>
+									<a href="">Xóa</a>
+								</td>
+							</tr>
+						<?php } ?>
 					</tbody>
 				</table>	
 			</div>
