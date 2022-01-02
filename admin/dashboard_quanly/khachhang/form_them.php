@@ -27,9 +27,9 @@
 				<input class="input--form" type="text" name="ten">
 				<br>
 				<label  for="gioi_tinh">Giới tính: </label>
-				<input  type="radio" name="gioi_tinh" value="nam">
+				<input  type="radio" name="gioi_tinh" value="1">
 				<label class="label--radio" for="nam">Nam </label>
-				<input  type="radio" name="gioi_tinh" value="nu">
+				<input  type="radio" name="gioi_tinh" value="0">
 				<label class="label--radio" for="nu">Nữ </label>
 
 				<br>

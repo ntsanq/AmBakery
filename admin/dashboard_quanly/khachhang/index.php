@@ -85,7 +85,13 @@
 									<?php echo $tung_khach_hang['ten'] ?>
 								</td>
 								<td>
-									<?php echo $tung_khach_hang['gioi_tinh'] ?>
+									<?php 
+										if ($tung_khach_hang['gioi_tinh'] == 1) {
+											echo "Nam";
+										}else{
+											echo "Nữ";
+										}
+									?>
 								</td>
 								<td>
 									<?php echo $tung_khach_hang['ngay_sinh'] ?>
