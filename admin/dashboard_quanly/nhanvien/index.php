@@ -90,7 +90,13 @@
 									<?php echo $tung_nhan_vien['email'] ?>
 								</td>
 								<td>
-									<?php echo $tung_nhan_vien['cap_do'] ?>
+								<?php 
+								if ($tung_nhan_vien['cap_do'] == 1) {
+									echo "Quản lý";
+								}else{
+									echo "Nhân viên";
+								}
+								?>
 								</td>
 								<td>
 									<a href="form_sua_nhanvien.php?ma=<?php echo $tung_nhan_vien['ma']?>">Sửa</a>

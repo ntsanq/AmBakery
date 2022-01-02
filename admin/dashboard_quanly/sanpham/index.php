@@ -94,7 +94,7 @@
 							</td>
 							<td>
 								<?php 
-								$tungsp = $tung_san_pham['ma_the_loai'];
+								$tungsp = $tung_san_pham['ma'];
 								$sql_the_loai = "select * from the_loai where ma = $tungsp";
 								$kq_the_loai = mysqli_query($connect, $sql_the_loai);
 								$ten_kq = mysqli_fetch_assoc($kq_the_loai);
