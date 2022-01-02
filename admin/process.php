@@ -27,7 +27,7 @@
 
 	if ($row['email'] == $email && $row['mat_khau'] == $mat_khau) {
 		// echo "Login success! Welcome ".$row['email'];
-		header("Location: dashboard_quanly/index.php");
+		header("Location: dashboard_quanly/root");
 	}else if ($row_KH['email'] == $email && $row_KH['mat_khau'] == $mat_khau) {
 		header("Location: ../khachhang/index.php");
 	}else {

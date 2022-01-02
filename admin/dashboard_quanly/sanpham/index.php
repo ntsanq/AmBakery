@@ -21,7 +21,7 @@
 	</header>
 	<div class="container">
 		<?php 	
-			include '../sidebar_part.php';
+			include '../menu.php';
 		?>
 		<main >
 			<div class="main_top">
