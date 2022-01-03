@@ -32,17 +32,17 @@ header{
 	background-color: white;
 	position: fixed;
 	top: 0;
-z-index: 1000;
+	z-index: 1000;
 }
 table{
 	border-collapse: separate;
 	border-spacing: 0 10px;
 	width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
-		text-align: center;
-		border: none;
-		padding: 0 1.5rem;
+	margin-bottom: 1rem;
+	color: #212529;
+	text-align: center;
+	border: none;
+	padding: 0 1.5rem;
 }
 thead {
 	display: table-header-group;
@@ -59,7 +59,7 @@ table .thead-dark th{
 	padding: 1.5rem 0;
 	font-size: 1.4rem;
 
-    border-bottom: 2px solid #dee2e6;
+	border-bottom: 2px solid #dee2e6;
 }
 
 /* table th, 
@@ -98,7 +98,7 @@ p.header__logo{
 .header__logo span{
 	font-size: 2.5rem;
 
-  text-align: center;
+	text-align: center;
 }
 
 
@@ -155,8 +155,8 @@ p.header__logo{
 	color: black;
 	/*text-decoration: underline;*/
 	cursor: pointer;
-  transform: scale(1.05);
-  box-shadow: 0px 5px .5rem 0px rgba(0, 0, 0, 0.39);
+	transform: scale(1.05);
+	box-shadow: 0px 5px .5rem 0px rgba(0, 0, 0, 0.39);
 }
 .container main{
 	height: 1000px;
@@ -210,8 +210,14 @@ p.header__logo{
 	justify-content: center;
 	align-items: center;
 }
-.main_content{
-	
+.main_content > .them{
+	padding: 2px;
+	border: 2px solid #474a49;
+	margin: 50px;
+	/*margin-top: 100px;*/
+	margin-left: 18px;
+	text-decoration: none;
+	color: #474a49;
 }
 
 .o_tim_kiem{
