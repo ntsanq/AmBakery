@@ -24,8 +24,8 @@
     </header>
 	<div class="container">
 		<form action="sua_process.php" method="POST">
-			<input type="hidden" name="ma" value="<?php echo $ma ?>">	
-			<div >
+			<input type="hidden" name="ma" value="<?php echo $ma ?>">
+			<div>
 				<h1>Sửa thông tin khách hàng</h1>
 				
 				<!-- <label for="ma">Mã khách hàng: </label>

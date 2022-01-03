@@ -187,6 +187,7 @@ p.header__logo{
 	padding: .5rem .5rem;
 	border-radius: 1rem;
 	border: 1px solid #ccc;
+	margin-left: 18px;
 }
 .main_top_left form button{
 	margin-left: -25px;
@@ -203,7 +204,7 @@ p.header__logo{
 .main_top_right{
 	height: 100%;
 	width: 30%;
-	background-color: yellow;
+	background-color: white;
 	float: left;
 	display: flex;
 	justify-content: center;

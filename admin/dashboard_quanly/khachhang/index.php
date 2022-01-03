@@ -36,7 +36,6 @@
 				</div>
 			</div>
 			<div class="main_content">
-				đây là trang khách hàng
 				<a href="form_them.php">Thêm khách hàng</a>
 				<?php 
 				include  '../../connect.php' ;
@@ -64,9 +63,9 @@
 							<th>
 								Mật khẩu
 							</th>
-							<th>
+							<!-- <th>
 								Loại khách hàng
-							</th>
+							</th> -->
 							<th>
 								Sửa
 							</th>
@@ -102,9 +101,9 @@
 								<td>
 									<?php echo $tung_khach_hang['mat_khau'] ?>
 								</td>
-								<td>
+								<!-- <td>
 									<?php echo $tung_khach_hang['cap_do'] ?>
-								</td>
+								</td> -->
 								<td>
 									<a href="form_sua.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
 								</td>
