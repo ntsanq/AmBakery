@@ -12,16 +12,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div id="header">
-			<a href="#" class="header__logo" >
-				<span><b>am</b>bakery</span>
-			</a>
-		</div>
-	</header>
+	<?php 
+	include '../header.php';
+	?>
 	<div class="container">
 		<?php 	
-			include '../menu.php';
+		include '../menu.php';
 		?>
 		<main >
 			<div class="main_top">
@@ -46,70 +42,70 @@
 				$result= mysqli_query($connect, $sql);
 				?>
 				<table border="1" width="100%">
-				<thead class="thead-dark">
-					<tr>
-						<th>
-							Mã
-						</th>
-						<th>
-							Tên sản phẩm
-						</th>
-						<th>
-							Mô tả
-						</th>
-						<th>
-							Ảnh
-						</th>
-						<th>
-							Giá
-						</th>
-						<th>
-							Thể loại
-						</th>
-						<th>
-							Sửa
-						</th>
-						<th>
-							Xóa
-						</th>
-					</tr>
+					<thead class="thead-dark">
+						<tr>
+							<th>
+								Mã
+							</th>
+							<th>
+								Tên sản phẩm
+							</th>
+							<th>
+								Mô tả
+							</th>
+							<th>
+								Ảnh
+							</th>
+							<th>
+								Giá
+							</th>
+							<th>
+								Thể loại
+							</th>
+							<th>
+								Sửa
+							</th>
+							<th>
+								Xóa
+							</th>
+						</tr>
 					</thead>	
 					<tbody>
-					<?php foreach ($result as $tung_san_pham  ) {?>
-						<tr>
-							<td>
-								<?php echo $tung_san_pham['ma'] ?>
-							</td>
-							<td>
-								<?php echo $tung_san_pham['ten_san_pham'] ?>
-							</td>
-							<td>
-								<?php echo $tung_san_pham['mo_ta'] ?>
-							</td>
-							<td>
-								<img src="<?php echo $tung_san_pham['anh'] ?>" height="100px">
-							</td>
-							<td>
-								<?php echo $tung_san_pham['gia'] ?>đ
-							</td>
-							<td>
-								<?php 
-								$tungsp = $tung_san_pham['ma'];
-								$sql_the_loai = "select * from the_loai where ma = $tungsp";
-								$kq_the_loai = mysqli_query($connect, $sql_the_loai);
-								$ten_kq = mysqli_fetch_assoc($kq_the_loai);
-								echo $ten_kq['ten_the_loai'];
+						<?php foreach ($result as $tung_san_pham  ) {?>
+							<tr>
+								<td>
+									<?php echo $tung_san_pham['ma'] ?>
+								</td>
+								<td>
+									<?php echo $tung_san_pham['ten_san_pham'] ?>
+								</td>
+								<td>
+									<?php echo $tung_san_pham['mo_ta'] ?>
+								</td>
+								<td>
+									<img src="<?php echo $tung_san_pham['anh'] ?>" height="100px">
+								</td>
+								<td>
+									<?php echo $tung_san_pham['gia'] ?>đ
+								</td>
+								<td>
+									<?php 
+									$tungsp = $tung_san_pham['ma'];
+									$sql_the_loai = "select * from the_loai where ma = $tungsp";
+									$kq_the_loai = mysqli_query($connect, $sql_the_loai);
+									$ten_kq = mysqli_fetch_assoc($kq_the_loai);
+									echo $ten_kq['ten_the_loai'];
 
-								 ?>
-							</td>
-							<td>
-								<a href="form_sua.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
-							</td>
-							<td>
-								<a href="xoa_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
-							</td>
-						</tr>
-					<?php } ?>
+									?>
+								</td>
+								<td>
+									<a href="form_sua.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
+								</td>
+								<td>
+									<a href="xoa_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+								</td>
+							</tr>
+						<?php } ?>
 					</tbody>
 				</table>
 

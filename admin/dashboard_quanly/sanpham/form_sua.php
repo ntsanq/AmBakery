@@ -9,19 +9,15 @@
 </head>
 <body>
 	<?php 
-		$ma = $_GET['ma'];
-		include  '../../connect.php' ;
-		$sql = "select * from san_pham where ma = $ma";
-		$result= mysqli_query($connect, $sql);
-		$san_pham = mysqli_fetch_array($result);
+	$ma = $_GET['ma'];
+	include  '../../connect.php' ;
+	$sql = "select * from san_pham where ma = $ma";
+	$result= mysqli_query($connect, $sql);
+	$san_pham = mysqli_fetch_array($result);
 	?>
-	<header>
-		<div id="header">
-			<a href="#" class="header__logo" >
-				<span><b>am</b>bakery</span>
-			</a>
-		</div>
-	</header>
+	<?php 
+	include '../header.php';
+	?>
 	<div class="container">
 		<!-- Đưa mã sản phẩm theo nhưng ẩn -->
 		

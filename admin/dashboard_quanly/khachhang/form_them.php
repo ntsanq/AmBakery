@@ -8,13 +8,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
 <body>
-<header>
-        <div id="header">
-            <a href="#" class="header__logo" >
-                <span><b>am</b>bakery</span>
-            </a>
-        </div>
-    </header>
+	<?php 
+	include '../header.php';
+	?>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 			<div >
@@ -42,7 +38,7 @@
 				<label for="mat_khau">Mật khẩu	: </label>
 				<input class="input--form" type="password" name="mat_khau">
 				<br>
-				 <input type="submit" id="btn" value="Đăng ký">
+				<input type="submit" id="btn" value="Đăng ký">
 			</div>
 		</form>
 	</div>

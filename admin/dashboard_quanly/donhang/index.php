@@ -12,23 +12,19 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div id="header">
-			<a href="#" class="header__logo" >
-				<span><b>am</b>bakery</span>
-			</a>
-		</div>
-	</header>
-	<div class="container">
-	<?php 	
-		include '../menu.php';
+	<?php 
+		include '../header.php';
 	 ?>
+	<div class="container">
+		<?php 	
+		include '../menu.php';
+		?>
 		<main >
 			<div class="main_top">
 				<div class="main_top_left">
 					<form>
-					<input type="search" placeholder="Tìm kiếm..." name="tim_kiem">
-					<button type="submit"><i class="fa fa-search"></i></button>
+						<input type="search" placeholder="Tìm kiếm..." name="tim_kiem">
+						<button type="submit"><i class="fa fa-search"></i></button>
 					</form>
 				</div>
 				<div class="main_top_right">

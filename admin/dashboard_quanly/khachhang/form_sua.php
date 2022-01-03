@@ -15,13 +15,9 @@
 		$result= mysqli_query($connect, $sql);
 		$khach_hang = mysqli_fetch_array($result);
 	?>
-<header>
-        <div id="header">
-            <a href="#" class="header__logo" >
-                <span><b>am</b>bakery</span>
-            </a>
-        </div>
-    </header>
+	<?php 
+		include '../header.php';
+	 ?>
 	<div class="container">
 		<form action="sua_process.php" method="POST">
 			<input type="hidden" name="ma" value="<?php echo $ma ?>">

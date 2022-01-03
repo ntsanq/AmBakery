@@ -8,18 +8,14 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
 <body>
-<header>
-        <div id="header">
-            <a href="#" class="header__logo" >
-                <span><b>am</b>bakery</span>
-            </a>
-        </div>
-    </header>
+	<?php 
+	include '../header.php';
+	?>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 			<div class="form__heading">
 				<h1>Đăng ký nhân viên mới</h1>
-				</div>
+			</div>
 				<!-- <label for="ma">Mã nhân viên: </label>
 				<input type="text" name="ma">
 				<br> -->
@@ -45,8 +41,8 @@
 				<label class="label--radio" for="quan_li">Quản lí </label>
 				<br>
 				<input  type="submit" id="btn" value="Đăng ký">
-			
-		</form>
-	</div>
-</body>
-</html>
+				
+			</form>
+		</div>
+	</body>
+	</html>

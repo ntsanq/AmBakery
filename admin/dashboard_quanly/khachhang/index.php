@@ -12,13 +12,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div id="header">
-			<a href="#" class="header__logo" >
-				<span><b>am</b>bakery</span>
-			</a>
-		</div>
-	</header>
+	<?php 
+		include '../header.php';
+	 ?>
 	<div class="container">
 		<?php 	
 		include '../menu.php';

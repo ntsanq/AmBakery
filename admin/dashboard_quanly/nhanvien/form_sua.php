@@ -8,13 +8,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<div id="header">
-			<a href="#" class="header__logo" >
-				<span><b>am</b>bakery</span>
-			</a>
-		</div>
-	</header>
+	<?php 
+		include '../header.php';
+	 ?>
 	<?php 
 		$ma = $_GET['ma'];
 		include  '../../connect.php' ;

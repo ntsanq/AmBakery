@@ -8,21 +8,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
 <body>
-<?php 
+	<?php 
 		$ma = $_GET['ma'];
 		include  '../../connect.php' ;
 		$sql = "select * from the_loai where ma = $ma";
-		// die($sql);
+			// die($sql);
 		$result= mysqli_query($connect, $sql);
 		$the_loai = mysqli_fetch_array($result);
-?>
-<header>
-        <div id="header">
-            <a href="#" class="header__logo" >
-                <span><b>am</b>bakery</span>
-            </a>
-        </div>
-    </header>
+	?>
+	<?php 
+		include '../header.php';
+	?>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 
