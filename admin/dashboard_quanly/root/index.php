@@ -36,7 +36,7 @@
 					<i class="fas fa-user-alt"></i>
 				</div>
 			</div>	
-			<div class="main_content">
+			<div class="main_content" style="background-image: url('../image/bg.jpg')">
 				đây là trang chủ
 			</div>
 		</main>

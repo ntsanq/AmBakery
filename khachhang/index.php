@@ -45,7 +45,7 @@
         <span>0</span>
       </div>
       <div class="vertical-line"></div>
-      <a href="../admin/login.php" class="header__login">
+      <a href="login.php" class="header__login">
         <span>Log in</span>
         <i class="far fa-user"></i>
       </a>
