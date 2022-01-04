@@ -5,29 +5,21 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Quản lý nhân viên</title>
 	<?php 
-		include '../thuvien.php';
-	 ?>
+	include '../thuvien.php';
+	?>
 </head>
 <body>
 	<?php 
-		include '../header.php';
-	 ?>
+	include '../header.php';
+	?>
 	<div class="container">
 		<?php 	
-			include '../menu.php';
+		include '../menu.php';
 		?>
 		<main >
-			<div class="main_top">
-				<div class="main_top_left">
-					<form>
-						<input type="search" placeholder="Tìm kiếm..." name="tim_kiem">
-						<button type="submit"><i class="fa fa-search"></i></button>
-					</form>
-				</div>
-				<div class="main_top_right">
-					admin's name
-				</div>
-			</div>
+			<?php 	
+			include '../main_top_div.php';
+			?>
 			<div class="main_content">
 				<a href="form_them.php" class="them">
 					<i class="fa fa-plus"></i>
@@ -86,13 +78,13 @@
 									<?php echo $tung_nhan_vien['email'] ?>
 								</td>
 								<td>
-								<?php 
-								if ($tung_nhan_vien['cap_do'] == 1) {
-									echo "Quản lý";
-								}else{
-									echo "Nhân viên";
-								}
-								?>
+									<?php 
+									if ($tung_nhan_vien['cap_do'] == 1) {
+										echo "Quản lý";
+									}else{
+										echo "Nhân viên";
+									}
+									?>
 								</td>
 								<td>
 									<a href="form_sua.php?ma=<?php echo $tung_nhan_vien['ma']?>">Sửa</a>
