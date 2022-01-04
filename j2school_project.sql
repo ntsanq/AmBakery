@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 24, 2021 at 10:44 AM
+-- Generation Time: Jan 04, 2022 at 07:59 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -88,7 +88,7 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`) VALUES
-(16, 'Nguyễn Thanh Sang', 0, '2011-12-13', 'sangkh@gmail.com', '123', 1),
+(16, 'Nguyễn Thanh Sang', 1, '2011-12-13', 'sangkh@gmail.com', '123', 1),
 (18, 'Huỳnh Thị Mai', 0, '2014-10-08', 'chomai@gg.com', '123', 1);
 
 -- --------------------------------------------------------
@@ -112,10 +112,11 @@ CREATE TABLE `nhan_vien` (
 --
 
 INSERT INTO `nhan_vien` (`ma`, `ten`, `dia_chi`, `sdt`, `email`, `mat_khau`, `cap_do`) VALUES
-(7, 'Nguyễn Thanh Sang', '123D Mậu Thân, An Hòa, Cần Thơ', '0966979243', 'sang@gmail.com', '123', 0),
-(8, 'Phùng Thanh Độ', 'Hà Lội Thân Yêu', '0954332432', 'dogamingpro@gg.com', '123', 1),
+(7, 'Nguyễn Thanh Sang', 'Cần Thơ', '0966979243', 'sang@gmail.com', '123', 0),
+(8, 'Phùng Thanh Độ', 'Hà Lội', '0954332432', 'dogamingpro@gg.com', '123', 1),
 (11, 'Nguyễn Nhật Linh', 'Long An', '0934293422', 'linhlinhlinh@gg.com', '123', 0),
-(12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1);
+(12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 0),
+(14, 'Bích Tuyền', 'Vị Thanh', '01232131231', 'tt@gg.com', '123', 0);
 
 -- --------------------------------------------------------
 
@@ -137,8 +138,12 @@ CREATE TABLE `san_pham` (
 --
 
 INSERT INTO `san_pham` (`ma`, `ten_san_pham`, `mo_ta`, `anh`, `gia`, `ma_the_loai`) VALUES
-(1, 'Doner', 'hay còn gọi là bánh mỳ Thổ Nhĩ Kỳ hay bánh mì tam giác là một thể loại bánh mỳ có nguồn gốc từ Thổ Nhĩ Kỳ. Món này phát triển rất mạnh tại Đức rồi lan rộng ra các châu lục khác và có mặt tại Việt Nam và rất được người Việt ưa chuộng. ', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/D%C3%B6ner_kebab.jpg', 6969696, 1),
-(2, 'Starbuck fa ke', 'Đây là 1 ly Starbuck nhưng không phải là Starbuck', 'https://images.foody.vn/res/g5/49849/s/201891994310-mf.jpg', 900900, 2);
+(1, 'Doner', 'Là loại bánh mỳ có nguồn gốc từ Thổ Nhĩ Kỳ. Món này phát triển rất mạnh tại Đức rồi lan rộng ra các châu lục khác và có mặt tại Việt Nam và rất được người Việt ưa chuộng. ', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/D%C3%B6ner_kebab.jpg', 600000, 1),
+(2, 'Starbuck fa ke', 'Đây là 1 ly Starbuck nhưng không phải là Starbuck', 'https://images.foody.vn/res/g5/49849/s/201891994310-mf.jpg', 900900, 2),
+(5, 'Bánh cua phô mai', 'Bánh mì cua phô mai mềm xốp, thơm phức, có vị mằn mặn, beo béo đặc trưng của phô mai. Món bánh này không những thơm ngon, bổ dưỡng.', 'https://i.ytimg.com/vi/iFIbFH3gucM/maxresdefault.jpg', 500000, 1),
+(6, 'Bánh bông lan sữa chua', ' Bánh bông lan sữa chua hấp được làm theo cách trên rất xốp mềm. Bánh có vị chua ngọt vô cùng ngon miệng', 'https://cdn.tgdd.vn/2020/11/CookProduct/thumb-1200x676-2.jpg', 9000, 1),
+(9, 'Mía ghim', 'Dễ gây đau bụng cho người có tiêu hóa yếu', 'http://s1.storage.5giay.vn/image/2014/12/20141222_293e22403c8c51dc00469f6967a47d53_1419242266.jpg', 2000, 4),
+(10, 'Phin sữa đá', 'Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!', 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png', 39000, 2);
 
 -- --------------------------------------------------------
 
@@ -157,7 +162,8 @@ CREATE TABLE `the_loai` (
 
 INSERT INTO `the_loai` (`ma`, `ten_the_loai`) VALUES
 (1, 'Thức ăn'),
-(2, 'Nước uống');
+(2, 'Nước uống'),
+(4, 'Trái cây');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +213,8 @@ ALTER TABLE `san_pham`
 -- Indexes for table `the_loai`
 --
 ALTER TABLE `the_loai`
-  ADD PRIMARY KEY (`ma`);
+  ADD PRIMARY KEY (`ma`),
+  ADD UNIQUE KEY `ma` (`ma`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -223,25 +230,25 @@ ALTER TABLE `hoa_don`
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
 --
 ALTER TABLE `the_loai`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

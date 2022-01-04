@@ -6,3 +6,5 @@ if (mysqli_connect_errno()){
 }
 
 mysqli_set_charset($connect,"utf8");
+
+// mysqli_close($connect);

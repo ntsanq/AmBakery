@@ -8,12 +8,17 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>
 <body>
+
+
 	<?php 
 	$ma = $_GET['ma'];
 	include  '../../connect.php' ;
 	$sql = "select * from san_pham where ma = $ma";
 	$result= mysqli_query($connect, $sql);
 	$san_pham = mysqli_fetch_array($result);
+
+	$sql_the_loai = "select * from the_loai";
+	$result_the_loai= mysqli_query($connect, $sql_the_loai);
 	?>
 	<?php 
 	include '../header.php';
@@ -42,8 +47,22 @@
 				<label for="gia">Giá: </label>
 				<input class="input--form" type="text" name="gia" value="<?php echo $san_pham['gia'] ?>">
 				<br>
-				<label for="ma_the_loai">Mã thể loại: </label>
-				<input class="input--form" type="text" name="ma_the_loai" value="<?php echo $san_pham['ma_the_loai'] ?>">
+				<label for="ma_the_loai">Thể loại: </label>
+
+				<?php
+				 $selected = $san_pham['ma_the_loai'];
+				?>
+				<select class="input--form" name="ma_the_loai" >
+					<?php foreach ($result_the_loai as $tung_the_loai ) {?>
+						<option <?php if ($selected == $tung_the_loai['ma']) {
+							echo "selected";
+						} ?> value="<?php echo $tung_the_loai['ma'] ?>" >
+
+							<?php echo $tung_the_loai['ten_the_loai'] ?>
+								
+						</option>
+					<?php } ?>
+				</select>
 				<br>
 				<input type="submit" id="btn" value="Hoàn tất chỉnh sửa">
 			</div>

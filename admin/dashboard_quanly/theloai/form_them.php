@@ -15,10 +15,10 @@
 		<form action="them_process.php" method="POST">
 			<div >
 				<h1>Thêm thể loại mới</h1>
-				
+				<!-- 
 				<label for="ma">Mã thể loại: </label>
 				<input class="input--form" type="text" name="ma">
-				<br>
+				<br> -->
 				<label for="ten_the_loai">Tên thể loại: </label>
 				<input class="input--form" type="text" name="ten_the_loai">
 				<br>

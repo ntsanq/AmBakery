@@ -9,6 +9,12 @@
 </head>
 <body>
 	<?php 
+	include  '../../connect.php' ;
+	$sql = "select * from the_loai";
+	$result= mysqli_query($connect, $sql);
+	?>
+
+	<?php 
 	include '../header.php';
 	?>
 	<div class="container">
@@ -31,8 +37,12 @@
 				<label for="gia">Giá: </label>
 				<input class="input--form" type="text" name="gia">
 				<br>
-				<label for="ma_the_loai">Mã thể loại: </label>
-				<input class="input--form" type="text" name="ma_the_loai">
+				<label for="ma_the_loai">Thể loại: </label>
+				<select class="input--form" name="ma_the_loai">
+					<?php foreach ($result as $tung_the_loai ) {?>
+						<option  value="<?php echo $tung_the_loai['ma'] ?>" ><?php echo $tung_the_loai['ten_the_loai'] ?></option>
+					<?php } ?>
+				</select>
 				<br>
 				<input type="submit" id="btn" value="Thêm">
 			</div>

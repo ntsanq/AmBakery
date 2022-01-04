@@ -28,12 +28,15 @@
 				<input type="text" name="ma">
 				<br> -->
 				<label for="ten">Tên khách hàng: </label>
-				<input class="input--form" type="text" name="ten" value="<?php echo $khach_hang['ten'] ?>">
+				<input class="input--form" type="text" name="ten" value="<?php echo $khach_hang['ten'] ?>"d
 				<br>
+				<?php 
+				$checked = $khach_hang['gioi_tinh'];
+				?>
 				<label  for="gioi_tinh">Giới tính: </label>
-				<input  type="radio" name="gioi_tinh" value="1">
+				<input  type="radio" name="gioi_tinh" value="1" <?php if ($checked == '1') {echo "checked";} ?>>
 				<label class="label--radio" for="nam">Nam </label>
-				<input  type="radio" name="gioi_tinh" value="0">
+				<input  type="radio" name="gioi_tinh" value="0" <?php if ($checked == '0') {echo "checked";} ?>>
 				<label class="label--radio" for="nu">Nữ </label>
 
 				<br>

@@ -43,10 +43,17 @@
 				<input class="input--form" type="password" name="mat_khau" value="<?php echo	$nhan_vien['mat_khau'] ?>">
 				<br>
 				<label for="cap_do">Là nhân viên hay là quản lí?  </label>
-				<input type="radio" name="cap_do" value="0">
-				<label class="label--radio"for="nhan_vien">Nhân viên </label>
-				<input type="radio" name="cap_do" value="1">
-				<label class="label--radio" for="quan_li">Quản lí </label>
+				<?php
+				 $selected = $nhan_vien['cap_do'];
+				?>
+				<select class="input--form" name="cap_do">
+					<option value="1" <?php if ($selected == 1) {echo "selected";} ?>>
+						Quản lý
+					</option>
+					<option value="0" <?php if ($selected == 0) {echo "selected";} ?>>
+						Nhân viên
+					</option>
+				</select>
 				<br>
 				<input  type="submit" id="btn" value="Hoàn tất chỉnh sửa">
 

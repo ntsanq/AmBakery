@@ -22,8 +22,17 @@
 			include '../main_top_div.php';
 			?>
 			
-			<div class="main_content" style="background-image: url('../image/bg.jpg')">
-				đây là trang chủ
+			<div class="main_content" >
+				<div class="bgimg">
+					<div >
+						<p>AmBakery's</p>
+					</div>
+					<div >
+						<h1>COMING SOON</h1>
+						<hr>
+						<p>... days left</p>
+					</div>
+				</div>
 			</div>
 		</main>
 	</div>

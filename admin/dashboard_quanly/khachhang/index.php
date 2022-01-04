@@ -97,7 +97,7 @@
 									<a href="form_sua.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
 								</td>
 								<td>
-									<a href="">Xóa</a>
+									<a href="xoa_process.php?ma=<?php echo $tung_khach_hang['ma'] ?> " onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
 								</td>
 							</tr>
 						<?php } ?>

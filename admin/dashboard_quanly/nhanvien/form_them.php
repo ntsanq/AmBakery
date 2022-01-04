@@ -39,6 +39,10 @@
 				<label class="label--radio"for="nhan_vien">Nhân viên </label>
 				<input type="radio" name="cap_do" value="1">
 				<label class="label--radio" for="quan_li">Quản lí </label>
+				<select class="input--form" name="cap_do">
+					<option value="1">Quản lý</option>
+					<option value="0">Nhân viên</option>
+				</select>
 				<br>
 				<input  type="submit" id="btn" value="Đăng ký">
 				
