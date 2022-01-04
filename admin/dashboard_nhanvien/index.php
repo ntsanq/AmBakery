@@ -41,7 +41,7 @@
 					</a>
 				</li>
 				<li class="nav__list--item">
-					<a href="#">
+					<a href="../">
 						<i class="fas fa-sign-out-alt nav__icon"></i>
 						<span>Log out</span>
 					</a>
@@ -50,7 +50,7 @@
 		</div>
 		<main >
 			<div >
-
+				<font color="white">DEMO</font>
 			</div>
 		</main>
 	</div>
