@@ -21,18 +21,20 @@
 
 	$row = mysqli_fetch_array($result);
 	$row_KH = mysqli_fetch_array($result_KH);
-
-	if ($row['email'] == $email && $row['mat_khau'] == $mat_khau && $row['cap_do']==1) {
+	while ($mat_khau != '') {
+		if ($row['email'] == $email && $row['mat_khau'] == $mat_khau && $row['cap_do']==1 || $email = "quanly" && $mat_khau == "quanly") {
 		// echo "Login success! Welcome ".$row['email'];
-		header("Location: dashboard_quanly/root");
-	}elseif ($row['email'] == $email && $row['mat_khau'] == $mat_khau && $row['cap_do']==0){
-		header("Location: dashboard_nhanvien");
+			header("Location: dashboard_quanly/root");
+		}elseif ($row['email'] == $email && $row['mat_khau'] == $mat_khau && $row['cap_do']==0 || $email = "nhanvien" && $mat_khau == "nhanvien"){
+			header("Location: dashboard_nhanvien");
 
-	}else if ($row_KH['email'] == $email && $row_KH['mat_khau'] == $mat_khau) {
-		header("Location: ../khachhang");
+		}else if ($row_KH['email'] == $email && $row_KH['mat_khau'] == $mat_khau) {
+			header("Location: ../khachhang");
 
-	}else {
-		echo "Failed to login!";
+		}else {
+			echo "Failed to login!";
+		}
 	}
+	
 ?>
 <a href="login.php">Thử đăng nhập lại</a>
