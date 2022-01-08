@@ -38,7 +38,7 @@
 			</a>
 		</li>
 		<li class="nav__list--item">
-			<a href="../../">
+			<a href="../logout_process.php">
 				<i class="fas fa-sign-out-alt nav__icon"></i>
 				<span>Log out</span>
 			</a>

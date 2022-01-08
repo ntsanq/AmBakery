@@ -1,3 +1,39 @@
+<?php 
+session_start();
+
+
+
+if (isset($_COOKIE['ghi_nho'])) {
+    // if ($_COOKIE['ghi_nho'] == $row ['ma']) {
+    //    header('location: dashboard_quanly');
+    //    echo "bạn đã đăng nhập bằng nick quản lý";
+    // }else if ($_COOKIE['ghi_nho'] == $row_nv['ma']) {
+    //    header('location: dashboard_nhanvien');
+    //    echo "bạn đã đăng nhập bằng nick nhan_vien";
+    // }
+    // exit;
+    
+    // $ma = $_COOKIE['ghi_nho'];
+    // require 'connect.php';
+    // $sql = "select * from nhan_vien";
+    // $result = mysqli_query($connect, $sql);
+    // $row = mysqli_fetch_array($result);
+
+    // $_SESSION['ma'] = $row['ma'];
+    // $_SESSION['ten'] = $row['ten'];
+    // $_SESSION['cap_do'] = $row['cap_do'];
+
+}
+if (isset($_SESSION['ma'])) {
+    
+    //     die($_SESSION['cap_do']);
+    // if ($_SESSION['cap_do'] ==1 ) {
+    //     header('location:dashboard_quanly/root');
+    // }elseif ($_SESSION['cap_do'] ==0) {
+    //     header('location:dashboard_nhanvien');
+    // }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head >
@@ -33,6 +69,10 @@
             <p>
                 <label for="mat_khau" >Mật khẩu:</label>
                 <input type="password" name="mat_khau" id="mat_khau" style=" margin-left: 5px;">
+            </p>
+            <p>
+                <input type="checkbox" name="ghi_nho" >
+                <label for="ghi_nho"> Ghi nhớ tôi</label>
             </p>
             <p>
                 <input type="submit" id="btn" value="Đăng nhập" >

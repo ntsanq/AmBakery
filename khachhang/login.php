@@ -25,7 +25,7 @@
         </p> -->
         <p id="login">LOGIN</p>        
 
-        <form action="process.php" method="POST">
+        <form action="login_process.php" method="POST">
             <p>
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email" style=" margin-left: 30px;" >
@@ -35,9 +35,13 @@
                 <input type="password" name="mat_khau" id="mat_khau" style=" margin-left: 5px;">
             </p>
             <p>
+                <input type="checkbox" name="ghi_nho" >
+                <label for="ghi_nho"> Ghi nhớ tôi</label>
+            </p>
+            <p>
                 <input type="submit" id="btn" value="Đăng nhập" >
             </p>
-            <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Đăng ký khách hàng mới</a>
+            <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Bạn chưa có tài khoản?</a>
         </form>
     </div>
 </body>
