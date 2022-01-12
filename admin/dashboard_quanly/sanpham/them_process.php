@@ -14,5 +14,5 @@
 
 		echo "Bạn đã thêm sản phẩm $ten_san_pham thành công!";
 		mysqli_close($connect);
+		header("Location: index.php");
 ?>
-<a href="index.php">Go back<<</a>

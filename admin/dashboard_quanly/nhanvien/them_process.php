@@ -14,5 +14,5 @@
 
 		echo "Bạn đã đăng ký cho nhân viên $ten thành công!";
 		mysqli_close($connect);
+		header("Location: index.php");
 ?>
-<a href="index.php">Go back<<</a>

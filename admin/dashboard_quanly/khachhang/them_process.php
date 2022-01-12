@@ -14,5 +14,5 @@
 		// die($sql);
 		echo "Bạn đã thêm khách hàng $ten thành công!";
 		mysqli_close($connect);
+		header("Location: index.php");
 ?>
-<a href="index.php">Go back<<</a>

@@ -16,6 +16,11 @@
         </div>
     </header>
 	<div class="container">
+		<?php 
+		if (isset($_GET['error'])) {
+			echo $_GET['error'];
+		}
+		 ?>
 		<form action="signup_process.php" method="POST">
 			<div >
 				<h1>Đăng ký khách hàng mới</h1>

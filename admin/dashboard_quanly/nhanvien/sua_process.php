@@ -23,5 +23,5 @@
 
 		echo "Bạn đã sửa thông tin nhân viên $ten thành công!";
 		mysqli_close($connect);
+		header("Location: index.php");
 ?>
-<a href="index.php">Go back<<</a>

@@ -10,5 +10,5 @@
 
 		echo "Bạn đã thêm thể loại $ten_the_loai thành công!";
 		mysqli_close($connect);
+		header("Location: index.php");
 ?>
-<a href="index.php">Go back<<</a>
