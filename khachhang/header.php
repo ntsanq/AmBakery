@@ -1,3 +1,4 @@
+
 <header>
     <div class="header__left">
       <div class="header__search">
@@ -26,8 +27,22 @@
       </div>
       <div class="vertical-line"></div>
       <a href="login.php" class="header__login">
-        <span>Log in</span>
+        
+        <span><?php 
+        if (isset($_SESSION['ten'])) {
+          echo $_SESSION['ten'];
+        }else{
+          echo "Log in";
+        }
+         ?></span>
+        
         <i class="far fa-user"></i>
       </a>
+      <?php 
+      // if (isset($_SESSION['ten'])) {
+      //   echo "<a href="logout.php">Log out</a>";
+      // }
+       ?>
+       <a href="logout.php">Log out</a>
     </div>
     </header>

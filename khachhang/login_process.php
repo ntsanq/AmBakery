@@ -16,15 +16,16 @@
 		$ghi_nho = false;
 	}
 
-	$sql_KH = "select * from khach_hang WHERE email = '$email' and mat_khau = '$mat_khau' ";
+	$sql = "select * from khach_hang WHERE email = '$email' and mat_khau = '$mat_khau' ";
 	
-	$result_KH = mysqli_query($connect, $sql_KH)
+	$result = mysqli_query($connect, $sql)
 		or die("Fail to query database ".mysqli_error());
 
-	$row_KH = mysqli_fetch_array($result_KH);
-		if ($row_KH['email'] == $email && $row_KH['mat_khau'] == $mat_khau) {
-			// $_SESSION['ma'] = row_KH('ma');
-			header("Location: trangkh.php");
+	$row = mysqli_fetch_array($result); 
+		if ($row['email'] == $email && $row['mat_khau'] == $mat_khau) {
+			session_start();
+			$_SESSION['ten'] = $row['ten'];
+			header("Location: index.php");
 		}else{
 			echo "Failed to log in";
 		}

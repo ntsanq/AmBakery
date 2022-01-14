@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +18,12 @@
 <body>
   <?php 
   include  'connect.php' ;
-  $sql = "select * from san_pham";
-  $result = mysqli_query($connect, $sql);
   
-  // $sql_the_loai = "select * from san_pham";
-  // $result_the_loai = mysqli_query($connect, $sql_the_loai);
+  
+  $sql_the_loai = "select * from the_loai";
+  $result_the_loai = mysqli_query($connect, $sql_the_loai);
   ?>
-  
+
   <?php 
   include 'header.php';
   ?>
@@ -29,189 +32,51 @@
     <div class="banner">
       <img src="img/banner-1.jpg" alt="Pain perdu">
     </div>
-
     <main>
-      <div class="product">
-        <h2 class="product__heading">Popular</h2>
-        <div class="product_category">
+      <?php foreach ($result_the_loai as $tung_the_loai) {?>
+        <div class="product">
+          <h2 class="product__heading"><?php echo $tung_the_loai['ten_the_loai'] ?></h2>
+          <div class="product_category">
+            <!-------------------- card--------------->
+            <?php 
+            $ma=$tung_the_loai['ma'];
+            $sql_san_pham = "select * from san_pham where ma_the_loai = '$ma'";
+            $result_san_pham = mysqli_query($connect, $sql_san_pham);
+            ?>
+            <?php foreach ($result_san_pham as $tung_san_pham) {?>
+              <div class="product__card">
+                <div class="product__card--body">
+                  <div class="product__photo">
+                    <a href="#">
+                      <img src="<?php echo $tung_san_pham['anh'] ?>" alt="">
+                    </a>
+                  </div>
+                  <div class="product__info">
+                    <div class="product__info--text">
+                      <div class="group">
+                        <a href="#"><?php echo $tung_san_pham['mo_ta'] ?></a>
+                      </div>
+                      <h2>
+                        <a href=""><?php echo $tung_san_pham['ten_san_pham'] ?></a>
+                      </h2>
+                      <div class="price">
+                        <span><?php echo $tung_san_pham['gia'] ?></span>
 
-          <!------------------------ card in Popular------------------------------>
-          <div class="product__card">
-            <div class="product__card--body">
-              <div class="product__photo">
-                <a href="#">
-                  <img src="img/product-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="product__info">
-                <div class="product__info--text">
-                  <div class="group">
-                    <a href="#">Sweet-breads</a>
-                  </div>
-                  <h2>
-                    <a href="">ABC</a>
-                  </h2>
-                  <div class="price">
-                    <span>$15</span>
-                  </div>
-                </div>
-                <div class="product__cart">
-                  <button class="product__cart--btn">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="product">
-        <h2 class="product__heading">Breads</h2>
-        <div class="product_category">
-          <div class="product__card">
-            <div class="product__card--body">
-              <div class="product__photo">
-                <a href="#">
-                  <img src="img/product-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="product__info">
-                <div class="product__info--text">
-                  <div class="group">
-                    <a href="#">Sweet-breads</a>
-                  </div>
-                  <h2>
-                    <a href="">ABC</a>
-                  </h2>
-                  <div class="price">
-                    <span>$15</span>
-
-                  </div>
-                </div>
-                <div class="product__cart">
-                  <button class="product__cart--btn">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__card">
-            <div class="product__card--body">
-              <div class="product__photo">
-                <a href="#">
-                  <img src="img/product-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="product__info">
-                <div class="product__info--text">
-                  <div class="group">
-                    <a href="#">Sweet-breads</a>
-                  </div>
-                  <h2>
-                    <a href="">ABC</a>
-                  </h2>
-                  <div class="price">
-                    <span>$15</span>
-
-                  </div>
-                </div>
-                <div class="product__cart">
-                  <button class="product__cart--btn">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__card">
-            <div class="product__card--body">
-              <div class="product__photo">
-                <a href="#">
-                  <img src="img/product-1.jpg" alt=""> 
-                </a>
-              </div>
-              <div class="product__info">
-                <div class="product__info--text">
-                  <div class="group">
-                    <a href="#">Sweet-breads</a>
-                  </div>
-                  <h2>
-                    <a href="">ABC</a>
-                  </h2>
-                  <div class="price">
-                    <span>$15</span>
-
-                  </div>
-                </div>
-                <div class="product__cart">
-                  <button class="product__cart--btn">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__card">
-            <div class="product__card--body">
-              <div class="product__photo">
-                <a href="#">
-                  <img src="img/product-1.jpg" alt="">
-                </a>
-              </div>
-              <div class="product__info">
-                <div class="product__info--text">
-                  <div class="group">
-                    <a href="#">Sweet-breads</a>
-                  </div>
-                  <h2>
-                    <a href="">ABC</a>
-                  </h2>
-                  <div class="price">
-                    <span>$15</span>
-
-                  </div>
-                </div>
-                <div class="product__cart">
-                  <button class="product__cart--btn">Add to cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <!-- ------------------------------------------------------------------------ -->
-        <h2 class="product__heading">Drinks</h2>
-        <div class="product_category">
-
-          <?php foreach ($result as $tung_san_pham) {?>
-            <div class="product__card">
-              <div class="product__card--body">
-                <div class="product__photo">
-                  <a href="#">
-                    <img src="<?php echo $tung_san_pham['anh'] ?>" alt="">
-                  </a>
-                </div>
-                <div class="product__info">
-                  <div class="product__info--text">
-                    <div class="group">
-                      <a href="#"><?php echo $tung_san_pham['mo_ta'] ?></a>
+                      </div>
                     </div>
-                    <h2>
-                      <a href=""><?php echo $tung_san_pham['ten_san_pham'] ?></a>
-                    </h2>
-                    <div class="price">
-                      <span><?php echo $tung_san_pham['gia'] ?></span>
-
+                    <div class="product__cart">
+                      <button class="product__cart--btn">Add to cart</button>
                     </div>
                   </div>
-                  <div class="product__cart">
-                    <button class="product__cart--btn">Add to cart</button>
-                  </div>
                 </div>
               </div>
-          </div>
             <?php } ?>
-
-        </div>
+          </div>
+        <?php } ?>
       </div>
     </main>
   </div>
-
+  
   <?php 
   include 'footer.php';
   ?>
