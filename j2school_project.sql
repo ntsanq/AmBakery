@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2022 at 07:42 AM
+-- Generation Time: Jan 14, 2022 at 10:35 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -90,7 +90,8 @@ CREATE TABLE `khach_hang` (
 INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`) VALUES
 (16, 'Nguyễn Thanh Sang', 1, '2011-12-13', 'sangkh@gmail.com', '123', 1),
 (18, 'Huỳnh Thị Mai', 0, '2014-10-08', 'chomai@gg.com', '123', 1),
-(20, '', 0, '0000-00-00', 'khachhang', '123', 1);
+(20, 'Khách hàng', 0, '0000-00-00', 'khachhang', '123', 1),
+(21, 'Vendy Võ', 0, '2000-08-06', 'ven@gg.com', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -114,10 +115,10 @@ CREATE TABLE `nhan_vien` (
 
 INSERT INTO `nhan_vien` (`ma`, `ten`, `dia_chi`, `sdt`, `email`, `mat_khau`, `cap_do`) VALUES
 (7, 'Nguyễn Thanh Sang', 'Cần Thơ', '0966979243', 'sang@gmail.com', '123', 0),
-(8, 'Phùng Thanh Độ', 'Hà Lội', '0954332432', 'dogamingpro@gg.com', '123', 1),
+(8, 'Lươn Thanh Độ', 'Hà Lội', '0954332432', 'dogamingpro@gg.com', '123', 1),
 (12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1),
-(15, '', '', '', 'quanly', '123', 1),
-(16, '', '', '', 'nhanvien', '123', 0);
+(15, 'Quản lý', '', '', 'quanly', '123', 1),
+(16, 'Nhân viên', '', '', 'nhanvien', '123', 0);
 
 -- --------------------------------------------------------
 
@@ -142,7 +143,12 @@ INSERT INTO `san_pham` (`ma`, `ten_san_pham`, `mo_ta`, `anh`, `gia`, `ma_the_loa
 (1, 'Doner', 'Là loại bánh mỳ có nguồn gốc từ Thổ Nhĩ Kỳ. Món này phát triển rất mạnh tại Đức rồi lan rộng ra các châu lục khác và có mặt tại Việt Nam và rất được người Việt ưa chuộng. ', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/D%C3%B6ner_kebab.jpg', 600000, 1),
 (2, 'Starbuck fa ke', 'Đây là 1 ly Starbuck nhưng không phải là Starbuck', 'https://images.foody.vn/res/g5/49849/s/201891994310-mf.jpg', 900900, 2),
 (5, 'Bánh cua phô mai', 'Bánh mì cua phô mai mềm xốp, thơm phức, có vị mằn mặn, beo béo đặc trưng của phô mai. Món bánh này không những thơm ngon, bổ dưỡng.', 'https://i.ytimg.com/vi/iFIbFH3gucM/maxresdefault.jpg', 500000, 1),
-(10, 'Phin sữa đá', 'Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!', 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png', 39000, 2);
+(10, 'Phin sữa đá', 'Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!', 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png', 39000, 2),
+(11, 'Mía ghim', 'thích hợp cho người thường xuyên bị đau bụng', 'https://phanvinh.files.wordpress.com/2013/07/mia-ghim.jpg', 100009, 4),
+(12, 'Bông lan sữa chua', 'Bánh bông lan mà nó có sữa chua thơm ngon giòn béo', 'https://cdn.tgdd.vn/2020/11/CookProduct/thumb-1200x676-2.jpg', 500, 1),
+(13, 'Bánh bắp', 'Chiếc bánh mà được làm từ bắp nhưng không phải hầu hết là bắp mà nó có chưa bắp', 'https://givralbakery.com.vn/vnt_upload/product/TeaBreak/dessert/thumbs/(443x443)_fh_bap_mieng.jpg', 100, 1),
+(14, 'Sữa chua nóng', 'Sữa đã được đem đi lên men và làm nóng lên tạo thành sữa chưa nóng cực nóng', 'https://cdn.huongnghiepaau.com/wp-content/uploads/2018/03/cee8d15e533fe0d998594b417925cd58.jpg', 99009, 2),
+(15, 'Bánh mỳ nướng quế', 'Một chiếc bánh mỳ quế mang hương vị của Pháp nhưng không phải đang ở Pháp mà nó có hương vị Pháp nhưng nó ở Việt Nam', 'https://thtranphu.edu.vn/wp-content/uploads/2021/08/banh-mi-nuong-que-kieu-phap2-600x400.jpeg', 23000, 1);
 
 -- --------------------------------------------------------
 
@@ -229,7 +235,7 @@ ALTER TABLE `hoa_don`
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
@@ -241,13 +247,13 @@ ALTER TABLE `nhan_vien`
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
 --
 ALTER TABLE `the_loai`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables
