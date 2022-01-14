@@ -1,22 +1,21 @@
-
 <header>
-    <div class="header__left">
-      <div class="header__search">
+  <div class="header__left">
+    <div class="header__search">
 
-        <input type="text">
-        <button class="btn header__search__btn">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
+      <input type="text">
+      <button class="btn header__search__btn">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
-    <div class="header__middle">
-      <a href="#" class="header__logo">
-        <!-- <img src="img/ta-logo-tamni.png" alt="TasteAtlas">         -->
-        <span><b>am</b>bakery</span>
-      </a>
-    </div>
-    
-    <div class="header__right">
+  </div>
+  <div class="header__middle">
+    <a href="#" class="header__logo">
+      <!-- <img src="img/ta-logo-tamni.png" alt="TasteAtlas">         -->
+      <span><b>am</b>bakery</span>
+    </a>
+  </div>
+
+  <div class="header__right">
 
       <!-- <a href="#" class="btn header__submit">
         <span>submit info or photo</span>
@@ -27,22 +26,22 @@
       </div>
       <div class="vertical-line"></div>
       <a href="login.php" class="header__login">
-        
-        <span><?php 
-        if (isset($_SESSION['ten'])) {
-          echo $_SESSION['ten'];
-        }else{
-          echo "Log in";
-        }
-         ?></span>
+
+        <span>
+          <?php 
+          if (isset($_SESSION['ten'])) {
+            echo $_SESSION['ten'];
+          }else{
+            echo "Log in";
+          }
+        ?>
+        </span>
         
         <i class="far fa-user"></i>
       </a>
       <?php 
-      // if (isset($_SESSION['ten'])) {
-      //   echo "<a href="logout.php">Log out</a>";
-      // }
-       ?>
-       <a href="logout.php">Log out</a>
-    </div>
-    </header>
+      if (isset($_SESSION['ten'])) {?>
+       <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
+     <?php } ?>
+   </div>
+ </header>

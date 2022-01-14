@@ -60,7 +60,7 @@ session_start();
                         <a href=""><?php echo $tung_san_pham['ten_san_pham'] ?></a>
                       </h2>
                       <div class="price">
-                        <span><?php echo $tung_san_pham['gia'] ?></span>
+                        <span><?php echo $tung_san_pham['gia'] ?>đ</span>
 
                       </div>
                     </div>
@@ -76,7 +76,7 @@ session_start();
       </div>
     </main>
   </div>
-  
+
   <?php 
   include 'footer.php';
   ?>
