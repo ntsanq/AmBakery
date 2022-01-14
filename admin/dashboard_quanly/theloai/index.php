@@ -23,7 +23,7 @@
 			include '../main_top_div.php';
 			?>
 			<div class="main_content">
-				<a href="form_them.php" class="them">
+				<a href="them_form.php" class="them">
 					<i class="fa fa-plus"></i>
 					Thêm thể loại
 				</a>
@@ -51,7 +51,7 @@
 									<?php echo $tung_the_loai['ten_the_loai'] ?>
 								</td>
 								<td>
-									<a href="form_sua.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
+									<a href="sua_form.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
 								</td>
 								<td>
 									<a href="xoa_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
