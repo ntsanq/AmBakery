@@ -1,3 +1,3 @@
 <?php
-unset($_SESSION['ma']);
+unset($_SESSION['ten']);
 header('location: ../');

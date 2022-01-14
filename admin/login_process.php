@@ -1,5 +1,4 @@
 <?php 
-	// session_start();
 	$email = $_POST['email'];
 	$mat_khau = $_POST['mat_khau'];
 	$email = stripcslashes($email);
@@ -20,9 +19,10 @@
 
 	$result = mysqli_query($connect, $sql) or die("Fail to query database " . mysqli_connect_error() );
 	if ($result->num_rows > 0) {
+		session_start();
 		$row = mysqli_fetch_array($result);
 		// $_SESSION['ma'] = $_row['ma'];
-		// $_SESSION['ten'] = $_row['ten'];
+		$_SESSION['ten'] = $row['ten'];
 		// $_SESSION['cap_do'] = $_row['cap_do'];
 		if ($row['cap_do'] == 1 ) {
 		echo "Login success! Welcome ".$row['email'];
@@ -35,8 +35,7 @@
 			header("Location: dashboard_nhanvien");
 		}
 	} else {
-		echo "Đăng nhập thất bại";
+		header('Location: index.php?error=Vui lòng đăng nhập lại!');
 	}
 	$connect ->close();
 	?>
-<a href="index.php">>>Thử đăng nhập lại</a>

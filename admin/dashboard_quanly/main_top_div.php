@@ -6,13 +6,7 @@
 		</form>
 	</div>
 	<div class="main_top_right">
-		admin's name
-					<!-- <?php  
-							// include  '../connect.php' ;
-							// $sql = "select * from nhan_vien";
-							// $ten_nv = mysqli_query($connect, $sql);
-							// echo $ten_nv['ten'];
-					?> -->
+		<?php echo $_SESSION['ten'] ?>
 		<i class="fas fa-user-alt"></i>
 	</div>
 </div>

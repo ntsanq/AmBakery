@@ -1,4 +1,3 @@
-<!-- https://stackoverflow.com/questions/36004291/how-create-base-url-of-website-if-the-menu-are-in-different-folder -->
 <div class="sidebar">
 	<ul class="nav__list">
 		<li class="nav__list--item">
