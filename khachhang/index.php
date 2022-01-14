@@ -53,11 +53,11 @@ session_start();
                   <div class="product__info">
                     <div class="product__info--text">
                       <div class="group">
-                        <a href="#"><?php echo $tung_san_pham['mo_ta'] ?></a>
-                      </div>
-                      <h2>
+                        <h2>
                         <a href=""><?php echo $tung_san_pham['ten_san_pham'] ?></a>
                       </h2>
+                        <a href="#"><?php echo $tung_san_pham['mo_ta'] ?></a>
+                      </div>
                       <div class="price">
                         <span><?php echo $tung_san_pham['gia'] ?>đ</span>
 
