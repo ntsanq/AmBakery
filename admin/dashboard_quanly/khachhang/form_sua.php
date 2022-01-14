@@ -28,7 +28,7 @@
 				<input type="text" name="ma">
 				<br> -->
 				<label for="ten">Tên khách hàng: </label>
-				<input class="input--form" type="text" name="ten" value="<?php echo $khach_hang['ten'] ?>"d
+				<input class="input--form" type="text" name="ten" value="<?php echo $khach_hang['ten'] ?>">
 				<br>
 				<?php 
 				$checked = $khach_hang['gioi_tinh'];

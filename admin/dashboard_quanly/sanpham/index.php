@@ -28,14 +28,22 @@
 					Thêm sản phẩm
 				</a>
 
-
-				<!-- ---------------------------------------------------------------------------------- -->
 				<?php 
 				include  '../../connect.php' ;
-				$sql = "select * from san_pham";
-				$result= mysqli_query($connect, $sql);
+				$sql_the_loai = "select * from the_loai";
+  				$result_the_loai = mysqli_query($connect, $sql_the_loai);
 				?>
-				<table border="1" width="100%">
+				<?php foreach ($result_the_loai as $tung_the_loai) {?>
+					
+				<h2><?php echo $tung_the_loai['ten_the_loai'] ?></h2>				
+
+				<!-- ------------TABLE---------- -->
+				<table width="100%">
+					<?php 
+		            $ma=$tung_the_loai['ma'];
+		            $sql_san_pham = "select * from san_pham where ma_the_loai = '$ma'";
+		            $result_san_pham = mysqli_query($connect, $sql_san_pham);
+		            ?>
 					<thead class="thead-dark">
 						<tr>
 							<th>
@@ -65,7 +73,7 @@
 						</tr>
 					</thead>	
 					<tbody>
-						<?php foreach ($result as $tung_san_pham  ) {?>
+						<?php foreach ($result_san_pham as $tung_san_pham  ) {?>
 							<tr>
 								<td>
 									<?php echo $tung_san_pham['ma'] ?>
@@ -101,7 +109,7 @@
 						<?php } ?>
 					</tbody>
 				</table>
-
+			<?php } ?>
 			</div>
 		</main>
 	</div>

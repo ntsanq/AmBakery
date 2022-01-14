@@ -15,8 +15,6 @@ include  '../../connect.php' ;
 		mat_khau = '$mat_khau'
 		where ma = $ma
 		";
-		die($sql);
 		mysqli_query($connect, $sql);
-		// die($sql);
 		mysqli_close($connect);
 		header("Location: index.php");

@@ -16,10 +16,9 @@ session_start();
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+  
   <?php 
   include  'connect.php' ;
-  
-  
   $sql_the_loai = "select * from the_loai";
   $result_the_loai = mysqli_query($connect, $sql_the_loai);
   ?>
