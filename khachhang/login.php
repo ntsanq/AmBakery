@@ -19,10 +19,7 @@
             <a href="../khachhang/index.php">to trang khách hàng</a>
         </div> -->
     </header>
-    <div id="frm">
-       <!--  <p href="" align="center">
-            <img src="./image/adicon.png" height="30px" >
-        </p> -->
+    <!-- <div id="frm">
         <p id="login">LOGIN</p>        
 
         <form action="login_process.php" method="POST">
@@ -43,6 +40,36 @@
             </p>
             <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Bạn chưa có tài khoản?</a>
         </form>
+    </div> -->
+
+    <div id="frm">
+        <div>
+            <div>
+                <p id="login">LOGIN</p>
+            </div>
+            <div>
+                <form action="login_process.php" method="POST">
+                    <table>
+                        <tr>
+                            <td>Email:</td>
+                            <td>
+                                <input type="text" name="email" id="email" size="23">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mật khẩu:</td>
+                            <td>
+                                <input type="text" name="email" id="email" size="23">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit" id="btn">Đăng nhập</button>
+                </form>
+            </div>
+            <div>
+                <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Bạn chưa có tài khoản?</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
