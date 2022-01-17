@@ -59,7 +59,7 @@
                         <tr>
                             <td>Mật khẩu:</td>
                             <td>
-                                <input type="text" name="email" id="email" size="23">
+                                <input type="password" name="mat_khau" id="mat_khau" size="23">
                             </td>
                         </tr>
                     </table>

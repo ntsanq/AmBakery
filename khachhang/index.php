@@ -54,9 +54,9 @@ session_start();
                     <div class="product__info--text">
                       <div class="group">
                         <h2>
-                        <a href=""><?php echo $tung_san_pham['ten_san_pham'] ?></a>
+                        <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['ten_san_pham'] ?></a>
                       </h2>
-                        <a href="#"><?php echo $tung_san_pham['mo_ta'] ?></a>
+                        <!-- <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['mo_ta'] ?></a> -->
                       </div>
                       <div class="price">
                         <span><?php echo $tung_san_pham['gia'] ?>đ</span>
