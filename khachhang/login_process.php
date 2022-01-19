@@ -24,7 +24,7 @@
 	$row = mysqli_fetch_array($result); 
 		if ($row['email'] == $email && $row['mat_khau'] == $mat_khau) {
 			session_start();
-			$_SESSION['ten'] = $row['ten'];
+			$_SESSION['ten_kh'] = $row['ten'];
 			header("Location: index.php");
 		}else{
 			echo "Failed to log in";

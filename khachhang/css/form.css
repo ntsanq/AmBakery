@@ -71,7 +71,31 @@ form .input--form{
 	background-color: #fff;
 	border-radius: 1rem;
 }
+.input--form--select{
+	width: 100%;
+	height: 29px;
+	border: none;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ccc;
+	background-color: #fff;
+	border-radius: 1rem;
+	text-align: center;
+}
+
 .input--form:focus{
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.322);
+}
+.input--form--texarea{
+	resize: none;
+	height: 110px;
+	border: none;
+	padding-bottom: 0.5rem;
+	border-bottom: solid 1px #ccc;
+	background-color: #fff;
+	border-radius: 1rem;
+}
+.input--form--texarea:focus{
 	outline: none;
 	background-color: rgba(230, 230, 230, 0.322);
 }
@@ -85,7 +109,6 @@ label{
 	display:inline-block;
 }
 
-#them_nhanvien_btn,
 #btn{
   border: 1px solid #ccc;
   border-radius: 1rem;
@@ -94,15 +117,8 @@ label{
   font-family: inherit;
   font-weight: 500;
 	width: 100%;
-<<<<<<< HEAD
-	margin-top: 20px;
-=======
-	margin-top: 1rem;
-
->>>>>>> c3c0f134fbc32c4c54c94eb306f2e38282d94980
-
+	margin-top: 12px;
 }
-#them_nhanvien_btn:hover,
 #btn:hover{
   cursor: pointer;
   transform: scale(1.05);

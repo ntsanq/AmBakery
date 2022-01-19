@@ -35,11 +35,25 @@
 				<!-- <label for="ma">Mã sản phẩm: </label>
 				<input type="text" name="ma">
 				<br> -->
+				<label for="ma_the_loai">Thể loại: </label>
+				<?php
+				 $selected = $san_pham['ma_the_loai'];
+				?>
+				<select class="input--form--select" name="ma_the_loai" >
+					<?php foreach ($result_the_loai as $tung_the_loai ) {?>
+						<option <?php if ($selected == $tung_the_loai['ma']) {
+							echo "selected";
+						} ?> value="<?php echo $tung_the_loai['ma'] ?>" >
+							<?php echo $tung_the_loai['ten_the_loai'] ?>
+						</option>
+					<?php } ?>
+				</select>
+				<br>
 				<label for="ten_san_pham">Tên sản phẩm: </label>
 				<input class="input--form" type="text" name="ten_san_pham" value="<?php echo $san_pham['ten_san_pham'] ?>">
 				<br>
 				<label for="mo_ta">Mô tả sản phẩm: </label>
-				<input class="input--form" type="text area" name="mo_ta" value="<?php echo $san_pham['mo_ta'] ?>">
+				<textarea class="input--form--texarea" name="mo_ta" rows="4" cols="50"><?php echo $san_pham['mo_ta'] ?></textarea> 
 				<br>
 				<label for="anh">Ảnh: </label>
 				<input class="input--form" type="text" name="anh" value="<?php echo $san_pham['anh'] ?>">
@@ -47,23 +61,7 @@
 				<label for="gia">Giá: </label>
 				<input class="input--form" type="text" name="gia" value="<?php echo $san_pham['gia'] ?>">
 				<br>
-				<label for="ma_the_loai">Thể loại: </label>
-
-				<?php
-				 $selected = $san_pham['ma_the_loai'];
-				?>
-				<select class="input--form" name="ma_the_loai" >
-					<?php foreach ($result_the_loai as $tung_the_loai ) {?>
-						<option <?php if ($selected == $tung_the_loai['ma']) {
-							echo "selected";
-						} ?> value="<?php echo $tung_the_loai['ma'] ?>" >
-
-							<?php echo $tung_the_loai['ten_the_loai'] ?>
-								
-						</option>
-					<?php } ?>
-				</select>
-				<br>
+				
 				<input type="submit" id="btn" value="Hoàn tất chỉnh sửa">
 			</div>
 		</form>

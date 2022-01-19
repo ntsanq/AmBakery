@@ -15,32 +15,7 @@
                 <span><b>am</b>bakery</span>
             </a>
         </div>
-      <!--   <div class="header_chuyen_KH">
-            <a href="../khachhang/index.php">to trang khách hàng</a>
-        </div> -->
     </header>
-    <!-- <div id="frm">
-        <p id="login">LOGIN</p>        
-
-        <form action="login_process.php" method="POST">
-            <p>
-                <label for="email">Email:</label>
-                <input type="text" name="email" id="email" style=" margin-left: 30px;" >
-            </p>
-            <p>
-                <label for="mat_khau" >Mật khẩu:</label>
-                <input type="password" name="mat_khau" id="mat_khau" style=" margin-left: 5px;">
-            </p>
-            <p>
-                <input type="checkbox" name="ghi_nho" >
-                <label for="ghi_nho"> Ghi nhớ tôi</label>
-            </p>
-            <p>
-                <input type="submit" id="btn" value="Đăng nhập" >
-            </p>
-            <a href="../khachhang/dangky_khachhang/signup.php" style="font-size: 15px;">>>Bạn chưa có tài khoản?</a>
-        </form>
-    </div> -->
 
     <div id="frm">
         <div>

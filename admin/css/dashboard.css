@@ -49,6 +49,7 @@ table{
     border-color: initial;
     border-image: initial;
     padding: 0px 1.5rem;
+    margin-left: -8px;
 }
 thead {
 	display: table-header-group;
@@ -67,13 +68,6 @@ table .thead-dark th{
 
 	border-bottom: 2px solid #dee2e6;
 }
-
-/* table th, 
-table td {
-	padding: .75rem;
-	vertical-align: top;
-	border-top: 1px solid #dee2e6;
-} */
 
 table tbody tr{
 	margin-bottom: 10px;
@@ -211,6 +205,9 @@ p.header__logo{
 .main_top_left form button{
 	display: inline-block;
 }
+.o_tim_kiem{
+	
+}
 .main_top_right{
 	height: 100%;
     width: 20%;
@@ -228,19 +225,23 @@ p.header__logo{
 	margin-left: 18px;
 	text-decoration: none;
 	color: #474a49;
-	
 }
+
 .main_content > .them:hover,
 .main_content > .them:focus {
     	opacity: .60;
-    	background-color: #343a40
-    	color: red;
+    	background-color: #343a40;
+    	color: white;
+}
+.main_content_the_loai {
+    margin-top: 5px;
+    margin-left: 18px;
+    text-align: center;
+    color: #343a40;
 }
 .main_content {
 	/*background-image: url("../image/bg.jpg");
 	height: 100%;
  	background-repeat: no-repeat;*/
 }
-.o_tim_kiem{
-	
-}
+

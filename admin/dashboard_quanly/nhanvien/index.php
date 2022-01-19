@@ -34,7 +34,7 @@
 				?>
 
 				<!-- -------------------------Bảng Nhân viên ---------------------->
-				<h2>Nhân viên</h2>
+				<h2 class="main_content_the_loai">Nhân viên</h2>
 				<table border="1" width="100%">
 					<?php 
 					include  '../../connect.php' ;
@@ -110,7 +110,7 @@
 					</table>
 
 					<!-- -------------------------Bảng Quản lý ---------------------->
-				<h2>Quản lý</h2>
+				<h2 class="main_content_the_loai">Quản lý</h2>
 				<table border="1" width="100%">
 					<?php 
 					include  '../../connect.php' ;

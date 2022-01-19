@@ -23,10 +23,6 @@
 			include '../main_top_div.php' 
 			?>
 			<div class="main_content">
-				<a href="them_form.php" class="them">
-					<i class="fa fa-plus"></i>
-					<span>Thêm khách hàng</span>
-				</a>
 				<?php 
 				include  '../../connect.php' ;
 				$sql = "select * from khach_hang";

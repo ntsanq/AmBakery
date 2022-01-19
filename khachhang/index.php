@@ -9,10 +9,7 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiệm bánh AmBakery</title>
-  <!-- GOOGLE FONT  -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
-  <!-- FONTAWESOME  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <?php include 'thuvien.php'; ?>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -34,7 +31,7 @@ session_start();
     <main>
       <?php foreach ($result_the_loai as $tung_the_loai) {?>
         <div class="product">
-          <h2 class="product__heading"><?php echo $tung_the_loai['ten_the_loai'] ?></h2>
+          <h1 class="product__heading"><?php echo $tung_the_loai['ten_the_loai'] ?></h1>
           <div class="product_category">
             <!-------------------- card--------------->
             <?php 
@@ -53,9 +50,9 @@ session_start();
                   <div class="product__info">
                     <div class="product__info--text">
                       <div class="group">
-                        <h2>
+                        <h3>
                         <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['ten_san_pham'] ?></a>
-                      </h2>
+                      </h3>
                         <!-- <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['mo_ta'] ?></a> -->
                       </div>
                       <div class="price">

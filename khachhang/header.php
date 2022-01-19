@@ -29,8 +29,11 @@
 
         <span>
           <?php 
-          if (isset($_SESSION['ten'])) {
-            echo $_SESSION['ten'];
+          if (isset($_SESSION['ten_kh'])) {
+             $ten = $_SESSION['ten_kh'];
+             $part = explode(' ', $ten);
+             $name_last = array_pop($part);
+             echo $name_last;
           }else{
             echo "Log in";
           }
@@ -40,7 +43,7 @@
         <i class="far fa-user"></i>
       </a>
       <?php 
-      if (isset($_SESSION['ten'])) {?>
+      if (isset($_SESSION['ten_kh'])) {?>
        <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
      <?php } ?>
    </div>

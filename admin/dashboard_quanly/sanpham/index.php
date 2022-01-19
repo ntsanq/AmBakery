@@ -35,7 +35,7 @@
 				?>
 				<?php foreach ($result_the_loai as $tung_the_loai) {?>
 					
-				<h2><?php echo $tung_the_loai['ten_the_loai'] ?></h2>				
+				<h2 class="main_content_the_loai"><?php echo $tung_the_loai['ten_the_loai'] ?></h2>				
 
 				<!-- ------------TABLE---------- -->
 				<table width="100%">
