@@ -1,5 +1,5 @@
 <?php 
-		
+		session_start();
 		include  '../connect.php' ;
 
 		// $ma= $_POST['ma'];
@@ -21,7 +21,8 @@
 		$sql = "insert into khach_hang (ten, gioi_tinh, ngay_sinh, email, mat_khau, cap_do) values ('$ten','$gioi_tinh','$ngay_sinh','$email','$mat_khau', '1')";
 		mysqli_query($connect, $sql);
 		// die($sql);
-		echo "Bạn đã thêm khách hàng $ten thành công!";
 		mysqli_close($connect);
+
+		$_SESSION['ten_kh'] = $ten;
 		header('location: ../index.php');
 ?>

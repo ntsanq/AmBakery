@@ -29,27 +29,94 @@
 				<input type="text" name="ma">
 				<br> -->
 				<label for="ten">Tên khách hàng: </label>
-				<input class="input--form" type="text" name="ten">
+				<input class="input--form" type="text" name="ten" id="ten"><span class="span_loi" id="loi_ten"></span>
 				<br>
 				<label  for="gioi_tinh">Giới tính: </label>
 				<input  type="radio" name="gioi_tinh" value="nam">
 				<label class="label--radio" for="nam">Nam </label>
 				<input  type="radio" name="gioi_tinh" value="nu">
 				<label class="label--radio" for="nu">Nữ </label>
-
+				<span class="span_loi" id="loi_gioi_tinh"></span>
 				<br>
 				<label for="ngay_sinh">Ngày sinh: </label>
-				<input class="input--form" type="date" name="ngay_sinh">
+				<input class="input--form" type="date" name="ngay_sinh" id="ngay_sinh"><span class="span_loi" id="loi_ngay_sinh" ></span>
 				<br>
 				<label for="email">Email: </label>
-				<input class="input--form" type="text" name="email">
+				<input class="input--form" type="email" name="email" id="email"><span class="span_loi" id="loi_email"></span>
 				<br>
-				<label for="mat_khau">Mật khẩu	: </label>
-				<input class="input--form" type="password" name="mat_khau">
+				<label for="mat_khau">Mật khẩu: </label>
+				<input class="input--form" type="password" name="mat_khau" id="mat_khau"><span class="span_loi" id="loi_mat_khau"></span>
 				<br>
-				 <input type="submit" id="btn" value="Đăng ký">
+				 <button type="submit" id="btn" onclick="return kiem_tra()">Đăng ký</button>
 			</div>
 		</form>
 	</div>
+
+<script type="text/javascript">
+	function kiem_tra(){
+		let kiem_tra_loi = false;
+		let ten = document.getElementById('ten').value;
+		console.log(ten);
+		if(ten.length == 0 || ten == ''){
+			document.getElementById('loi_ten').innerHTML = 'tên không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			let regex_ten = /^([A-ZÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬBCDĐEÈẺẼÉẸÊỀỂỄẾỆFGHIÌỈĨÍỊJKLMNOÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢPQRSTUÙỦŨÚỤƯỪỬỮỨỰVWXYỲỶỸÝỴ][a-zàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵ]{1,6}\s?)+$/;
+			if (regex_ten.test(ten)==false) {
+				document.getElementById('loi_ten').innerHTML = "tên không hợp lệ";
+				kiem_tra_loi= true;
+			}else{
+				document.getElementById('loi_ten').innerHTML = "";
+			}
+		}
+
+
+		let ngay_sinh = document.getElementById('ngay_sinh').value;
+		if(ngay_sinh.length === 0 ){
+			document.getElementById('loi_ngay_sinh').innerHTML = 'ngày sinh không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			document.getElementById('loi_ngay_sinh').innerHTML = "";
+		}
+
+		let mang_gioi_tinh = document.getElementsByName('gioi_tinh');
+		let kiem_tra_gioi_tinh = false;
+		for (let i = 0; i < mang_gioi_tinh.length; i++) {
+			if (mang_gioi_tinh[i].checked) {
+				kiem_tra_gioi_tinh = true;
+			}
+		}
+		if(kiem_tra_gioi_tinh == false){
+			document.getElementById('loi_gioi_tinh').innerHTML = 'giới tính không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			document.getElementById('loi_gioi_tinh').innerHTML = "";
+		}
+
+		let email = document.getElementById('email').value;
+		if(email.length === 0 ){
+			document.getElementById('loi_email').innerHTML = 'email không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			document.getElementById('loi_email').innerHTML = "";
+		}
+
+		let mat_khau = document.getElementById('mat_khau').value;
+		if(mat_khau.length === 0 ){
+			document.getElementById('loi_mat_khau').innerHTML = 'mật khẩu không được để trống';
+			kiem_tra_loi = true;
+		}else if(mat_khau.length<8){
+			document.getElementById('loi_mat_khau').innerHTML = "mật khẩu ngắn quá";
+			kiem_tra_loi = true;
+		}else{
+			document.getElementById('loi_mat_khau').innerHTML = "";
+		}
+
+		if(kiem_tra_loi){
+			return false;
+		}
+	}
+</script>
+
 </body>
 </html>
