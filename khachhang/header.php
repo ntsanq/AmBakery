@@ -46,5 +46,6 @@
       if (isset($_SESSION['ten_kh'])) {?>
        <a href="logout.php"><i class="fas fa-sign-out-alt"></i></a>
      <?php } ?>
+
    </div>
  </header>

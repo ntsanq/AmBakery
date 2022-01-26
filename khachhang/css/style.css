@@ -205,14 +205,16 @@ a{
   flex: 1 1 25%;
   padding: 3rem;
   color: #828282;
+  align-self: stretch;
 }
 .product__card--body{
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  /* justify-content: center; */
+  /* align-items: flex-start; */
   flex-direction: column;
   background-color: #fff;
   box-shadow: 0 1.3rem 2.4rem 0 rgb(0 0 0 / 5%);
+  height: 100%;
 }
 .product__photo img{
   height: 24rem;
@@ -222,12 +224,13 @@ a{
 .product__info{
 align-self: stretch;
 display: flex;
-justify-content: center;
+/* justify-content: center; */
 align-items: flex-start;
 flex-direction: column;
 gap: 1.5rem 0;
 margin: .9rem;
 position: relative;
+height: 100%;
 }
 .product__info--text{
   display: flex;
@@ -308,4 +311,60 @@ color:  #fe8777 ;
 }
 footer span{
   font-size: 1.2rem;
+}
+
+
+/////////////////////////////////*TABLE*////////////////////////
+table{
+  border-collapse: separate;
+    width: 103%;
+    margin-bottom: 1rem;
+    color: rgb(33, 37, 41);
+    text-align: center;
+    border-spacing: 0px 10px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 0px 1.5rem;
+    margin-left: -8px;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+table .thead-dark th{
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55;
+
+
+  border: none;
+  padding: 1.5rem 0;
+  font-size: 1.4rem;
+
+  border-bottom: 2px solid #dee2e6;
+}
+
+table tbody tr{
+  margin-bottom: 10px;
+  box-shadow: 0 5px 12px -12px rgb(0 0 0 / 29%);
+
+
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+table tbody th, 
+table tbody td {
+  border: none;
+  padding: 30px;
+  font-size: 14px;
+  background: #fff;
+}
+td a {
+    color: rgb(226,79,79);
 }

@@ -43,7 +43,7 @@ session_start();
               <div class="product__card">
                 <div class="product__card--body">
                   <div class="product__photo">
-                    <a href="#">
+                    <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                       <img src="<?php echo $tung_san_pham['anh'] ?>" alt="">
                     </a>
                   </div>
@@ -61,7 +61,9 @@ session_start();
                       </div>
                     </div>
                     <div class="product__cart">
-                      <button class="product__cart--btn">Add to cart</button>
+                      <a href="giohang/add_to_cart.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                        <button class="product__cart--btn">Add to cart</button>
+                      </a>
                     </div>
                   </div>
                 </div>
