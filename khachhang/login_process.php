@@ -25,6 +25,7 @@
 		if ($row['email'] == $email && $row['mat_khau'] == $mat_khau) {
 			session_start();
 			$_SESSION['ten_kh'] = $row['ten'];
+			$_SESSION['ma_kh'] = $row['ma'];
 			header("Location: index.php");
 		}else{
 			echo "Failed to log in";

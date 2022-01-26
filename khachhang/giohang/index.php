@@ -13,6 +13,7 @@
 	$cart = $_SESSION['cart'];
 
 	require '../connect.php';
+	$tong_tien = 0;
 	?>
 	<div width="100%">
 		<div width="10%" style="font-size:20px; ">
@@ -53,7 +54,11 @@
 						<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=incre" style="font-size: 25px;">+</a>
 					</td>
 					<td>
-						<?php echo  $tung_san_pham['gia']*$tung_san_pham['so_luong']?>
+						<?php 
+						$tong = $tung_san_pham['gia']*$tung_san_pham['so_luong'];
+						echo  $tong;
+						$tong_tien += $tong;
+						?>đ
 					</td>
 					<td>
 						<a href="xoa_process.php?ma=<?php echo $ma?>" onclick="if(confirm('Bạn xóa món hàng này thật à?')){}else{return false;}">Xóa
@@ -63,5 +68,30 @@
 			<?php } ?>
 		</tbody>
 	</table>
+	<p style="font-size: 20px; margin-top: 10px;">Tổng tiền hóa đơn là : <?php  echo $tong_tien?>đ</p>
+	<br>
+	<h2>ĐẶT HÀNG</h2>
+	<form method="post" action="../dathang/checkout_process.php">
+		
+		Mã khách hàng:
+		<input type="text" name="ma_kh" value="<?php echo $_SESSION['ma_kh']?>"><br>
+		Thời gian đặt:
+		<input type="text" name="thoi_gian_dat" value="<?php
+			echo date("d/m/Y");
+			echo " ";
+			echo date("h:i:sa");
+		?>
+		"><br>
+
+		Tên người nhận:
+		<input type="text" name="ten_kh" value="<?php echo $_SESSION['ten_kh']?>"><br>
+		Sđt người nhận:
+		<input type="text" name="sdt"><br>
+		Địa chỉ giao hàng:
+		<input type="text" name="dia_chi"><br>
+		Ghi chú:
+		<textarea name="ghi_chu"></textarea><br>
+		<button type="submit">Đặt hàng</button>
+	</form>
 </body>
 </html>

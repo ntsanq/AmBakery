@@ -24,6 +24,6 @@ else{
 }
 
 // echo json_encode($_SESSION['cart']);
-// header("Location: index.php");
+header("Location: index.php");
 
-echo sizeof($_SESSION['cart']);
+// echo sizeof($_SESSION['cart']);
