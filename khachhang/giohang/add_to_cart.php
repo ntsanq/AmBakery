@@ -23,5 +23,7 @@ else{
 	$_SESSION['cart'][$ma]['so_luong']++;
 }
 
+// echo json_encode($_SESSION['cart']);
+// header("Location: index.php");
 
-echo json_encode($_SESSION['cart']);
+echo sizeof($_SESSION['cart']);

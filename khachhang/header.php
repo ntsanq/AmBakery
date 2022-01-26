@@ -10,19 +10,26 @@
   </div>
   <div class="header__middle">
     <a href="#" class="header__logo">
-      <!-- <img src="img/ta-logo-tamni.png" alt="TasteAtlas">         -->
       <span><b>am</b>bakery</span>
     </a>
   </div>
 
   <div class="header__right">
-
-      <!-- <a href="#" class="btn header__submit">
-        <span>submit info or photo</span>
-      </a> -->
       <div class="header__cart">
-        <i class="fas fa-shopping-bag"></i>
-        <span>0</span>
+        <a href="giohang">
+          <i class="fas fa-shopping-bag"></i>
+          <span>
+            <?php 
+              $tong = 0;
+              $times = sizeof($_SESSION['cart']);
+              $cart = $_SESSION['cart'];
+              foreach ($cart as $ma => $tung_san_pham) {
+                $tong += $_SESSION['cart'][$ma]['so_luong'];
+              }
+              echo $tong;
+            ?>
+          </span>
+        </a>
       </div>
       <div class="vertical-line"></div>
       <a href="login.php" class="header__login">

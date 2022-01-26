@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" href="../css/style.css">
+	<?php include '../thuvien.php'; ?>
 </head>
 <body>
 	<?php  
@@ -13,7 +14,15 @@
 
 	require '../connect.php';
 	?>
-	<h1 align="center">Giỏ hàng</h1>
+	<div width="100%">
+		<div width="10%" style="font-size:20px; ">
+			<a href="../"><i class="fas fa-arrow-left"></i>
+			<span>Go back</span>
+			</a>
+		</div>
+		<div width="90%"><h1 align="center">Giỏ hàng</h1></div>
+	</div>
+	
 	<br>
 	<table border="1" width="100%">
 		<thead class="thead-dark">
