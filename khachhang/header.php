@@ -36,11 +36,17 @@
 
         <span>
           <?php 
-          if (isset($_SESSION['ten_kh'])) {
-             $ten = $_SESSION['ten_kh'];
-             $part = explode(' ', $ten);
-             $name_last = array_pop($part);
-             echo $name_last;
+          if (isset($_SESSION['ma_kh'])) {
+
+            $ma=$_SESSION['ma_kh'];
+            $sql = "select ten from khach_hang where ma = '$ma'";
+            $result=  mysqli_query($connect, $sql);
+            $row = mysqli_fetch_array($result);
+            echo $row['ten'];
+             // $ten = $_SESSION['ten_kh'];
+             // $part = explode(' ', $ten);
+             // $name_last = array_pop($part);
+             // echo $name_last;
           }else{
             echo "Log in";
           }

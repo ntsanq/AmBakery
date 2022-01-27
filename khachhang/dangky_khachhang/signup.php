@@ -28,9 +28,11 @@
 				<!-- <label for="ma">Mã khách hàng: </label>
 				<input type="text" name="ma">
 				<br> -->
+
 				<label for="ten">Tên khách hàng: </label>
 				<input class="input--form" type="text" name="ten" id="ten"><span class="span_loi" id="loi_ten"></span>
 				<br>
+
 				<label  for="gioi_tinh">Giới tính: </label>
 				<input  type="radio" name="gioi_tinh" value="nam">
 				<label class="label--radio" for="nam">Nam </label>
@@ -38,15 +40,27 @@
 				<label class="label--radio" for="nu">Nữ </label>
 				<span class="span_loi" id="loi_gioi_tinh"></span>
 				<br>
+
 				<label for="ngay_sinh">Ngày sinh: </label>
 				<input class="input--form" type="date" name="ngay_sinh" id="ngay_sinh"><span class="span_loi" id="loi_ngay_sinh" ></span>
 				<br>
+
 				<label for="email">Email: </label>
 				<input class="input--form" type="email" name="email" id="email"><span class="span_loi" id="loi_email"></span>
 				<br>
+
+				<label for="sdt">Số điện thoại: </label>
+				<input class="input--form" type="tel" name="sdt" id="sdt"><span class="span_loi" id="loi_sdt"></span>
+				<br>
+
+				<label for="dia_chi">Địa chỉ: </label>
+				<input class="input--form" type="text" name="dia_chi" id="dia_chi"><span class="span_loi" id="loi_dia_chi"></span>
+				<br>
+
 				<label for="mat_khau">Mật khẩu: </label>
 				<input class="input--form" type="password" name="mat_khau" id="mat_khau"><span class="span_loi" id="loi_mat_khau"></span>
 				<br>
+
 				 <button type="submit" id="btn" onclick="return kiem_tra()">Đăng ký</button>
 			</div>
 		</form>

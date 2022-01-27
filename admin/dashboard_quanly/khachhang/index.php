@@ -51,11 +51,8 @@ if (!isset($_SESSION['cap_do'])) {
 								Email
 							</th>
 							<th>
-								Mật khẩu
+								Sđt
 							</th>
-							<!-- <th>
-								Loại khách hàng
-							</th> -->
 							<th>
 								Sửa
 							</th>
@@ -89,7 +86,7 @@ if (!isset($_SESSION['cap_do'])) {
 									<?php echo $tung_khach_hang['email'] ?>
 								</td>
 								<td>
-									<?php echo $tung_khach_hang['mat_khau'] ?>
+									<?php echo $tung_khach_hang['sdt'] ?>
 								</td>
 								<!-- <td>
 									<?php echo $tung_khach_hang['cap_do'] ?>

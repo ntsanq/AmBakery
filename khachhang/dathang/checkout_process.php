@@ -3,9 +3,8 @@ session_start();
 
 require '../connect.php';
 
-$ma_kh = $_POST['ma_kh'];
-$thoi_gian_dat = $_POST['thoi_gian_dat'];
-$ten_kh = $_POST['ten_kh'];
+$ma = $_POST['ma'];
+$ten = $_POST['ten'];
 $sdt = $_POST['sdt'];
 $dia_chi = $_POST['dia_chi'];
 $ghi_chu = $_POST['ghi_chu'];
@@ -16,10 +15,10 @@ foreach ($cart as $tung_san_pham) {
 	$tong_tien += $tung_san_pham['gia']*$tung_san_pham['so_luong'];
 }
 
-$sql = "insert into hoa_don (ma_khach_hang, ten_nguoi_nhan, sdt_nguoi_nhan, dia_chi_giao_hang, ghi_chu, trang_thai, tong_tien) VALUES ('$ma_kh', '$ten_kh', '$sdt', '$dia_chi', '$ghi_chu', '$trang_thai', '$tong_tien')";
+$sql = "insert into hoa_don (ma_khach_hang, ten_nguoi_nhan, sdt_nguoi_nhan, dia_chi_giao_hang, ghi_chu, trang_thai, tong_tien) VALUES ('$ma', '$ten', '$sdt', '$dia_chi', '$ghi_chu', '$trang_thai', '$tong_tien')";
 mysqli_query($connect,$sql);
 
-$sql="select max(ma) from hoa_don where ma_khach_hang = '$ma_kh'";
+$sql="select max(ma) from hoa_don where ma_khach_hang = '$ma'";
 $result =mysqli_query($connect,$sql);
 $ma_hoa_don = mysqli_fetch_array($result)['max(ma)'];
 

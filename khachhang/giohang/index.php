@@ -70,28 +70,6 @@
 	</table>
 	<p style="font-size: 20px; margin-top: 10px;">Tổng tiền hóa đơn là : <?php  echo $tong_tien?>đ</p>
 	<br>
-	<h2>ĐẶT HÀNG</h2>
-	<form method="post" action="../dathang/checkout_process.php">
-		
-		Mã khách hàng:
-		<input type="text" name="ma_kh" value="<?php echo $_SESSION['ma_kh']?>"><br>
-		Thời gian đặt:
-		<input type="text" name="thoi_gian_dat" value="<?php
-			echo date("d/m/Y");
-			echo " ";
-			echo date("h:i:sa");
-		?>
-		"><br>
-
-		Tên người nhận:
-		<input type="text" name="ten_kh" value="<?php echo $_SESSION['ten_kh']?>"><br>
-		Sđt người nhận:
-		<input type="text" name="sdt"><br>
-		Địa chỉ giao hàng:
-		<input type="text" name="dia_chi"><br>
-		Ghi chú:
-		<textarea name="ghi_chu"></textarea><br>
-		<button type="submit">Đặt hàng</button>
-	</form>
+	<?php include('../dathang/form.php') ?>
 </body>
 </html>
