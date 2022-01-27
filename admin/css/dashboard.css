@@ -269,7 +269,13 @@ table tbody td {
 }
 
 .fa-minus-square {
-    color: red;
+    color: rgb(243,33,33);
+}
+.fa-minus-circle {
+    color: rgb(243,33,33);
+}
+.fa-check {
+    color: rgb(82,231,7);
 }
 /*----------------------------------------------------------------*/
 

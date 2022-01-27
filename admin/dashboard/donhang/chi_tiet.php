@@ -17,41 +17,50 @@
 	$sql = "select * FROM hoa_don_chi_tiet where ma_hoa_don = '$ma'";
 	$result = mysqli_query($connect, $sql);
 	?>
-	<h1>Mã hóa đơn: <?php echo $ma ?></h1>
+	<div width="100%">
+		<div width="10%" style="font-size:20px; ">
+			<a href="index.php"><i class="fas fa-arrow-left"></i>
+				<span>Go back</span>
+			</a>
+		</div>
+		<div width="90%"><h1 align="center">
+			Mã hóa đơn: <?php echo $ma ?>
+		</h1></div>
+	</div>
 	<table border="1" width="100%">
 		<thead class="thead-dark">
-						<tr>
-							<th>
-								Tên sản phẩm
-							</th>
-							<th></th>
-							<th>
-								Số lượng
-							</th>
-							
-						</tr>
-					</thead>
-					<tbody>
-						<?php foreach ($result as $tung_hoa_don) { ?>
-							<tr>
-								<td>
-									<?php
-									$ma_san_pham = $tung_hoa_don['ma_san_pham'];
-									$sql= "select * from san_pham where ma = '$ma_san_pham'";
-									$result = mysqli_query($connect,$sql);
-									$row= mysqli_fetch_array($result);
-									echo $row['ten_san_pham'];
-									 ?>
-								</td>
-								<td>
-									<img src="<?php echo $row['anh'] ?>" height="100px">
-								</td>
-								<td>
-									<?php echo $tung_hoa_don['so_luong'] ?>
-								</td>
-							</tr>
-						<?php } ?>
-					</tbody>
+			<tr>
+				<th>
+					Tên sản phẩm
+				</th>
+				<th></th>
+				<th>
+					Số lượng
+				</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($result as $tung_hoa_don) { ?>
+				<tr>
+					<td>
+						<?php
+						$ma_san_pham = $tung_hoa_don['ma_san_pham'];
+						$sql= "select * from san_pham where ma = '$ma_san_pham'";
+						$result = mysqli_query($connect,$sql);
+						$row= mysqli_fetch_array($result);
+						echo $row['ten_san_pham'];
+						?>
+					</td>
+					<td>
+						<img src="<?php echo $row['anh'] ?>" height="100px">
+					</td>
+					<td>
+						<?php echo $tung_hoa_don['so_luong'] ?>
+					</td>
+				</tr>
+			<?php } ?>
+		</tbody>
 	</table>	
 </body>
 </html>

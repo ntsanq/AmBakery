@@ -22,7 +22,6 @@
 			include '../main_top_div.php';
 			?>
 			<div class="main_content">
-				<h1>Danh sách hóa đơn</h1>
 
 				<?php 
 				require  '../../connect.php' ;
@@ -67,6 +66,9 @@
 							<th>
 								Duyệt
 							</th>
+							<th>
+								Hủy
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -101,6 +103,11 @@
 								<td>
 									<a href="duyet_process.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
 										<i class="fas fa-check"></i>
+									</a>
+								</td>
+								<td>
+									<a href="huy_process.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
+										<i class="fas fa-minus-circle"></i>
 									</a>
 								</td>
 							</tr>
