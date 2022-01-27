@@ -1,5 +1,5 @@
 <?php 
-	include  '../../connect.php' ;
+	require  '../../connect.php' ;
 	$ma = $_GET['ma'];
 	$sql = "delete from khach_hang where ma = $ma";
 	mysqli_query($connect, $sql);

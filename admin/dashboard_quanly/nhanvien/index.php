@@ -28,7 +28,7 @@
 				</a>
 
 				<?php 
-				include  '../../connect.php' ;
+				require  '../../connect.php' ;
 				$sql= "select cap_do from nhan_vien";
 				$result= mysqli_query($connect, $sql);
 				?>
@@ -39,7 +39,7 @@
 				<h2 class="main_content_the_loai">Quản lý</h2>
 				<table border="1" width="100%">
 					<?php 
-					include  '../../connect.php' ;
+					require  '../../connect.php' ;
 					$sql = "select * from nhan_vien where cap_do = 1 ";
 					$result = mysqli_query($connect, $sql);
 					?>

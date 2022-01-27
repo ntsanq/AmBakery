@@ -13,7 +13,7 @@
 	 ?>
 	<?php 
 		$ma = $_GET['ma'];
-		include  '../../connect.php' ;
+		require  '../../connect.php' ;
 		$sql = "select * from nhan_vien where ma = $ma";
 		$result= mysqli_query($connect, $sql);
 		$nhan_vien = mysqli_fetch_array($result);

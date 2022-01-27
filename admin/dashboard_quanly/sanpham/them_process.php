@@ -1,6 +1,6 @@
 <?php 
 		
-		include  '../../connect.php' ;
+		require  '../../connect.php' ;
 
 		// $ma= $_POST['ma'];
 		$ten_san_pham = $_POST['ten_san_pham'];

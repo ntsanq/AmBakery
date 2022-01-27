@@ -12,7 +12,7 @@
 
 	<?php 
 	$ma = $_GET['ma'];
-	include  '../../connect.php' ;
+	require  '../../connect.php' ;
 	$sql = "select * from san_pham where ma = $ma";
 	$result= mysqli_query($connect, $sql);
 	$san_pham = mysqli_fetch_array($result);

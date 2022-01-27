@@ -9,7 +9,7 @@
 </head>
 <body>
 	<?php 
-	include  '../../connect.php' ;
+	require  '../../connect.php' ;
 	$sql = "select * from the_loai";
 	$result= mysqli_query($connect, $sql);
 	?>

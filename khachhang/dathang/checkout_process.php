@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include '../connect.php';
+require '../connect.php';
 
 $ma_kh = $_POST['ma_kh'];
 $thoi_gian_dat = $_POST['thoi_gian_dat'];

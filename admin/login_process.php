@@ -4,7 +4,7 @@
 	$email = stripcslashes($email);
 	$mat_khau = stripcslashes($mat_khau);
 
-	include  'connect.php' ;
+	require  'connect.php' ;
 
 	$email = mysqli_real_escape_string($connect, $email);
 	$mat_khau = mysqli_real_escape_string($connect,$mat_khau);
