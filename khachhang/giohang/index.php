@@ -10,54 +10,48 @@
 <body>
 	<?php  
 	session_start();
-	$cart = $_SESSION['cart'];
-
 	require '../connect.php';
 	$tong_tien = 0;
-	?>
-	<div width="100%">
-		<div width="10%" style="font-size:20px; ">
-			<a href="../"><i class="fas fa-arrow-left"></i>
-			<span>Go back</span>
-			</a>
-		</div>
-		<div width="90%"><h1 align="center">Giỏ hàng</h1></div>
-	</div>
-	
-	<br>
-	<table border="1" width="100%">
-		<thead class="thead-dark">
-			<tr>
-				<th>Ảnh</th>
-				<th>Tên sản phẩm</th>
-				<th>Giá</th>
-				<th>Số lượng</th>
-				<th>Tổng tiền</th>
-				<th>Xóa</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach ($cart as $ma => $tung_san_pham) { ?>
+
+	if (isset($_SESSION['cart'])) {
+		$cart = $_SESSION['cart'];
+		?>
+		
+		<?php include 'header.php' ?>
+
+		<table border="1" width="100%">
+			<thead class="thead-dark">
 				<tr>
-					<td>
-						<img src="<?php echo $tung_san_pham['anh']?>" height="100px"> 
-					</td>
-					<td>
-						<?php echo $tung_san_pham['ten_san_pham']?>
-					</td>
-					<td>
-						<?php echo $tung_san_pham['gia']?>đ
-					</td>
-					<td>
-						<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=decre" style="font-size: 25px;">-</a>
-						<?php echo $tung_san_pham['so_luong']?>
-						<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=incre" style="font-size: 25px;">+</a>
-					</td>
-					<td>
-						<?php 
-						$tong = $tung_san_pham['gia']*$tung_san_pham['so_luong'];
-						echo  $tong;
-						$tong_tien += $tong;
+					<th>Ảnh</th>
+					<th>Tên sản phẩm</th>
+					<th>Giá</th>
+					<th>Số lượng</th>
+					<th>Tổng tiền</th>
+					<th>Xóa</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($cart as $ma => $tung_san_pham) { ?>
+					<tr>
+						<td>
+							<img src="<?php echo $tung_san_pham['anh']?>" height="100px"> 
+						</td>
+						<td>
+							<?php echo $tung_san_pham['ten_san_pham']?>
+						</td>
+						<td>
+							<?php echo $tung_san_pham['gia']?>đ
+						</td>
+						<td>
+							<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=decre" style="font-size: 25px;">-</a>
+							<?php echo $tung_san_pham['so_luong']?>
+							<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=incre" style="font-size: 25px;">+</a>
+						</td>
+						<td>
+							<?php 
+							$tong = $tung_san_pham['gia']*$tung_san_pham['so_luong'];
+							echo  $tong;
+							$tong_tien += $tong;
 						?>đ
 					</td>
 					<td>
@@ -66,10 +60,38 @@
 					</td>
 				</tr>
 			<?php } ?>
+			<tr class="tong_tien">
+				<td colspan="4" >
+					Tổng tiền hóa đơn là :
+				</td>
+				<td colspan="2" >
+					<span > <?php  echo $tong_tien?>đ</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6" >
+					<a href="xoa_all_process.php" class="huy_tat">Hủy tất cả</a>
+				</td>
+			</tr>
 		</tbody>
 	</table>
-	<p style="font-size: 20px; margin-top: 10px;">Tổng tiền hóa đơn là : <?php  echo $tong_tien?>đ</p>
 	<br>
 	<?php include('../dathang/form.php') ?>
+
+	<?php } ?>
+
+	<?php 
+	if (empty($_SESSION['cart'])) { 
+		include 'header.php';
+		?>
+		<table>
+			<th>Bạn không có đồ trong giỏ hàng</th>
+		</table>
+	<?php } ?>
+	
+
+	
+	
+	
 </body>
 </html>

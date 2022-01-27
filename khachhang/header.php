@@ -20,20 +20,32 @@
         <i class="fas fa-shopping-bag"></i>
         <span>
           <?php 
-          $tong = 0;
-          $times = sizeof($_SESSION['cart']);
-          $cart = $_SESSION['cart'];
-          foreach ($cart as $ma => $tung_san_pham) {
-            $tong += $_SESSION['cart'][$ma]['so_luong'];
+          if (isset($_SESSION['cart'])) {
+            $tong = 0;
+            $times = sizeof($_SESSION['cart']);
+            $cart = $_SESSION['cart'];
+            foreach ($cart as $ma => $tung_san_pham) {
+              $tong += $_SESSION['cart'][$ma]['so_luong'];
+            }
+            echo $tong;
+          }elseif (!isset($_SESSION['cart'])) {
+            echo 0;
           }
-          echo $tong;
+          
           ?>
         </span>
       </a>
     </div>
     <div class="vertical-line"></div>
-    <a href="login.php" class="header__login">
-
+    
+    <?php 
+    if (!isset($_SESSION['ma_kh'])) {
+      $link = 'login.php';
+    }else{
+      $link = '';
+    }
+    ?>
+    <a href="<?php echo $link ?>" class="header__login">
       <span>
         <?php 
         if (isset($_SESSION['ma_kh'])) {
@@ -51,9 +63,7 @@
           echo "Log in";
         }
         ?>
-        
       </span>
-
       <i class="far fa-user"></i>
     </a>
     <?php 

@@ -1,6 +1,7 @@
+<?php 
+if (isset($_SESSION['ma_kh'])) {?>
 <h2>ĐẶT HÀNG</h2>
 <form method="post" action="../dathang/checkout_process.php">
-
 	<?php 
 	$ma=$_SESSION['ma_kh'];
     $sql = "select * from khach_hang where ma = '$ma'";
@@ -18,3 +19,6 @@
 	<textarea name="ghi_chu"></textarea><br>
 	<button type="submit">Đặt hàng</button>
 </form>
+<?php }else { ?>
+	<h3>Bạn vui lòng đăng nhập để được đặt hàng</h3>
+<?php } ?>
