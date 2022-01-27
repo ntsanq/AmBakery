@@ -6,8 +6,15 @@
 		</form>
 	</div>
 	<div class="main_top_right">
-		<?php echo $_SESSION['ten'] ?>
-		<i class="fas fa-user-alt"></i>
+		<div class="dropdown">
+			<button class="dropbtn">
+				<?php echo $_SESSION['ten'] ?>
+				<i class="fas fa-user-alt"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="../logout_process.php">Đăng xuất</a>
+			</div>
+		</div>
 	</div>
 </div>
 
