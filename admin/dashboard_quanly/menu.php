@@ -6,12 +6,15 @@
 				<span>Trang chủ</span>
 			</a>
 		</li>
+		<?php 
+		if ($_SESSION['cap_do'] == 1) {?>
 		<li class="nav__list--item">
 			<a href="../nhanvien">
 				<i class="fas fa-male nav__icon"></i>
 				<span>Quản lý nhân viên</span>
 			</a>
 		</li>
+		<?php } ?>
 		<li class="nav__list--item">
 			<a href="../sanpham">
 				<i class="fas fa-bread-slice nav__icon"></i>
@@ -36,6 +39,16 @@
 				<span>Khách hàng</span>
 			</a>
 		</li>
+		<?php 
+		if ($_SESSION['cap_do'] == 1) {?>
+		<li class="nav__list--item">
+			<a href="../khuyenmai">
+				<i class="fas fa-percent"></i>
+				<span>Khuyến mãi</span>
+			</a>
+		</li>
+		<?php } ?>
+		
 		<li class="nav__list--item">
 			<a href="../logout_process.php">
 				<i class="fas fa-sign-out-alt nav__icon"></i>
