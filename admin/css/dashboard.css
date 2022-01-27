@@ -267,6 +267,10 @@ table tbody td {
 	font-size: 14px;
 	background: #fff;
 }
+
+.fa-minus-square {
+    color: red;
+}
 /*----------------------------------------------------------------*/
 
 

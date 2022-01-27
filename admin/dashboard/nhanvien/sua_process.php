@@ -21,7 +21,6 @@
 		// die($sql);
 		mysqli_query($connect, $sql);
 
-		echo "Bạn đã sửa thông tin nhân viên $ten thành công!";
 		mysqli_close($connect);
 		header("Location: index.php");
 ?>

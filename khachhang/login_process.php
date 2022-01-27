@@ -5,7 +5,7 @@
 	$email = stripcslashes($email);
 	$mat_khau = stripcslashes($mat_khau);
 
-	include  'connect.php' ;
+	require  'connect.php' ;
 
 	$email = mysqli_real_escape_string($connect, $email);
 	$mat_khau = mysqli_real_escape_string($connect,$mat_khau);
@@ -24,7 +24,6 @@
 	$row = mysqli_fetch_array($result); 
 		if ($row['email'] == $email && $row['mat_khau'] == $mat_khau) {
 			session_start();
-			$_SESSION['ten_kh'] = $row['ten'];
 			$_SESSION['ma_kh'] = $row['ma'];
 			header("Location: index.php");
 		}else{

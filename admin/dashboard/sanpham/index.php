@@ -1,8 +1,4 @@
-<?php session_start(); 
-if (!isset($_SESSION['cap_do'])) {
-	header("Location: ../../index.php");
-}
-?>
+<?php include '../check_nhanvien_login.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +33,7 @@ if (!isset($_SESSION['cap_do'])) {
 				$sql_the_loai = "select * from the_loai";
   				$result_the_loai = mysqli_query($connect, $sql_the_loai);
 				?>
+				
 				<?php foreach ($result_the_loai as $tung_the_loai) {?>
 					
 				<h2 class="main_content_the_loai"><?php echo $tung_the_loai['ten_the_loai'] ?></h2>				
@@ -104,10 +101,14 @@ if (!isset($_SESSION['cap_do'])) {
 									?>
 								</td>
 								<td>
-									<a href="sua_form.php?ma=<?php echo $tung_san_pham['ma']?>">Sửa</a>
+									<a href="sua_form.php?ma=<?php echo $tung_san_pham['ma']?>">
+										<i class="far fa-edit"></i>
+									</a>
 								</td>
 								<td>
-									<a href="xoa_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+									<a href="xoa_process.php?ma=<?php echo $tung_san_pham['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">
+										<i class="far fa-minus-square"></i>
+									</a>
 								</td>
 							</tr>
 						<?php } ?>

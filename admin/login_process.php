@@ -15,9 +15,9 @@
 	if ($result->num_rows ==1 ) {
 		session_start();
 		$row = mysqli_fetch_array($result);
-		$_SESSION['ten'] = $row['ten'];
+		$_SESSION['ma'] = $row['ma'];
 		$_SESSION['cap_do'] = $row['cap_do'];
-		header("Location: dashboard_quanly/root");
+		header("Location: dashboard/root");
 	} else {
 		header('Location: index.php?error=Vui lòng đăng nhập lại!');
 	}

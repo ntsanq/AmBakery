@@ -1,8 +1,4 @@
-<?php session_start(); 
-if (!isset($_SESSION['cap_do'])) {
-	header("Location: ../../index.php");
-}
-?>
+<?php include '../check_nhanvien_login.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +50,9 @@ if (!isset($_SESSION['cap_do'])) {
 								Sđt
 							</th>
 							<th>
+								Địa chỉ
+							</th>
+							<th>
 								Sửa
 							</th>
 							<th>
@@ -88,14 +87,18 @@ if (!isset($_SESSION['cap_do'])) {
 								<td>
 									<?php echo $tung_khach_hang['sdt'] ?>
 								</td>
-								<!-- <td>
-									<?php echo $tung_khach_hang['cap_do'] ?>
-								</td> -->
 								<td>
-									<a href="sua_form.php?ma=<?php echo $tung_khach_hang['ma'] ?>">Sửa</a>
+									<?php echo $tung_khach_hang['dia_chi'] ?>
 								</td>
 								<td>
-									<a href="xoa_process.php?ma=<?php echo $tung_khach_hang['ma'] ?> " onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+									<a href="sua_form.php?ma=<?php echo $tung_khach_hang['ma'] ?>">
+										<i class="far fa-edit"></i>
+									</a>
+								</td>
+								<td>
+									<a href="xoa_process.php?ma=<?php echo $tung_khach_hang['ma'] ?> " onclick="if(confirm('Xóa thật hả?')){}else{return false;}">
+										<i class="far fa-minus-square"></i>
+									</a>
 								</td>
 							</tr>
 						<?php } ?>

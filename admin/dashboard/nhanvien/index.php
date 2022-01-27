@@ -1,8 +1,4 @@
-<?php session_start(); 
-if (!isset($_SESSION['cap_do'])) {
-	header("Location: ../../index.php");
-}
-?>
+<?php include '../check_nhanvien_login.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +27,7 @@ if (!isset($_SESSION['cap_do'])) {
 					Thêm nhân viên
 				</a>
 
+				<!-- --------------Kết nối--------------------- -->
 				<?php 
 				require  '../../connect.php' ;
 				$sql= "select cap_do from nhan_vien";
@@ -43,7 +40,6 @@ if (!isset($_SESSION['cap_do'])) {
 				<h2 class="main_content_the_loai">Quản lý</h2>
 				<table border="1" width="100%">
 					<?php 
-					require  '../../connect.php' ;
 					$sql = "select * from nhan_vien where cap_do = 1 ";
 					$result = mysqli_query($connect, $sql);
 					?>
@@ -103,11 +99,15 @@ if (!isset($_SESSION['cap_do'])) {
 									?>
 								</td>
 								<td>
-									<a href="sua_form.php?ma=<?php echo $tung_nhan_vien['ma']?>">Sửa</a>
+									<a href="sua_form.php?ma=<?php echo $tung_nhan_vien['ma']?>">
+										<i class="far fa-edit"></i>
+									</a>
 								</td>
 								<td>
 									<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
-										>Xóa</a>
+										>
+										<i class="far fa-minus-square"></i>
+									</a>
 
 									</td>
 								</tr>
@@ -119,7 +119,6 @@ if (!isset($_SESSION['cap_do'])) {
 					<h2 class="main_content_the_loai">Nhân viên</h2>
 					<table border="1" width="100%">
 						<?php 
-						include  '../../connect.php' ;
 						$sql = "select * from nhan_vien where cap_do = 0 ";
 						$result = mysqli_query($connect, $sql);
 						?>
@@ -179,11 +178,15 @@ if (!isset($_SESSION['cap_do'])) {
 										?>
 									</td>
 									<td>
-										<a href="sua_form.php?ma=<?php echo $tung_nhan_vien['ma']?>">Sửa</a>
+										<a href="sua_form.php?ma=<?php echo $tung_nhan_vien['ma']?>">
+											<i class="far fa-edit"></i>
+										</a>
 									</td>
 									<td>
 										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
-											>Xóa</a>
+											>
+											<i class="far fa-minus-square"></i>
+										</a>
 
 										</td>
 									</tr>

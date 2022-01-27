@@ -1,8 +1,4 @@
-<?php session_start(); 
-if (!isset($_SESSION['cap_do'])) {
-	header("Location: ../../index.php");
-}
-?>
+<?php include '../check_nhanvien_login.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,10 +51,14 @@ if (!isset($_SESSION['cap_do'])) {
 									<?php echo $tung_the_loai['ten_the_loai'] ?>
 								</td>
 								<td>
-									<a href="sua_form.php?ma=<?php echo	$tung_the_loai['ma'] ?>">Sửa</a>
+									<a href="sua_form.php?ma=<?php echo	$tung_the_loai['ma'] ?>">
+										<i class="far fa-edit"></i>
+									</a>
 								</td>
 								<td>
-									<a href="xoa_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">Xóa</a>
+									<a href="xoa_process.php?ma=<?php echo	$tung_the_loai['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}">
+										<i class="far fa-minus-square"></i>
+									</a>
 								</td>
 							</tr>
 						<?php } ?>
