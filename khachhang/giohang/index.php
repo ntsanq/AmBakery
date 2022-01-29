@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/form.css">
 	<?php include '../thuvien.php'; ?>
 </head>
 <body>
@@ -106,11 +107,13 @@
 			</tr>
 		</tbody>
 	</table>
+	<!-- <button onclick="showForm()">Show the form</button> -->
 	<br>
 	<?php include('../dathang/form.php') ?>
-
 <?php } ?>
 
+
+<!-- Không có đồ trong giỏ hàng -->
 <?php 
 if (empty($_SESSION['cart'])) { 
 	include 'header.php';
@@ -119,10 +122,6 @@ if (empty($_SESSION['cart'])) {
 		<th>Bạn không có đồ trong giỏ hàng</th>
 	</table>
 <?php } ?>
-
-
-
-
 
 </body>
 </html>

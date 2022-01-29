@@ -206,8 +206,9 @@ a{
 
 }
 .product__heading{
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin: 6rem;
+  font-weight: 600;
 }
 .product_category{
   display: flex;
@@ -252,8 +253,11 @@ height: 100%;
   flex-direction: column;
   gap: .9rem 0;
 }
+
+/*tên sản phẩm*/
 .group a{
   color: rgb(75, 75, 75);
+  font-weight: 600;
 }
 .price{
 

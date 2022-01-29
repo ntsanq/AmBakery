@@ -30,7 +30,7 @@
 				<br> -->
 
 				<label for="ten">Tên khách hàng: </label>
-				<input class="input--form" type="text" name="ten" id="ten"><span class="span_loi" id="loi_ten"></span>
+				<input class="input--form" type="name" name="ten" id="ten"><span class="span_loi" id="loi_ten"></span>
 				<br>
 
 				<label  for="gioi_tinh">Giới tính: </label>
@@ -54,7 +54,7 @@
 				<br>
 
 				<label for="dia_chi">Địa chỉ: </label>
-				<input class="input--form" type="text" name="dia_chi" id="dia_chi"><span class="span_loi" id="loi_dia_chi"></span>
+				<input class="input--form" name="dia_chi" id="dia_chi"><span class="span_loi" id="loi_dia_chi"></span>
 				<br>
 
 				<label for="mat_khau">Mật khẩu: </label>

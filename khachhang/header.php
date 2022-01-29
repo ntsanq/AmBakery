@@ -42,7 +42,7 @@
     if (!isset($_SESSION['ma_kh'])) {
       $link = 'login.php';
     }else{
-      $link = '';
+      $link = '#';
     }
     ?>
     <a href="<?php echo $link ?>" class="header__login">

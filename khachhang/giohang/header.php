@@ -4,6 +4,6 @@
 			<span>Go back</span>
 		</a>
 	</div>
-	<div width="90%"><h1 align="center">Giỏ hàng</h1></div>
+	<div width="90%"><h1 align="center" style=" font-weight: 600;">Giỏ hàng</h1></div>
 </div>
 <br>
