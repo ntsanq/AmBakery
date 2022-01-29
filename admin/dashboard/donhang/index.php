@@ -31,7 +31,7 @@
 
 
 				<!-- -------------------------Bảng Chưa duyệt ---------------------->
-				<h2 class="main_content_the_loai">Chưa được duyệt</h2>
+				<h2 class="main_content_the_loai">Đơn chưa được duyệt</h2>
 				<table border="1" width="100%">
 					<?php 
 					$sql = "select * from hoa_don where trang_thai = 0 ";
@@ -116,7 +116,7 @@
 				</table>	
 
 				<!-- -------------------------Bảng đã duyệt ---------------------->
-				<h2 class="main_content_the_loai">Đã được duyệt</h2>
+				<h2 class="main_content_the_loai">Đơn đã được duyệt</h2>
 				<table border="1" width="100%">
 					<?php 
 					$sql = "select * from hoa_don where trang_thai = 1 ";

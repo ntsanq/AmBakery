@@ -28,6 +28,7 @@
 				$sql = "select * from khach_hang";
 				$result= mysqli_query($connect, $sql);
 				?>
+				<h2 class="main_content_the_loai">Danh sách khách hàng</h2>
 				<table border="1" width="100%">
 					<thead class="thead-dark">
 						<tr>

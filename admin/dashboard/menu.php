@@ -27,12 +27,15 @@
 				<span>Quản lý đơn hàng</span>
 			</a>
 		</li>
+		<?php 
+		if ($_SESSION['cap_do'] == 1) {?>
 		<li class="nav__list--item">
 			<a href="../theloai">
 				<i class="fas fa-tasks nav__icon"></i>
 				<span>Danh mục thể loại</span>
 			</a>
 		</li>
+		<?php } ?>
 		<li class="nav__list--item">
 			<a href="../khachhang">
 				<i class="fas fa-users nav__icon"></i>

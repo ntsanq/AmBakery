@@ -32,6 +32,7 @@
 				$sql = "select * from the_loai";
 				$result= mysqli_query($connect, $sql);
 				?>
+				<h2 class="main_content_the_loai">Danh sách thể loại</h2>
 				<table border="1" width="100%">
 					<thead class="thead-dark">
 						<tr>
