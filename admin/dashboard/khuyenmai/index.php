@@ -25,8 +25,7 @@
 			
 			<div class="main_content" >
 				<div class="bgimg">
-					Đây là trang khuyến mãi
-					<h1>Chế độ khuyến mãi</h1>
+					<h2 class="main_content_the_loai">Chế độ khuyến mãi</h2>
 
 					<?php 
 					require '../../connect.php';

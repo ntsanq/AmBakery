@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2022 at 10:35 AM
+-- Generation Time: Jan 29, 2022 at 12:36 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -29,15 +29,16 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `giam_gia` (
   `phan_tram` decimal(10,0) NOT NULL,
-  `ma_cap_do` int(11) NOT NULL
+  `ma_cap_do` int(11) NOT NULL,
+  `ghi_chu` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `giam_gia`
 --
 
-INSERT INTO `giam_gia` (`phan_tram`, `ma_cap_do`) VALUES
-('10', 1);
+INSERT INTO `giam_gia` (`phan_tram`, `ma_cap_do`, `ghi_chu`) VALUES
+('50', 1, 'khách hàng có tài khoản');
 
 -- --------------------------------------------------------
 
@@ -52,8 +53,17 @@ CREATE TABLE `hoa_don` (
   `ten_nguoi_nhan` varchar(100) NOT NULL,
   `sdt_nguoi_nhan` varchar(20) NOT NULL,
   `dia_chi_giao_hang` varchar(100) NOT NULL,
-  `ghi_chu` text NOT NULL
+  `ghi_chu` text NOT NULL,
+  `trang_thai` tinyint(1) NOT NULL,
+  `tong_tien` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hoa_don`
+--
+
+INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `thoi_gian_dat`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_giao_hang`, `ghi_chu`, `trang_thai`, `tong_tien`) VALUES
+(14, 33, '2022-01-27 12:45:54', 'Edogawa Conan', '0983259334', 'Tokyo, JP', 'toi dang  làm nhiệm vụ', 1, 20000);
 
 -- --------------------------------------------------------
 
@@ -67,6 +77,13 @@ CREATE TABLE `hoa_don_chi_tiet` (
   `so_luong` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `hoa_don_chi_tiet`
+--
+
+INSERT INTO `hoa_don_chi_tiet` (`ma_hoa_don`, `ma_san_pham`, `so_luong`) VALUES
+(14, 18, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -79,6 +96,8 @@ CREATE TABLE `khach_hang` (
   `gioi_tinh` tinyint(1) NOT NULL,
   `ngay_sinh` date NOT NULL,
   `email` varchar(100) NOT NULL,
+  `sdt` varchar(12) NOT NULL,
+  `dia_chi` varchar(100) NOT NULL,
   `mat_khau` varchar(50) NOT NULL,
   `cap_do` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -87,11 +106,11 @@ CREATE TABLE `khach_hang` (
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `mat_khau`, `cap_do`) VALUES
-(16, 'Nguyễn Thanh Sang', 1, '2011-12-13', 'sangkh@gmail.com', '123', 1),
-(18, 'Huỳnh Thị Mai', 0, '2014-10-08', 'chomai@gg.com', '123', 1),
-(20, 'Khách hàng', 0, '0000-00-00', 'khachhang', '123', 1),
-(21, 'Vendy Võ', 0, '2000-08-06', 'ven@gg.com', '123', 1);
+INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `sdt`, `dia_chi`, `mat_khau`, `cap_do`) VALUES
+(30, 'Nguyễn Thị Bích Tuyền', 0, '2006-01-13', 'tuyen@gg.com', '0914319328', '133 Đồng Khởi, Hậu Giang', '123123123', 1),
+(31, 'Mori Ran', 0, '2022-01-05', 'morri@gg.com', '0934293422', '1234 Ssduf, HN', '123123123123', 1),
+(33, 'Edogawa Conan', 1, '2021-12-27', 'conan@gmail.com', '0983259334', 'Tokyo, JP', '123123123', 1),
+(34, 'Vendy Võ', 0, '2001-08-06', 'vy@gg.com', '0932234342', 'Vĩnh Long', '123123123', 1);
 
 -- --------------------------------------------------------
 
@@ -114,11 +133,8 @@ CREATE TABLE `nhan_vien` (
 --
 
 INSERT INTO `nhan_vien` (`ma`, `ten`, `dia_chi`, `sdt`, `email`, `mat_khau`, `cap_do`) VALUES
-(7, 'Nguyễn Thanh Sang', 'Cần Thơ', '0966979243', 'sang@gmail.com', '123', 0),
-(8, 'Lươn Thanh Độ', 'Hà Lội', '0954332432', 'dogamingpro@gg.com', '123', 1),
-(12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1),
-(15, 'Quản lý', '', '', 'quanly', '123', 1),
-(16, 'Nhân viên', '', '', 'nhanvien', '123', 0);
+(7, 'Nguyễn Thanh Sang', 'Cần Thơ', '0966979243', 'sang@gg.com', '123', 0),
+(12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -140,15 +156,17 @@ CREATE TABLE `san_pham` (
 --
 
 INSERT INTO `san_pham` (`ma`, `ten_san_pham`, `mo_ta`, `anh`, `gia`, `ma_the_loai`) VALUES
-(1, 'Doner', 'Là loại bánh mỳ có nguồn gốc từ Thổ Nhĩ Kỳ. Món này phát triển rất mạnh tại Đức rồi lan rộng ra các châu lục khác và có mặt tại Việt Nam và rất được người Việt ưa chuộng. ', 'https://upload.wikimedia.org/wikipedia/commons/f/f9/D%C3%B6ner_kebab.jpg', 600000, 1),
 (2, 'Starbuck fa ke', 'Đây là 1 ly Starbuck nhưng không phải là Starbuck', 'https://images.foody.vn/res/g5/49849/s/201891994310-mf.jpg', 900900, 2),
-(5, 'Bánh cua phô mai', 'Bánh mì cua phô mai mềm xốp, thơm phức, có vị mằn mặn, beo béo đặc trưng của phô mai. Món bánh này không những thơm ngon, bổ dưỡng.', 'https://i.ytimg.com/vi/iFIbFH3gucM/maxresdefault.jpg', 500000, 1),
+(5, 'Bánh cua phô mai', 'Bánh mì cua phô mai mềm xốp, thơm phức, có vị mằn mặn, beo béo đặc trưng của phô mai. Món bánh này không những thơm ngon, bổ dưỡng. hihi', 'https://i.ytimg.com/vi/iFIbFH3gucM/maxresdefault.jpg', 500000, 1),
 (10, 'Phin sữa đá', 'Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!', 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png', 39000, 2),
-(11, 'Mía ghim', 'thích hợp cho người thường xuyên bị đau bụng', 'https://phanvinh.files.wordpress.com/2013/07/mia-ghim.jpg', 100009, 4),
-(12, 'Bông lan sữa chua', 'Bánh bông lan mà nó có sữa chua thơm ngon giòn béo', 'https://cdn.tgdd.vn/2020/11/CookProduct/thumb-1200x676-2.jpg', 500, 1),
 (13, 'Bánh bắp', 'Chiếc bánh mà được làm từ bắp nhưng không phải hầu hết là bắp mà nó có chưa bắp', 'https://givralbakery.com.vn/vnt_upload/product/TeaBreak/dessert/thumbs/(443x443)_fh_bap_mieng.jpg', 100, 1),
 (14, 'Sữa chua nóng', 'Sữa đã được đem đi lên men và làm nóng lên tạo thành sữa chưa nóng cực nóng', 'https://cdn.huongnghiepaau.com/wp-content/uploads/2018/03/cee8d15e533fe0d998594b417925cd58.jpg', 99009, 2),
-(15, 'Bánh mỳ nướng quế', 'Một chiếc bánh mỳ quế mang hương vị của Pháp nhưng không phải đang ở Pháp mà nó có hương vị Pháp nhưng nó ở Việt Nam', 'https://thtranphu.edu.vn/wp-content/uploads/2021/08/banh-mi-nuong-que-kieu-phap2-600x400.jpeg', 23000, 1);
+(15, 'Bánh mỳ nướng quế', 'Một chiếc bánh mỳ quế mang hương vị của Pháp nhưng không phải đang ở Pháp mà nó có hương vị Pháp nhưng nó ở Việt Nam', 'https://thtranphu.edu.vn/wp-content/uploads/2021/08/banh-mi-nuong-que-kieu-phap2-600x400.jpeg', 23000, 1),
+(16, 'Cherry', 'Cherry nhập khẩu từ Mỹ với hệ thống sản xuất và chất lượng dây chuyền tại Mỹ rất là thật là Mỹ.', 'https://hoaquafuji.com/storage/app/media/gia-cherry-tren-thi-truong-00.png', 89000000, 16),
+(17, 'Mận Hà Nội', 'Mận được trồng ở Hà Nội nhưng không chắc ở Hà Nội. Có thể từ tỉnh khác.', 'https://cafefcdn.com/2020/5/27/photo-1-1590544038027245927332.jpeg', 900200, 16),
+(18, 'Butter cake', 'Tên là butter cake thì chỉ biết là nó là cái cake rồi chét bơ lên thôi chứ còn lại chủ shop chưa biết', 'https://cdn.daylambanh.edu.vn/wp-content/uploads/2020/01/butter-cake-hap-dan-600x400.jpg', 20000, 1),
+(19, 'Combo cam nho', 'Cam ngọt mướt, nhìn là thèm', 'https://vcdn-vnexpress.vnecdn.net/2015/07/11/fruit-image-7365-1436585539.jpg', 290000, 16),
+(21, 'Dưa hấu', 'Dưa hấu ngọt lịm như người yêu của bạn', 'https://hongngochospital.vn/wp-content/uploads/2020/02/loi-ich-cua-dua-hau-2.jpg', 202000, 16);
 
 -- --------------------------------------------------------
 
@@ -168,7 +186,7 @@ CREATE TABLE `the_loai` (
 INSERT INTO `the_loai` (`ma`, `ten_the_loai`) VALUES
 (1, 'Thức ăn'),
 (2, 'Nước uống'),
-(4, 'Trái cây');
+(16, 'Trái cây');
 
 --
 -- Indexes for dumped tables
@@ -184,8 +202,7 @@ ALTER TABLE `giam_gia`
 -- Indexes for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  ADD PRIMARY KEY (`ma`),
-  ADD KEY `ma_khach_hang` (`ma_khach_hang`);
+  ADD PRIMARY KEY (`ma`);
 
 --
 -- Indexes for table `hoa_don_chi_tiet`
@@ -199,13 +216,15 @@ ALTER TABLE `hoa_don_chi_tiet`
 --
 ALTER TABLE `khach_hang`
   ADD PRIMARY KEY (`ma`),
-  ADD KEY `giam_gia` (`cap_do`);
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `fk_giam_gia` (`cap_do`);
 
 --
 -- Indexes for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
-  ADD PRIMARY KEY (`ma`);
+  ADD PRIMARY KEY (`ma`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `san_pham`
@@ -229,13 +248,13 @@ ALTER TABLE `the_loai`
 -- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
@@ -247,23 +266,17 @@ ALTER TABLE `nhan_vien`
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
 --
 ALTER TABLE `the_loai`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `hoa_don`
---
-ALTER TABLE `hoa_don`
-  ADD CONSTRAINT `ma_khach_hang` FOREIGN KEY (`ma_khach_hang`) REFERENCES `hoa_don` (`ma`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `hoa_don_chi_tiet`
@@ -276,7 +289,7 @@ ALTER TABLE `hoa_don_chi_tiet`
 -- Constraints for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  ADD CONSTRAINT `giam_gia` FOREIGN KEY (`cap_do`) REFERENCES `giam_gia` (`ma_cap_do`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_giam_gia` FOREIGN KEY (`cap_do`) REFERENCES `giam_gia` (`ma_cap_do`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `san_pham`
