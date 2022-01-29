@@ -75,7 +75,7 @@
 						<?php foreach ($result as $tung_hoa_don) { ?>
 							<tr>
 								<td>
-									<a href="chi_tiet.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
+									<a class="ma_hoa_don" href="chi_tiet.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
 										<?php echo $tung_hoa_don['ma'] ?>
 									</a>
 								</td>
@@ -157,7 +157,7 @@
 						<?php foreach ($result as $tung_hoa_don) { ?>
 							<tr>
 								<td>
-									<a href="chi_tiet.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
+									<a class="ma_hoa_don" href="chi_tiet.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
 										<?php echo $tung_hoa_don['ma'] ?>
 									</a>
 								</td>

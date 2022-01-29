@@ -60,6 +60,8 @@
 					</td>
 				</tr>
 			<?php } ?>
+
+			<!-- Tính tổng tiền -->
 			<tr class="tong_tien">
 				<td colspan="4" >
 					Tổng tiền hóa đơn là :
@@ -68,6 +70,35 @@
 					<span > <?php  echo $tong_tien?>đ</span>
 				</td>
 			</tr>
+
+
+			<!-- Khách có tài khoản -->
+			<?php if(isset($_SESSION['ma_kh'])){?>
+				<tr class="tong_tien">
+					<td colspan="4" >
+						Khuyến mãi (<?php 
+						$ma_kh_session = $_SESSION['ma_kh'];
+						$sql = "select cap_do from khach_hang where ma = '$ma_kh_session'";
+						$result = mysqli_query($connect,$sql);
+						$row = mysqli_fetch_array($result);
+						$row_cap_do = $row['cap_do'];
+
+						$sql = "select phan_tram from giam_gia where ma_cap_do = '$row_cap_do'";
+						$result = mysqli_query($connect,$sql);
+						$row = mysqli_fetch_array($result);
+						$row_phan_tram = $row['phan_tram'];
+						echo $row_phan_tram;
+						?>
+						%) giảm còn :
+					</td>
+					<td colspan="2" >
+						<span >
+							<?php $tong_tien_da_giam = $tong_tien - $tong_tien * ($row_phan_tram/100);
+							echo $tong_tien_da_giam;?>đ
+						</span>
+					</td>
+				</tr>
+			<?php } ?>
 			<tr>
 				<td colspan="6" >
 					<a href="xoa_all_process.php" class="huy_tat">Hủy tất cả</a>
@@ -78,20 +109,20 @@
 	<br>
 	<?php include('../dathang/form.php') ?>
 
-	<?php } ?>
+<?php } ?>
 
-	<?php 
-	if (empty($_SESSION['cart'])) { 
-		include 'header.php';
-		?>
-		<table>
-			<th>Bạn không có đồ trong giỏ hàng</th>
-		</table>
-	<?php } ?>
-	
+<?php 
+if (empty($_SESSION['cart'])) { 
+	include 'header.php';
+	?>
+	<table>
+		<th>Bạn không có đồ trong giỏ hàng</th>
+	</table>
+<?php } ?>
 
-	
-	
-	
+
+
+
+
 </body>
 </html>
