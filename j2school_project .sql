@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2022 at 12:36 PM
+-- Generation Time: Jan 30, 2022 at 05:40 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -156,17 +156,18 @@ CREATE TABLE `san_pham` (
 --
 
 INSERT INTO `san_pham` (`ma`, `ten_san_pham`, `mo_ta`, `anh`, `gia`, `ma_the_loai`) VALUES
-(2, 'Starbuck fa ke', 'Đây là 1 ly Starbuck nhưng không phải là Starbuck', 'https://images.foody.vn/res/g5/49849/s/201891994310-mf.jpg', 900900, 2),
-(5, 'Bánh cua phô mai', 'Bánh mì cua phô mai mềm xốp, thơm phức, có vị mằn mặn, beo béo đặc trưng của phô mai. Món bánh này không những thơm ngon, bổ dưỡng. hihi', 'https://i.ytimg.com/vi/iFIbFH3gucM/maxresdefault.jpg', 500000, 1),
-(10, 'Phin sữa đá', 'Cà phê Phin thế hệ mới với chất Phin êm hơn, kết hợp cùng Choco ngọt tan mang đến hương vị mới lạ, không thể hấp dẫn hơn!', 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png', 39000, 2),
-(13, 'Bánh bắp', 'Chiếc bánh mà được làm từ bắp nhưng không phải hầu hết là bắp mà nó có chưa bắp', 'https://givralbakery.com.vn/vnt_upload/product/TeaBreak/dessert/thumbs/(443x443)_fh_bap_mieng.jpg', 100, 1),
-(14, 'Sữa chua nóng', 'Sữa đã được đem đi lên men và làm nóng lên tạo thành sữa chưa nóng cực nóng', 'https://cdn.huongnghiepaau.com/wp-content/uploads/2018/03/cee8d15e533fe0d998594b417925cd58.jpg', 99009, 2),
-(15, 'Bánh mỳ nướng quế', 'Một chiếc bánh mỳ quế mang hương vị của Pháp nhưng không phải đang ở Pháp mà nó có hương vị Pháp nhưng nó ở Việt Nam', 'https://thtranphu.edu.vn/wp-content/uploads/2021/08/banh-mi-nuong-que-kieu-phap2-600x400.jpeg', 23000, 1),
-(16, 'Cherry', 'Cherry nhập khẩu từ Mỹ với hệ thống sản xuất và chất lượng dây chuyền tại Mỹ rất là thật là Mỹ.', 'https://hoaquafuji.com/storage/app/media/gia-cherry-tren-thi-truong-00.png', 89000000, 16),
-(17, 'Mận Hà Nội', 'Mận được trồng ở Hà Nội nhưng không chắc ở Hà Nội. Có thể từ tỉnh khác.', 'https://cafefcdn.com/2020/5/27/photo-1-1590544038027245927332.jpeg', 900200, 16),
-(18, 'Butter cake', 'Tên là butter cake thì chỉ biết là nó là cái cake rồi chét bơ lên thôi chứ còn lại chủ shop chưa biết', 'https://cdn.daylambanh.edu.vn/wp-content/uploads/2020/01/butter-cake-hap-dan-600x400.jpg', 20000, 1),
-(19, 'Combo cam nho', 'Cam ngọt mướt, nhìn là thèm', 'https://vcdn-vnexpress.vnecdn.net/2015/07/11/fruit-image-7365-1436585539.jpg', 290000, 16),
-(21, 'Dưa hấu', 'Dưa hấu ngọt lịm như người yêu của bạn', 'https://hongngochospital.vn/wp-content/uploads/2020/02/loi-ich-cua-dua-hau-2.jpg', 202000, 16);
+(2, 'ESPRESSO', 'Espresso là café được pha bằng máy, sử dụng nước nóng nén bởi áp suất cao qua lớp bột cà phê được xay mịn. Nước dùng để pha chế Espresso là nước tinh khiết, còn café dùng để pha chế theo phương pháp này cũng phải là café rang mộc, không tẩm ướp bất kỳ tạp chất nào.', 'http://img.v3.news.zdn.vn/w660/Uploaded/ngtmns/2016_12_07/italiancoffeexlarge.jpg', 55000, 2),
+(5, 'CROISSANT', 'Croissant không dễ làm! Bột nhào đòi hỏi một quy trình chi tiết được gọi là cán mỏng bao gồm gấp và lăn nhiều lần — đông lạnh hoặc làm lạnh giữa các lần gấp — để tạo ra các lớp bơ bên trong bánh ngọt. Nhưng nó hoàn toàn xứng đáng khi bạn cắn vào thành quả béo ngậy, thơm như bơ, giòn tan.', 'http://www.monpetitchouxfrenchbakery.com.au/wp-content/uploads/2017/10/pastrie-menu-tile-1.jpg', 30000, 1),
+(10, ' COFFEE FRAPPÉ', 'Frappe là một loại hỗn hợp cà phê đá ngọt xuất phát từ đất nước Hy Lạp, được pha trộn gồm sữa và cà phê espresso, sau đó được xay nhuyễn cùng đá viên nó tạo nên một món cà phê hoàn hảo, được yêu thích khắp nơi trên thế giới.', 'https://shottbeverages.com/wp-content/uploads/2020/10/hazelnut-frappe.jpg', 68000, 2),
+(13, 'FRENCH BREAD', 'Chiếc bánh Pháp rộng và dài hơn bánh mì baguette, với lớp vỏ mềm hơn nhiều. Nó không yêu cầu bất kỳ thiết bị đặc biệt nào để làm và nó linh hoạt như một chiếc bánh mì baguette, nhưng bên ngoài mềm mại của nó khiến nó trở nên hoàn hảo cho món bánh mì nướng hoặc bánh mì tỏi.\r\n', 'https://www.tasteofhome.com/wp-content/uploads/2021/02/whole-wheat-baguettes-sliced-895088696.jpg?re', 40000, 1),
+(14, 'CARAMEL MACCHIATO', 'Thỏa mãn cơn thèm ngọt! Ly cà phê Caramel Macchiato bắt đầu từ dòng sữa tươi và lớp bọt sữa béo ngậy, sau đó hòa quyện cùng cà phê espresso đậm đà và sốt caramel ngọt ngào. Thông qua bàn tay điêu luyện của các chuyên gia pha chế, mọi thứ hoàn toàn được nâng tầm thành nghệ thuật!', 'https://vietblend.vn/wp-content/uploads/2018/12/caramel-macchiato_830x550.jpg', 89000, 2),
+(18, 'FRENCH CAKES AND PETITS GÂTEAUX', 'Hãy thưởng thức những vị khách của bạn với một trong những chiếc bánh độc đáo này.\r\nMon Petit Choux cung cấp một loạt các loại bánh kỷ niệm lấy cảm hứng từ tiệm bánh thực sự của Pháp.', 'http://www.monpetitchouxfrenchbakery.com.au/wp-content/uploads/2018/06/menu-cake-tilev2.jpg', 150000, 1),
+(22, 'CAFÉ MOCHA', 'Cafe Mocha là một loại thức uống với sự kết hợp của Espresso, sữa nóng và hương vị sauce chocolate rất quyến rũ. Chính những thành phần này đã tạo nên một hỗn hợp hoàn hảo nhất, đó là vị đắng của cà phê kết hợp với cảm giác lắng đọng của chocolate.', 'https://file.hstatic.net/1000059704/article/mocha_master.jpg', 70000, 2),
+(24, 'FOO FOO', ' Foo Foo vẫn tuyệt vời vì chúng rất lạ mắt, với giá cả phải chăng. Mang hơi hướng cổ điển, nhà bếp chế biến ra những đĩa bánh semifreddo phủ trái cây xinh xắn với đế bánh hạnh nhân, bánh táo kết hợp với kem xoài tiêu đen, bánh tres bí đỏ và bánh tráng trộn với kem cà phê caramel muối.', 'https://media-cdn.tripadvisor.com/media/photo-s/0c/fd/f0/83/foo-foo.jpg', 30000, 16),
+(25, 'KIND KONES', ' Kind Kones đi theo con đường lành mạnh với dừa và sữa hạt được làm từ các nguyên liệu tự nhiên, chưa qua chế biến như đường mía và mật mía chưa tinh chế. Bên cạnh việc không có trứng và sữa, nó còn có các lựa chọn không chứa gluten như kem chuối thanh long, bánh khúc bạch bạc hà, chuối óc chó, mè đen và vani than.', 'https://coconuts.co/wp-content/uploads/2019/08/kind-kones-kl.jpg', 25000, 16),
+(26, '   MADHATTER', 'Cái tên đằng sau tiệm bánh kỳ lạ này là Marcus Low, còn được gọi là “Vua tráng miệng” trên MasterChef Asia (anh ấy đã về nhì mùa giải đầu tiên năm 2015). Giống như anh ấy đã thổi bay các giám khảo trong cuộc thi nấu ăn trên truyền hình, Low đã nghĩ ra những công thức nấu ăn độc đáo và cải tiến những sáng tạo lấy cảm hứng từ địa phương trong nhà bếp của anh ấy trong hai năm qua.', 'https://coconuts.co/wp-content/uploads/2019/08/madhatter-desserts-kl.jpg', 18000, 16),
+(27, 'SOUKA', 'Souka là loại bánh ra đời vào năm 2008. Thành phần \r\ngồm bánh ngọt, chuối caramel, bánh nướng và bánh tart sô cô la caramel mặn và đặc biệt có cả bánh quy', 'https://coconuts.co/wp-content/uploads/2019/08/souka-cakes-kl.jpg', 99000, 16),
+(28, 'BRIOCHE', 'Một chiếc bánh brioche thích hợp chắc chắn mang một vị đậm đà như bánh ngọt, với phần vụn và kết cấu của bánh mì ”. Nó có được hương vị và kết cấu từ lớp bột mịn như nhung, có chứa sữa, trứng và rất nhiều bơ. Brioche cuộn là sự lựa chọn hàng đầu của chúng tôi để làm bánh mì kẹp thịt và chúng tôi thích sử dụng một lát dày cho bánh mì nướng kiểu Pháp.', 'https://www.tasteofhome.com/wp-content/uploads/2021/02/french-brioche-175421595.jpg?resize=696,696', 56000, 1);
 
 -- --------------------------------------------------------
 
@@ -184,9 +185,9 @@ CREATE TABLE `the_loai` (
 --
 
 INSERT INTO `the_loai` (`ma`, `ten_the_loai`) VALUES
-(1, 'Thức ăn'),
-(2, 'Nước uống'),
-(16, 'Trái cây');
+(1, 'Breads'),
+(2, 'Drinks'),
+(16, 'Desserts');
 
 --
 -- Indexes for dumped tables
@@ -266,7 +267,7 @@ ALTER TABLE `nhan_vien`
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
