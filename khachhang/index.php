@@ -29,8 +29,9 @@ session_start();
       <img src="img/banner-1.jpg" alt="Pain perdu">
     </div>
     <main>
-      <?php foreach ($result_the_loai as $tung_the_loai) {?>
-        <div class="product">
+
+      <div class="product">
+        <?php foreach ($result_the_loai as $tung_the_loai) {?>
           <h1 class="product__heading"><?php echo $tung_the_loai['ten_the_loai'] ?></h1>
           <div class="product_category">
             <!-------------------- card--------------->
