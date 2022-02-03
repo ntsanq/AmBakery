@@ -42,7 +42,7 @@
 				<tbody>
 					<?php foreach ($result as $tung_hoa_don) { ?>
 						<tr>
-							<td>
+							<td class="div_ten_sp">
 								<?php
 								$ma_san_pham = $tung_hoa_don['ma_san_pham'];
 								$sql= "select * from san_pham where ma = '$ma_san_pham'";
@@ -51,7 +51,7 @@
 								echo $row['ten_san_pham'];
 								?>
 							</td>
-							<td>
+							<td class="div_anh" >
 								<img src="<?php echo $row['anh'] ?>" height="100px">
 							</td>
 							<td>

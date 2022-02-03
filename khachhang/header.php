@@ -5,9 +5,8 @@
         <input type="text" name="tim_kiem">
         <button type="submit" class="btn header__search__btn" >
           <i class="fas fa-search"></i>
-        </form>
-
-      </button>
+        </button>
+      </form>
     </div>
   </div>
   <div class="header__middle">
