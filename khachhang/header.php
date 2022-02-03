@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="header__middle">
-    <a href="#" class="header__logo">
+    <a href="index.php" class="header__logo">
       <span><b>am</b>bakery</span>
     </a>
   </div>
