@@ -9,16 +9,19 @@
 	<?php include '../thuvien.php'; ?>
 </head>
 <body>
+
 	<?php  
 	session_start();
 	require '../connect.php';
+
+	include 'header.php';
+	
 	$tong_tien = 0;
 
 	if (isset($_SESSION['cart'])) {
 		$cart = $_SESSION['cart'];
 		?>
 		
-		<?php include 'header.php' ?>
 
 		<table border="1" width="100%">
 			<thead class="thead-dark">
@@ -116,7 +119,6 @@
 <!-- Không có đồ trong giỏ hàng -->
 <?php 
 if (empty($_SESSION['cart'])) { 
-	include 'header.php';
 	?>
 	<table>
 		<th>Bạn không có đồ trong giỏ hàng</th>

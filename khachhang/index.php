@@ -13,7 +13,14 @@ session_start();
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <?php 
+  if (isset($_GET['tim_kiem'])) { 
+  $tim_kiem = $_GET['tim_kiem'];?>
+  <p>Bạn đã tìm kiếm <?php echo "Bạn đã tìm kiếm $tim_kiem" ?></p>
+  <?php } ?>
   
+
   <?php 
   require  'connect.php' ;
   $sql_the_loai = "select * from the_loai";

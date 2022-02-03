@@ -1,10 +1,12 @@
 <header>
   <div class="header__left">
     <div class="header__search">
+      <form>
+        <input type="text" name="tim_kiem">
+        <button type="submit" class="btn header__search__btn" >
+          <i class="fas fa-search"></i>
+        </form>
 
-      <input type="text">
-      <button class="btn header__search__btn">
-        <i class="fas fa-search"></i>
       </button>
     </div>
   </div>
@@ -37,16 +39,17 @@
       </a>
     </div>
     <div class="vertical-line"></div>
-    
-    <?php 
-    if (!isset($_SESSION['ma_kh'])) {
-      $link = 'login.php';
-    }else{
-      $link = '#';
-    }
-    ?>
-    <a href="<?php echo $link ?>" class="header__login">
-      <span>
+
+
+    <div class="dropdown">
+      <?php 
+      if (!isset($_SESSION['ma_kh'])) {
+        $link = 'login.php';
+      }else{
+        $link = '#';
+      }
+      ?>
+      <button class="dropbtn header__login" onclick="location.href='<?php echo $link ?>'">
         <?php 
         if (isset($_SESSION['ma_kh'])) {
 
@@ -63,13 +66,16 @@
           echo "Log in";
         }
         ?>
-      </span>
-      <i class="far fa-user"></i>
-    </a>
-    <?php 
-    if (isset($_SESSION['ma_kh'])) {?>
-     <a href="logout_process.php"><i class="fas fa-sign-out-alt"></i></a>
-   <?php } ?>
+        <i class="far fa-user"></i>
+      </button>
+      <?php
+      if (isset($_SESSION['ma_kh'])) {?>
+        <div class="dropdown-content">
+          <a href="lichsu">Lịch sử mua hàng</a>
+          <a href="logout_process.php">Đăng xuất <!-- <i class="fas fa-sign-out-alt"></i> --></a>
+        </div>
+      <?php } ?>
+    </div>
 
- </div>
+  </div>
 </header>
