@@ -51,5 +51,14 @@
 			</a>
 		</li>
 		<?php } ?>
+		<?php 
+		if ($_SESSION['cap_do'] == 1) {?>
+		<li class="nav__list--item">
+			<a href="../mail">
+				<i class="far fa-paper-plane"></i>
+				<span>Gửi mail quảng cáo</span>
+			</a>
+		</li>
+		<?php } ?>
 	</ul>
 </div>
