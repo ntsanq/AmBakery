@@ -7,7 +7,7 @@ $ma = $_GET['ma'];
 
 // TH1: chưa có gì
 if (empty($_SESSION['cart'][$ma])) {
-	require '../connect.php';
+	require '../../admin/connect.php' ;
 	$sql= "select * from san_pham where ma = '$ma'";
 	$result= mysqli_query($connect, $sql);
 	$tung_san_pham = mysqli_fetch_array($result);

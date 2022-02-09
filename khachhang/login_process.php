@@ -5,7 +5,7 @@
 	$email = stripcslashes($email);
 	$mat_khau = stripcslashes($mat_khau);
 
-	require  'connect.php' ;
+	require  '../admin/connect.php'  ;
 
 	$email = mysqli_real_escape_string($connect, $email);
 	$mat_khau = mysqli_real_escape_string($connect,$mat_khau);

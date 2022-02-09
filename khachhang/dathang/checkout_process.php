@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require '../connect.php';
+require '../../admin/connect.php' ;
 
 $ma = $_POST['ma'];
 $ten = $_POST['ten'];

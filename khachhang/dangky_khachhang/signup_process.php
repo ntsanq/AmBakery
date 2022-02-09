@@ -1,6 +1,6 @@
 <?php 
 		session_start();
-		require  '../connect.php' ;
+		require  '../../admin/connect.php' ;
 
 		$ten = $_POST['ten'];
 		$gioi_tinh = $_POST['gioi_tinh'];

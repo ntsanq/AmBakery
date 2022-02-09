@@ -13,7 +13,7 @@
 	<?php include 'header.php'; ?>
 
 	<?php 
-	require '../connect.php';
+	require '../../admin/connect.php' ;
 	$ma_kh = $_SESSION['ma_kh'];
 	$sql = "select * from hoa_don where ma_khach_hang = '$ma_kh'";
 	$result = mysqli_query($connect, $sql);
