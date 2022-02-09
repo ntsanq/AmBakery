@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sửa khuyến mãi</title>
 	<link rel="stylesheet" href="../../css/form.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
+	<?php include '../thuvien.php'; ?>
 </head>
 <body>
 	<?php 
@@ -18,6 +18,7 @@
 	<?php 
 		include '../header.php';
 	 ?>
+	  <a href="../khuyenmai"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<form action="sua_process.php" method="POST">
 			<input type="hidden" name="ma_cap_do" value="<?php echo $row['ma_cap_do'] ?>">

@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Thêm thể loại</title>
 	<link rel="stylesheet" href="../../css/form.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
+	<?php include '../thuvien.php'; ?>
 </head>
 <body>
 	<?php 
 	include '../header.php';
 	?>
+	 <a href="../theloai"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 			<div >

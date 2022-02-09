@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dashboard Quản lý</title>
-
+	<link rel="stylesheet" href="../../css/dashboard.css">
 	<?php 
 	include '../thuvien.php';
 	?>

@@ -30,4 +30,4 @@
 			echo "Failed to log in";
 		}
 ?>
-<a href="index.php">Thử đăng nhập lại</a>
+<a href="login.php">Thử đăng nhập lại</a>

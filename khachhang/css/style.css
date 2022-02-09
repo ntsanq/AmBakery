@@ -466,12 +466,14 @@ color:  #fe8777 ;
 .dropdown {
   position: relative;
   display: inline-block;
+  float: right;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  min-width: 160px;
+    right: 0;
+  min-width: 185px;
   z-index: 1;
     background-color: #ffffff;
 }

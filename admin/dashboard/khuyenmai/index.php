@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Dashboard Quản lý</title>
-
+	<link rel="stylesheet" href="../../css/dashboard.css">
 	<?php 
 	include '../thuvien.php';
 	?>
@@ -14,6 +14,7 @@
 	<?php 
 	include '../header.php';
 	?>
+	
 	<div class="container">
 		<?php 	
 		include('../menu.php');
@@ -38,9 +39,6 @@
 						<thead class="thead-dark">
 							<tr>
 								<th>
-									Loại khách hàng
-								</th>
-								<th>
 									Phần trăm
 								</th>
 								<th>
@@ -49,18 +47,12 @@
 								<th>
 									Sửa
 								</th>
-								<th>
-									Xóa
-								</th>
 
 							</tr>
 						</thead>
 						<tbody>
 							<?php foreach ($result as $tung_giam_gia) { ?>
 								<tr>
-									<td>
-										<?php echo $tung_giam_gia['ma_cap_do'] ?>
-									</td>
 									<td>
 										<?php echo $tung_giam_gia['phan_tram'] ?>%
 									</td>
@@ -70,11 +62,6 @@
 									<td>
 										<a href="sua_form.php?ma_cap_do=<?php echo $tung_giam_gia['ma_cap_do'] ?>">
 											<i class="far fa-edit"></i>
-										</a>
-									</td>
-									<td>
-										<a href="xoa_process.php?ma_cap_do=<?php echo $tung_giam_gia['ma_cap_do'] ?> " onclick="if(confirm('Xóa thật hả?')){}else{return false;}">
-											<i class="far fa-minus-square"></i>
 										</a>
 									</td>
 

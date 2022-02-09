@@ -1,6 +1,6 @@
 <header>
 	<div id="header">
-		<a href="#" class="header__logo" onclick="if(confirm('Kiếm gì?')){}else{return false;}">
+		<a href="index.php" class="header__logo">
 			<span><b>am</b>bakery</span>
 		</a>
 	</div>

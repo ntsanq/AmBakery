@@ -1,47 +1,32 @@
-<!-- Hiện tại tổng số mail khách hàng đang có : ......
-Bạn có chắc gửi mail đến những người này? -->
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
 
-require 'PHPMailer-master/src/Exception.php';
-require 'PHPMailer-master/src/OAuth.php';
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/POP3.php';
-require 'PHPMailer-master/src/SMTP.php';
-	
+	Hiện tổng số mail khách hàng hiện có là: 
+	<?php 
+	require '../../connect.php';
+	$sql = "select * from khach_hang";
+	$result = mysqli_query($connect, $sql);
+	$so_email = mysqli_num_rows($result);
+	echo $so_email;
+	echo "<br>";
+	$index = 0;
+	foreach ($result as $row) {
+		$index++;
+		echo "$index) ";
+		echo $row['email'];
+		echo "<br>";
+	}
+	?>
+	<br>
+	Bạn có thực sự muốn gửi mail cho tất cả khách hàng?
+	<a href="">Có</a>
+	<a href="">Không</a>
 
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->Mailer = "smtp";
-
-try {
-    //Server settings
-    $mail->SMTPDebug  = 1;  
-	$mail->SMTPAuth   = TRUE;
-	$mail->SMTPSecure = "tls";
-	$mail->Port       = 587;
-	$mail->Host       = "smtp.gmail.com";
-	$mail->Username   = "ambakery2022@gmail.com";
-	$mail->Password   = "website2022";
-
-
-    $mail->IsHTML(true);
-    //Recipients
-    $mail->setFrom('ambakery2022@gmail.com', 'AmBakery');
-    $mail->addAddress('nguyenthanhsang2401@gmail.com', 'Sang');     //Add a recipient
-
-    //Content
-	$mail->Subject = "Test is Test Email sent via Gmail SMTP Server using PHP Mailer";
-	$content = "<b>This is a Test Email sent via Gmail SMTP Server using PHP mailer class.</b>";
-
-    
-    
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
+</body>
+</html>
