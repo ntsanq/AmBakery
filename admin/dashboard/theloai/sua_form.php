@@ -19,7 +19,7 @@
 	<?php 
 		include '../header.php';
 	?>
-	 <a href="../khachhang"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
+	 <a href="../khachhang" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<form action="sua_process.php" method="POST">
 

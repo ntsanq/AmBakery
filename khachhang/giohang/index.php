@@ -121,7 +121,7 @@
 if (empty($_SESSION['cart'])) { 
 	?>
 	<table>
-		<th>Bạn không có đồ trong giỏ hàng</th>
+		<td>Bạn không có đồ trong giỏ hàng</td>
 	</table>
 <?php } ?>
 

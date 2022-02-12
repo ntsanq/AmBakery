@@ -18,7 +18,7 @@
 	<?php 
 		include '../header.php';
 	 ?>
-	  <a href="../khuyenmai"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
+	  <a href="../khuyenmai" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<form action="sua_process.php" method="POST">
 			<input type="hidden" name="ma_cap_do" value="<?php echo $row['ma_cap_do'] ?>">

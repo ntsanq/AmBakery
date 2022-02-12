@@ -23,7 +23,7 @@
 	<?php 
 	include '../header.php';
 	?>
-	 <a href="../sanpham"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
+	 <a href="../sanpham" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<!-- Đưa mã sản phẩm theo nhưng ẩn -->
 		

@@ -25,8 +25,8 @@
 	?>
 	<br>
 	Bạn có thực sự muốn gửi mail cho tất cả khách hàng?
-	<a href="">Có</a>
-	<a href="">Không</a>
+	<a href="send_process.php">Có</a>
+	<a href="../root">Không</a>
 
 </body>
 </html>

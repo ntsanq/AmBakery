@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2022 at 11:19 AM
+-- Generation Time: Feb 12, 2022 at 01:15 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -65,7 +65,8 @@ CREATE TABLE `hoa_don` (
 INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `thoi_gian_dat`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_giao_hang`, `ghi_chu`, `trang_thai`, `tong_tien`) VALUES
 (14, 33, '2022-01-27 12:45:54', 'Edogawa Conan', '0983259334', 'Tokyo, JP', 'toi dang  làm nhiệm vụ', 1, 20000),
 (31, 33, '2022-02-03 06:09:45', 'Edogawa Conan', '0983259334', 'Tokyo, JP', '', 1, 104000),
-(32, 0, '2022-02-09 08:29:30', 'Vendy Võ', '0914319328', '123D Mậu Thân, An Hòa, Cần Thơ', 'dw123123', 0, 70000);
+(32, 0, '2022-02-09 08:29:30', 'Vendy Võ', '0914319328', '123D Mậu Thân, An Hòa, Cần Thơ', 'dw123123', 0, 70000),
+(33, 34, '2022-02-09 12:39:04', 'Vendy', '0932234342', 'Vĩnh Long', 'tôi đang đói quá', 1, 150000);
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,8 @@ INSERT INTO `hoa_don_chi_tiet` (`ma_hoa_don`, `ma_san_pham`, `so_luong`) VALUES
 (31, 14, 2),
 (31, 24, 1),
 (32, 5, 1),
-(32, 13, 1);
+(32, 13, 1),
+(33, 5, 10);
 
 -- --------------------------------------------------------
 
@@ -113,10 +115,11 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `sdt`, `dia_chi`, `mat_khau`, `cap_do`) VALUES
-(31, 'Mori Ran', 0, '2022-01-05', 'morri@gg.com', '0934293422', '1234 Ssduf, HN', '123123123123', 1),
+(31, 'Mori Ran', 0, '2022-01-05', 'morri@gg.com', '0934293422', '1234 SW, JP', '123123123123', 1),
 (33, 'Edogawa Conan', 1, '2021-12-27', 'conan@gmail.com', '0983259334', 'Tokyo, JP', '123123123', 1),
 (34, 'Vendy', 0, '2001-08-06', 'vy@gg.com', '0932234342', 'Vĩnh Long', '123123123', 1),
-(35, 'Sha Da', 0, '2019-01-15', 'sanda@gg.com', '0923423482', 'Bạc Liêu', '123123123123', 1);
+(35, 'Sha Da', 0, '2019-01-15', 'sanda@gg.com', '0923423482', 'Bạc Liêu', '123123123123', 1),
+(36, 'Nguyễn Nam Long', 1, '2006-01-01', 'longhacker@gg.com', '0966888111', '26, Sơn La', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -256,13 +259,13 @@ ALTER TABLE `the_loai`
 -- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`

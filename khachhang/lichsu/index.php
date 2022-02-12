@@ -17,51 +17,61 @@
 	$ma_kh = $_SESSION['ma_kh'];
 	$sql = "select * from hoa_don where ma_khach_hang = '$ma_kh'";
 	$result = mysqli_query($connect, $sql);
-	foreach ($result as $row) { ?>
-		Ngày đặt: <?php echo $row['thoi_gian_dat'] ?>
-		<div class="div_bang_chi_tiet_hoa_don">
-			<?php 
-			$ma_hoa_don = $row['ma'];
-			$sql = "select * from hoa_don_chi_tiet where ma_hoa_don = '$ma_hoa_don'";
-			$result = mysqli_query($connect, $sql);
-			$row = mysqli_fetch_array($result);
-			?>
-			<table class="bang_chi_tiet_hoa_don" >
-				<thead class="thead-dark">
-					<tr>
-						<th>
-							Tên sản phẩm
-						</th>
-						<th></th>
-						<th>
-							Số lượng
-						</th>
-
-					</tr>
-				</thead>
-				<tbody>
-					<?php foreach ($result as $tung_hoa_don) { ?>
+	$number = mysqli_num_rows($result);
+	if ($number == 0) {
+		echo '<table>
+		<td>Bạn chưa từng mua hàng</td>
+	</table>';
+	}else{
+		foreach ($result as $row) { ?>
+			Ngày đặt: <?php echo $row['thoi_gian_dat'] ?>
+			<div class="div_bang_chi_tiet_hoa_don">
+				<?php 
+				$ma_hoa_don = $row['ma'];
+				$sql = "select * from hoa_don_chi_tiet where ma_hoa_don = '$ma_hoa_don'";
+				$result = mysqli_query($connect, $sql);
+				$row = mysqli_fetch_array($result);
+				?>
+				<table class="bang_chi_tiet_hoa_don" >
+					<thead class="thead-dark">
 						<tr>
-							<td class="div_ten_sp">
-								<?php
-								$ma_san_pham = $tung_hoa_don['ma_san_pham'];
-								$sql= "select * from san_pham where ma = '$ma_san_pham'";
-								$result = mysqli_query($connect,$sql);
-								$row= mysqli_fetch_array($result);
-								echo $row['ten_san_pham'];
-								?>
-							</td>
-							<td class="div_anh" >
-								<img src="<?php echo $row['anh'] ?>" height="100px">
-							</td>
-							<td>
-								<?php echo $tung_hoa_don['so_luong'] ?>
-							</td>
+							<th>
+								Tên sản phẩm
+							</th>
+							<th></th>
+							<th>
+								Số lượng
+							</th>
+
 						</tr>
-					<?php } ?>
-				</tbody>
-			</table>
-		</div>
-	<?php } ?>
+					</thead>
+					<tbody>
+						<?php foreach ($result as $tung_hoa_don) { ?>
+							<tr>
+								<td class="div_ten_sp">
+									<?php
+									$ma_san_pham = $tung_hoa_don['ma_san_pham'];
+									$sql= "select * from san_pham where ma = '$ma_san_pham'";
+									$result = mysqli_query($connect,$sql);
+									$row= mysqli_fetch_array($result);
+									echo $row['ten_san_pham'];
+									?>
+								</td>
+								<td class="div_anh" >
+									<img src="<?php echo $row['anh'] ?>" height="100px">
+								</td>
+								<td>
+									<?php echo $tung_hoa_don['so_luong'] ?>
+								</td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+			</div>
+		<?php } 
+
+	}?>
+
+	
 </body>
 </html>

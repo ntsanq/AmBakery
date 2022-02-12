@@ -11,7 +11,7 @@
 	<?php 
 		include '../header.php';
 	 ?>
-	  <a href="../nhanvien"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
+	  <a href="../nhanvien" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<?php 
 		$ma = $_GET['ma'];
 		require  '../../connect.php' ;
