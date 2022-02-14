@@ -42,7 +42,7 @@ session_start();
           <div class="product__card">
             <div class="product__card--body">
               <div class="product__photo">
-                <a href="mota/chitietsp.php?ma=<?php echo $row['ma'] ?>">
+                <a href="mota/index.php?ma=<?php echo $row['ma'] ?>">
                   <img src="<?php echo $row['anh'] ?>" alt="">
                 </a>
               </div>
@@ -50,7 +50,7 @@ session_start();
                 <div class="product__info--text">
                   <div class="group">
                     <h3>
-                      <a href="mota/chitietsp.php?ma=<?php echo $row['ma'] ?>"><?php echo $row['ten_san_pham'] ?></a>
+                      <a href="mota/index.php?ma=<?php echo $row['ma'] ?>"><?php echo $row['ten_san_pham'] ?></a>
                     </h3>
                   </div>
                   <div class="price">
@@ -92,7 +92,7 @@ session_start();
                 <div class="product__card">
                   <div class="product__card--body">
                     <div class="product__photo">
-                      <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>">
+                      <a href="mota/index.php?ma=<?php echo $tung_san_pham['ma'] ?>">
                         <img src="<?php echo $tung_san_pham['anh'] ?>" alt="">
                       </a>
                     </div>
@@ -100,9 +100,9 @@ session_start();
                       <div class="product__info--text">
                         <div class="group">
                           <h3>
-                            <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['ten_san_pham'] ?></a>
+                            <a href="mota/index.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['ten_san_pham'] ?></a>
                           </h3>
-                          <!-- <a href="mota/chitietsp.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['mo_ta'] ?></a> -->
+                          <!-- <a href="mota/index.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['mo_ta'] ?></a> -->
                         </div>
                         <div class="price">
                           <span><?php echo $tung_san_pham['gia'] ?>đ</span>
