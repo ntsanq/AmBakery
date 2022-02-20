@@ -44,7 +44,8 @@
 							<?php echo $tung_san_pham['ten_san_pham']?>
 						</td>
 						<td>
-							<?php echo $tung_san_pham['gia']?>đ
+							<?php echo number_format($tung_san_pham['gia']) ?>đ
+							
 						</td>
 						<td>
 							<a href="so_luong_update.php?ma=<?php echo $ma ?>&type=decre" style="font-size: 25px;">-</a>
@@ -54,7 +55,7 @@
 						<td>
 							<?php 
 							$tong = $tung_san_pham['gia']*$tung_san_pham['so_luong'];
-							echo  $tong;
+							echo  number_format($tong) ;
 							$tong_tien += $tong;
 						?>đ
 					</td>
@@ -71,7 +72,7 @@
 					Tổng tiền hóa đơn là :
 				</td>
 				<td colspan="2" >
-					<span > <?php  echo $tong_tien?>đ</span>
+					<span > <?php  echo number_format($tong_tien)?>đ</span>
 				</td>
 			</tr>
 
@@ -91,14 +92,14 @@
 						$result = mysqli_query($connect,$sql);
 						$row = mysqli_fetch_array($result);
 						$row_phan_tram = $row['phan_tram'];
-						echo $row_phan_tram;
+						echo $row_phan_tram."%)";
 						?>
-						%) giảm còn :
+						giảm còn :
 					</td>
 					<td colspan="2" >
 						<span >
 							<?php $tong_tien_da_giam = $tong_tien - $tong_tien * ($row_phan_tram/100);
-							echo $tong_tien_da_giam;?>đ
+							echo number_format($tong_tien_da_giam)?>đ
 						</span>
 					</td>
 				</tr>

@@ -12,31 +12,51 @@
 			width: 500px;
 			float: left;
 			object-fit: cover;
+			margin-right: 20px;
 		}
 		.div_mota {
 			height:  500px;
 			width: 70%;
 			margin: 0px auto;
-			border: 1px solid black;
-			
+			box-shadow: 5px 10px 28px #888888;
+
 		}
 		.mota__noidung{
-			
+
 		}
 		.mota__tensp {
-			
+
 		}
 		.mota__chitiet {
-			
+
+		}
+		.product__cart--btn{
+			font-family: inherit;
+			font-weight: 500;
+            position: absolute;
+            right: 210px;
+            bottom: 75px;
+			border: none;
+			background-color: transparent;
+			border-bottom: 2px solid #fe8777;
+            font-size: 23px;
+            margin: 20px ;
+            
+		}
+		.product__cart--btn:hover{
+			cursor: pointer;
+			color:  #fe8777 ;
+			transition: all .3s;
 		}
 	</style>
 </head>
 <body>
 
-	<?php include '../small_header.php'; ?>
-	<div width="10%" style="font-size:20px; ">
+	<!-- <?php include '../small_header.php'; ?> -->
+
+	<div width="10%" style="font-size:20px; margin-left: 10px;">
 		<a href="../"><i class="fas fa-arrow-left"></i>
-			<span>Go back</span>
+			<span>Quay lại</span>
 		</a>
 	</div>
 	<div class="div_mota">

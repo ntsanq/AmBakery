@@ -70,6 +70,7 @@
       <?php
       if (isset($_SESSION['ma_kh'])) {?>
         <div class="dropdown-content">
+          <a href="thongtincanhan">Thông tin cá nhân</a>
           <a href="lichsu">Lịch sử mua hàng</a>
           <a href="logout_process.php">Đăng xuất <!-- <i class="fas fa-sign-out-alt"></i> --></a>
         </div>

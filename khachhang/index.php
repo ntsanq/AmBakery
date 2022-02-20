@@ -105,7 +105,7 @@ session_start();
                           <!-- <a href="mota/index.php?ma=<?php echo $tung_san_pham['ma'] ?>"><?php echo $tung_san_pham['mo_ta'] ?></a> -->
                         </div>
                         <div class="price">
-                          <span><?php echo $tung_san_pham['gia'] ?>đ</span>
+                          <span><?php echo number_format($tung_san_pham['gia']) ?>đ</span>
 
                         </div>
                       </div>

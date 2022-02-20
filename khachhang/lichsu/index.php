@@ -10,21 +10,33 @@
 	<?php include '../thuvien.php'; ?>
 </head>
 <body>
-	<?php include 'header.php'; ?>
+	<div width="100%">
+		<div width="10%" style="font-size:20px; ">
+			<a href="../"><i class="fas fa-arrow-left"></i>
+				<span>Quay lại</span>
+			</a>
+		</div>
+		<div width="90%"><h1 align="center" style=" font-weight: 600;">Lịch sử mua hàng</h1></div>
+	</div>
+	<br>
 
 	<?php 
 	require '../../admin/connect.php' ;
 	$ma_kh = $_SESSION['ma_kh'];
-	$sql = "select * from hoa_don where ma_khach_hang = '$ma_kh'";
+	$sql = "select * from hoa_don where ma_khach_hang = '$ma_kh' and trang_thai = 1";
 	$result = mysqli_query($connect, $sql);
 	$number = mysqli_num_rows($result);
 	if ($number == 0) {
 		echo '<table>
 		<td>Bạn chưa từng mua hàng</td>
-	</table>';
+		</table>';
 	}else{
 		foreach ($result as $row) { ?>
-			Ngày đặt: <?php echo $row['thoi_gian_dat'] ?>
+			Ngày đặt: 
+			<?php
+			$date=date_create($row['thoi_gian_dat']);
+			echo date_format($date,"d.m.Y - H:i:s");
+			?>
 			<div class="div_bang_chi_tiet_hoa_don">
 				<?php 
 				$ma_hoa_don = $row['ma'];

@@ -11,6 +11,13 @@
     <?php include 'small_header.php'; ?>
 
     <div id="frm">
+        <span style="color: red">
+            <?php
+            if (isset($_GET['error'])) {
+                echo $_GET['error'];
+            }
+            ?>
+        </span>
         <div>
             <div>
                 <p id="login">LOGIN</p>

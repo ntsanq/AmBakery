@@ -42,9 +42,13 @@ session_start();
     </div> -->
 
     <div id="frm">
-        <span ><?php if (isset($_GET['error'])) {
-            echo $_GET['error'];
-        } ?></span>
+        <span style="color: red">
+            <?php
+            if (isset($_GET['error'])) {
+                echo $_GET['error'];
+            }
+            ?>
+        </span>
         <div>
             <div>
                 <p href="" align="center">
