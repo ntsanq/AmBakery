@@ -425,3 +425,29 @@ a.ma_hoa_don:hover:after {
 
 
 /*--------------------------------------------------------------------*/
+
+
+/*------------------Chia ten the loai---------------------*/
+.list_phanloai{
+    height: 10px;
+    margin-top: 25px;
+}
+.chia_the_loai ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  float: right;
+}
+
+.chia_the_loai li {
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+  
+.chia_the_loai li:hover,
+.chia_the_loai li:focus-within {
+  background: rgb(113,106,106);
+  cursor: pointer;	
+}
+/*-----------------------------------------*/

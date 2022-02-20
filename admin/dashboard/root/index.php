@@ -19,9 +19,14 @@
 		include('../menu.php');
 		?>
 		<main >
-			<?php 	
-			include '../main_top_div.php';
-			?>
+			<!-- ----------------maintopdiv-------------------- -->
+			<div class="main_top">
+				<div class="main_top_left">
+					
+				</div>
+				<?php include '../main_top_right.php'; ?>
+			</div>
+			<!-- --------------------------------- -->
 			
 			<div class="main_content" >
 				<div class="bgimg">

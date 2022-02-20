@@ -16,27 +16,10 @@
 			</li>
 		<?php } ?>
 		<li class="nav__list--item">
-			<div class="dropdown">
-				<button class="dropbtn" onclick="location.href='../sanpham'">
-					<i class="fas fa-bread-slice nav__icon"></i>
-					<span>Quản lý sản phẩm</span>
-				</button>
-				<div class="dropdown-content">
-					<?php 
-					require '../../connect.php';
-					$sql = "select * from the_loai";
-					$result = mysqli_query($connect, $sql);
-					foreach ($result as $row) {
-						$ten_the_loai = $row['ten_the_loai'];
-						$sql= "select * from the_loai where ten_the_loai = '$ten_the_loai'";
-						$result = mysqli_query($connect,$sql);
-						$ma_the_loai = mysqli_fetch_array($result);
-						$lay_ma = $ma_the_loai['ma'];
-						?>
-						<a href="../sanpham/phanloai.php?ma=<?php echo $lay_ma ?>"><?php echo $row['ten_the_loai'] ?></a>
-					<?php } ?>	
-				</div>
-			</div>
+			<a href="../sanpham">
+				<i class="fas fa-bread-slice nav__icon"></i>
+				<span>Quản lý sản phẩm</span>
+			</a>
 		</li>
 		<li class="nav__list--item">
 			<a href="../donhang">
@@ -68,14 +51,11 @@
 				</a>
 			</li>
 		<?php } ?>
-		<?php 
-		if ($_SESSION['cap_do'] == 1) {?>
-			<li class="nav__list--item">
+			<!-- <li class="nav__list--item">
 				<a href="../mail">
 					<i class="far fa-paper-plane"></i>
 					<span>Gửi mail quảng cáo</span>
 				</a>
-			</li>
-		<?php } ?>
+			</li> -->
 	</ul>
 </div>

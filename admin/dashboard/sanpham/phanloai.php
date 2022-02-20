@@ -20,15 +20,23 @@
 		include '../menu.php';
 		?>
 		<main >
-			<?php 	
-			include '../main_top_div.php';
-			?>
+			<!-- ----------------maintopdiv-------------------- -->
+			<div class="main_top">
+				<div class="main_top_left">
+					<form>
+						<input type="search" placeholder="Tìm kiếm sản phẩm theo tên..." name="tim_kiem">
+						<button type="submit"><i class="fa fa-search"></i></button>
+					</form>
+				</div>
+				<?php include '../main_top_right.php'; ?>
+			</div>
+			<!-- --------------------------------- -->
+			<?php include 'list_phanloai.php' ?>
 			<div class="main_content">
 				<a href="them_form.php" class="them">
 					<i class="fa fa-plus"></i>
 					Thêm sản phẩm
 				</a>
-
 				<?php 
 				require  '../../connect.php' ;
 				$ma = $_GET['ma'];
