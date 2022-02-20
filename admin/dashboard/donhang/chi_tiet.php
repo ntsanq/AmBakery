@@ -21,7 +21,7 @@
 	<div width="100%" class="chi_tiet_header">
 		<div width="10%" class="a_arrow">
 			<a href="index.php"><i class="fas fa-arrow-left"></i>
-				<span>Go back</span>
+				<span>Quay lại</span>
 			</a>
 		</div>
 		<div width="90%"><h1 align="center" class="chi_tiet_ma">
@@ -80,7 +80,14 @@
 	}else{
 		echo $row['ten'];
 	}
-
+	?>
+	<br>
+	Người duyệt:
+	<?php 
+	$sql = "select duyet_boi from hoa_don_chi_tiet where ma_hoa_don = $ma";
+	$result = mysqli_query($connect, $sql);
+	$row = mysqli_fetch_array($result);
+	echo $row['duyet_boi'];
 	?>
 </body>
 </html>

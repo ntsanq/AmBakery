@@ -127,7 +127,7 @@ p.header__logo{
 .container main{
 	height: 1000px;
 	flex-basis: 80% ;
-	margin-left: 250px;
+	margin-left: 240px;
 }
 
 .main_top{
@@ -447,7 +447,7 @@ a.ma_hoa_don:hover:after {
   
 .chia_the_loai li:hover,
 .chia_the_loai li:focus-within {
-  background: rgb(113,106,106);
+  background: #dadada;
   cursor: pointer;	
 }
 /*-----------------------------------------*/
