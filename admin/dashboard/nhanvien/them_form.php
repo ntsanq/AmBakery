@@ -11,7 +11,7 @@
 	<?php 
 	include '../header.php';
 	?>
-	 <a href="../nhanvien" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
+	<?php include '../quaylai_btn.php' ?>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 			<div class="form__heading">
@@ -35,11 +35,7 @@
 				<label for="mat_khau">Password: </label>
 				<input class="input--form" type="password" name="mat_khau">
 				<br>
-				<label for="cap_do">Là nhân viên hay là quản lí?  </label>
-				<input type="radio" name="cap_do" value="0">
-				<label class="label--radio"for="nhan_vien">Nhân viên </label>
-				<input type="radio" name="cap_do" value="1">
-				<label class="label--radio" for="quan_li">Quản lí </label>
+				<label for="cap_do">Chức vụ: </label>
 				<select class="input--form" name="cap_do">
 					<option value="1">Quản lý</option>
 					<option value="0">Nhân viên</option>

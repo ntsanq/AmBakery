@@ -9,6 +9,13 @@
 	<?php 
 	include '../thuvien.php';
 	?>
+	<style type="text/css">
+		img{
+			width: 150px;
+			  height: 100px;
+			  object-fit: cover;
+		}
+	</style>
 </head>
 <body>
 	<?php 
@@ -86,10 +93,10 @@
 											<?php echo $tung_san_pham['mo_ta'] ?>
 										</td>
 										<td>
-											<img src="<?php echo $tung_san_pham['anh'] ?>" height="100px">
+											<img src="<?php echo $tung_san_pham['anh'] ?>" >
 										</td>
 										<td>
-											<?php echo $tung_san_pham['gia'] ?>đ
+											<?php echo number_format($tung_san_pham['gia']) ?>đ
 										</td>
 										<td>
 											<a href="sua_form.php?ma=<?php echo $tung_san_pham['ma']?>">
@@ -158,7 +165,7 @@
 											<img src="<?php echo $tung_san_pham['anh'] ?>" height="100px">
 										</td>
 										<td>
-											<?php echo $tung_san_pham['gia'] ?>đ
+											<?php echo number_format($tung_san_pham['gia']) ?>đ
 										</td>
 										<td>
 											<a href="sua_form.php?ma=<?php echo $tung_san_pham['ma']?>">

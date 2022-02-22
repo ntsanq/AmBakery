@@ -15,7 +15,7 @@
 	if ($result->num_rows ==1 ) {
 		session_start();
 		$row = mysqli_fetch_array($result);
-		$_SESSION['ma_nv'] = $row['ma_nv'];
+		$_SESSION['ma_nv'] = $row['ma'];
 		$_SESSION['ten_nv'] = $row['ten'];
 		$_SESSION['cap_do'] = $row['cap_do'];
 		header("Location: dashboard/root");

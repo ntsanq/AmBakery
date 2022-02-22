@@ -22,13 +22,14 @@
         <span>
           <?php 
           if (isset($_SESSION['cart'])) {
-            $tong = 0;
-            $times = sizeof($_SESSION['cart']);
+            $so_luong = 0;
+            // $times = sizeof($_SESSION['cart']);
             $cart = $_SESSION['cart'];
             foreach ($cart as $ma => $tung_san_pham) {
-              $tong += $_SESSION['cart'][$ma]['so_luong'];
+              $so_luong += $_SESSION['cart'][$ma]['so_luong'];
+              $_SESSION['sl_sp'] =$so_luong;
             }
-            echo $tong;
+            echo $so_luong;
           }elseif (!isset($_SESSION['cart'])) {
             echo 0;
           }

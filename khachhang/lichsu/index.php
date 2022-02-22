@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Lịch sử mua hàng</title>
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/form.css">
 	<?php include '../thuvien.php'; ?>
@@ -25,7 +25,7 @@
 	$ma_kh = $_SESSION['ma_kh'];
 	$sql = "select * from hoa_don where ma_khach_hang = '$ma_kh' and trang_thai = 1";
 	$result = mysqli_query($connect, $sql);
-	$number = mysqli_num_rows($result);
+	$number  = mysqli_num_rows($result);
 	if ($number == 0) {
 		echo '<table>
 		<td>Bạn chưa từng mua hàng</td>
@@ -37,6 +37,7 @@
 			$date=date_create($row['thoi_gian_dat']);
 			echo date_format($date,"d.m.Y - H:i:s");
 			?>
+			<a href="chi_tiet.php?ma=<?php echo $row['ma'] ?>" style="color: blue">&lt;Xem chi tiết&gt;</a>
 			<div class="div_bang_chi_tiet_hoa_don">
 				<?php 
 				$ma_hoa_don = $row['ma'];

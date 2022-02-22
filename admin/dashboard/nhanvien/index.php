@@ -111,7 +111,11 @@
 										</a>
 									</td>
 									<td>
-										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
+										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" 
+											onclick="
+											if(confirm('Bạn có chắc muốn xóa nhân viên này?')){
+
+											}else{return false;}"
 											>
 											<i class="far fa-minus-square"></i>
 										</a>
@@ -198,7 +202,7 @@
 										</a>
 									</td>
 									<td>
-										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
+										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Bạn có chắc muốn xóa nhân viên này?')){}else{return false;}"
 											>
 											<i class="far fa-minus-square"></i>
 										</a>
@@ -277,7 +281,7 @@
 										</a>
 									</td>
 									<td>
-										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Xóa thật hả?')){}else{return false;}"
+										<a href="xoa_process.php?ma=<?php echo $tung_nhan_vien['ma']?>" onclick="if(confirm('Bạn có chắc muốn xóa nhân viên này?')){}else{return false;}"
 											>
 											<i class="far fa-minus-square"></i>
 										</a>

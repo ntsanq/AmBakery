@@ -105,7 +105,7 @@
 										<?php echo $tung_hoa_don['ghi_chu'] ?>
 									</td>
 									<td>
-										<?php echo $tung_hoa_don['tong_tien'] ?>
+										<?php echo number_format($tung_hoa_don['tong_tien']) ?>đ
 									</td>
 									<td>
 										<?php 
@@ -189,7 +189,7 @@
 										<?php echo $tung_hoa_don['ghi_chu'] ?>
 									</td>
 									<td>
-										<?php echo $tung_hoa_don['tong_tien'] ?>
+										<?php echo number_format($tung_hoa_don['tong_tien']) ?>đ
 									</td>
 									<td>
 										<a href="duyet_process.php?ma=<?php echo $tung_hoa_don['ma'] ?>">
@@ -271,7 +271,7 @@
 										<?php echo $tung_hoa_don['ghi_chu'] ?>
 									</td>
 									<td>
-										<?php echo $tung_hoa_don['tong_tien'] ?>
+										<?php echo number_format($tung_hoa_don['tong_tien']) ?>đ
 									</td>
 									<td>
 										<?php 

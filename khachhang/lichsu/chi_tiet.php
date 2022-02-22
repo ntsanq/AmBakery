@@ -1,18 +1,17 @@
-<?php include '../check_nhanvien_login.php' ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Chi tiết Đơn hàng</title>
-	<link rel="stylesheet" href="../../css/dashboard.css">
+	<title>Chi tiết đơn hàng</title>
+	<link rel="stylesheet" href="../css/style.css">
 	<?php 
 	include '../thuvien.php';
 	?>
 </head>
 <body>
 	<?php 
-	require '../../connect.php';
+	require '../../admin/connect.php';
 	// $sql = "select ma_hoa_don, count(*) FROM hoa_don_chi_tiet GROUP BY ma_hoa_don;";
 	$ma = $_GET['ma'];
 	$sql = "select * FROM hoa_don_chi_tiet where ma_hoa_don = '$ma'";
@@ -39,9 +38,7 @@
 					<th>
 						Số lượng
 					</th>
-					<th>
-						Tổng tiền
-					</th>
+
 				</tr>
 			</thead>
 			<tbody>
@@ -57,32 +54,13 @@
 							?>
 						</td>
 						<td class="div_anh">
-							<img src="<?php echo $row['anh'] ?>" height="100px" >
+							<img src="<?php echo $row['anh'] ?>" height="100px">
 						</td>
 						<td>
 							<?php echo $tung_hoa_don['so_luong'] ?>
 						</td>
-						<td>
-							<?php 
-							$tong = $row['gia']*$tung_hoa_don['so_luong'];
-							echo number_format($tong);
-							?>đ
-						</td>
 					</tr>
 				<?php } ?>
-				<tr>
-					<td colspan="3">
-						Tổng tiền đã thanh toán
-					</td>
-					<td >
-						<?php 
-						$sql= "select * from hoa_don where ma = '$ma'";
-						$result = mysqli_query($connect,$sql);
-						$row= mysqli_fetch_array($result);
-						echo number_format($row['tong_tien']);
-						?>đ
-					</td>
-				</tr>
 			</tbody>
 		</table>
 	</div>

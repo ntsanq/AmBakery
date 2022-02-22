@@ -14,8 +14,8 @@ session_start();
 </head>
 <body>
 
-  
-  
+
+
 
   <?php 
   require  '../admin/connect.php'  ;
@@ -76,6 +76,30 @@ session_start();
       <div class="banner">
         <img src="img/banner-1.jpg" alt="Pain perdu">
       </div>
+
+      <!-- ---------chia the loai---------- -->
+      <?php 
+      require '../admin/connect.php';
+      $sql_the_loai = "select * from the_loai";
+      $result_the_loai = mysqli_query($connect, $sql_the_loai);
+      foreach ($result_the_loai as $row) {?>
+        <div class="footer__nav">
+          <ul>
+            <li>
+              <?php 
+              $ten_the_loai = $row['ten_the_loai'];
+              $sql= "select * from the_loai where ten_the_loai = '$ten_the_loai'";
+              $result = mysqli_query($connect,$sql);
+              $ma_the_loai = mysqli_fetch_array($result);
+              $lay_ma = $ma_the_loai['ma'];
+              ?>
+              <a href="../sanpham/phanloai.php?ma=<?php echo $lay_ma ?>"><?php echo $row['ten_the_loai'] ?></a>
+            </li>
+          </ul>
+        </div>
+      <?php } ?>      
+      <!-- ---------------------------------- -->
+
       <main>
 
         <div class="product">
