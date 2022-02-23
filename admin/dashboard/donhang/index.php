@@ -125,7 +125,7 @@
 					<h2 class="main_content_the_loai">Đơn chưa được duyệt</h2>
 					<table border="1" width="100%">
 						<?php 
-						$sql = "select * from hoa_don where trang_thai = 0 ";
+						$sql = "select * from hoa_don where trang_thai = 0 order by thoi_gian_dat DESC";
 						$result = mysqli_query($connect, $sql);
 						?>
 						<thead class="thead-dark">
@@ -210,7 +210,7 @@
 					<h2 class="main_content_the_loai">Đơn đã được duyệt</h2>
 					<table border="1" width="100%">
 						<?php 
-						$sql = "select * from hoa_don where trang_thai = 1 ";
+						$sql = "select * from hoa_don where trang_thai = 1 order by thoi_gian_dat DESC";
 						$result = mysqli_query($connect, $sql);
 						?>
 						<thead class="thead-dark">

@@ -20,13 +20,17 @@
 	session_start();
 	require '../../admin/connect.php' ;
 	
-
+	if (isset($_GET['thanh_cong'])) {?>
+		<table>
+			<td><?php echo $_GET['thanh_cong'] ?></td>
+		</table>
+	<?php } else
 	if (empty($_SESSION['cart'])) { 
 		?>
 		<table>
 			<td>Bạn không có đồ trong giỏ hàng</td>
 		</table>
-	<?php }else{ 
+	<?php } else { 
 		$tong_tien = 0;
 
 		if (isset($_SESSION['cart'])) {

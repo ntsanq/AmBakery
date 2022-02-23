@@ -25,6 +25,6 @@
 		Ghi chú:
 		<input type="text" name="ghi_chu">
 		<br>
-		<button type="submit" id="btn_dat_hang">Đặt hàng</button>
+		<button type="submit" id="btn_dat_hang" >Đặt hàng</button>
 	</form>
 </div>

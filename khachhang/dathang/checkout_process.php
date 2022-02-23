@@ -55,6 +55,5 @@ foreach ($cart as $ma_san_pham => $tung_san_pham) {
 
 mysqli_close($connect);
 unset($_SESSION['cart']);
-echo "BẠN ĐÃ ĐẶT HÀNG THÀNH CÔNG!";
-echo "<a href='../'>Về trang chủ</a>";
+header('Location: ../giohang/index.php?thanh_cong=Bạn đã đặt hàng thành công!');
 // header("Location: ../index.php");
