@@ -17,15 +17,13 @@
 	$sql = "select * FROM hoa_don_chi_tiet where ma_hoa_don = '$ma'";
 	$result = mysqli_query($connect, $sql);
 	?>
-	<div width="100%" class="chi_tiet_header">
-		<div width="10%" class="a_arrow">
+	<div width="100%">
+		<div width="10%" style="font-size:20px; ">
 			<a href="index.php"><i class="fas fa-arrow-left"></i>
 				<span>Quay lại</span>
 			</a>
 		</div>
-		<div width="90%"><h1 align="center" class="chi_tiet_ma">
-			Mã hóa đơn: <?php echo $ma ?>
-		</h1></div>
+		<div width="90%"><h1 align="center" style="margin-top: 20px; font-weight: 600;">Mã hóa đơn: <?php echo $ma ?></h1></div>
 	</div>
 	<div class="div_bang_chi_tiet_hoa_don">
 		<table class="bang_chi_tiet_hoa_don" >

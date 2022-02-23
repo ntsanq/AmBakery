@@ -313,15 +313,26 @@ main > .product > .product > .product_category img {
   list-style: none;
   gap: 0 3rem;
   font-size: 1.8rem;
+  
 
 }
 .nav__list-item{
-  transition: 0 .3s;
+  /*transition: 0 .3s;
+
+  float: left;*/
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
 }
-.nav__list-item:hover{
+/*.nav__list-item:hover{
   cursor: pointer;
   color:  #fe8777 ;
 
+}*/
+.nav__list-item:hover,
+.nav__list-item:focus-within {
+  background: #dadada;
+  cursor: pointer;  
 }
 /*--------------------------------------------------------------*/
 
@@ -479,8 +490,7 @@ color:  #fe8777 ;
 }
 
 .dropdown-content a {
-  
-      color: rgba(0,0,0,0.8);;
+  color: rgba(0,0,0,0.8);;
   padding: 12px 16px;
   text-decoration: none;
   display: block;

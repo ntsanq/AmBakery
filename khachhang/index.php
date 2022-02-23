@@ -8,7 +8,7 @@ session_start();
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiệm bánh AmBakery</title>
+  <title>AmBakery</title>
   <?php include 'thuvien.php'; ?>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -74,18 +74,18 @@ session_start();
     <!-- -------------------NỘI DUNG TẤT CẢ SẢN PHẨM--------------------------- -->
     <div class="container">
       <div class="banner">
-        <img src="img/banner-1.jpg" alt="Pain perdu">
+        <img src="https://www.tasteatlas.com/images/dishes/26716764bc414a4699efef6434025831.jpg" alt="Pain perdu" width="1300px" height="566px">
       </div>
 
       <!-- ---------chia the loai---------- -->
-      <?php 
+      <!-- <?php 
       require '../admin/connect.php';
       $sql_the_loai = "select * from the_loai";
       $result_the_loai = mysqli_query($connect, $sql_the_loai);
       foreach ($result_the_loai as $row) {?>
-        <div class="footer__nav">
-          <ul>
-            <li>
+        <div class="list__nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
               <?php 
               $ten_the_loai = $row['ten_the_loai'];
               $sql= "select * from the_loai where ten_the_loai = '$ten_the_loai'";
@@ -97,7 +97,7 @@ session_start();
             </li>
           </ul>
         </div>
-      <?php } ?>      
+      <?php } ?> -->
       <!-- ---------------------------------- -->
 
       <main>

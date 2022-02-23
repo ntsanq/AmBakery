@@ -7,7 +7,7 @@ session_start();
 <head >
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Đăng nhập</title>
+    <title>Đăng nhập Admin</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@500&display=swap0" rel="stylesheet">
 </head>

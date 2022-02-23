@@ -10,17 +10,13 @@
 <body>
 <header>
         <div id="header">
-            <a href="#" class="header__logo" >
+            <a href="../login.php" class="header__logo" >
                 <span><b>am</b>bakery</span>
             </a>
         </div>
     </header>
 	<div class="container">
-		<?php 
-		if (isset($_GET['error'])) {
-			echo $_GET['error'];
-		}
-		 ?>
+		
 		<form action="signup_process.php" method="POST">
 			<div >
 				<h1>Đăng ký khách hàng mới</h1>
@@ -44,9 +40,14 @@
 				<label for="ngay_sinh">Ngày sinh: </label>
 				<input class="input--form" type="date" name="ngay_sinh" id="ngay_sinh"><span class="span_loi" id="loi_ngay_sinh" ></span>
 				<br>
-
 				<label for="email">Email: </label>
 				<input class="input--form" type="email" name="email" id="email"><span class="span_loi" id="loi_email"></span>
+				<span class="span_loi"><?php 
+				if (isset($_GET['error'])) {
+					echo $_GET['error'];
+				}
+				 ?></span>
+				
 				<br>
 
 				<label for="sdt">Số điện thoại: </label>
@@ -108,13 +109,40 @@
 		}
 
 		let email = document.getElementById('email').value;
-		if(email.length === 0 ){
+		if(email.length === 0 || email == '' ){
 			document.getElementById('loi_email').innerHTML = 'email không được để trống';
 			kiem_tra_loi = true;
 		}else{
-			document.getElementById('loi_email').innerHTML = "";
+			let regex_email =/^((?!\.)[\w\-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+			if (regex_email.test(email)==false) {
+				document.getElementById('loi_email').innerHTML = "Email không hợp lệ";
+				kiem_tra_loi= true;
+			}else{
+				document.getElementById('loi_email').innerHTML = "";
+			}
 		}
 
+		let sdt = document.getElementById('sdt').value;
+		if(sdt.length === 0 ){
+			document.getElementById('loi_sdt').innerHTML = 'số điện thoại không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			let phoneExp = /^(^\+251|^251|^0)?9\d{8}$/;
+			if (regex_sdt.test(sdt)==false) {
+				document.getElementById('loi_sdt').innerHTML = "Số điện thoại không hợp lệ";
+				kiem_tra_loi= true;
+			}else{
+				document.getElementById('loi_sdt').innerHTML = "";
+			}
+		}
+
+		let dia_chi = document.getElementById('dia_chi').value;
+		if(sdt.length === 0 ){
+			document.getElementById('loi_dia_chi').innerHTML = 'địa chỉ không được để trống';
+			kiem_tra_loi = true;
+		}else{
+			document.getElementById('loi_dia_chi').innerHTML = "";
+		}
 		let mat_khau = document.getElementById('mat_khau').value;
 		if(mat_khau.length === 0 ){
 			document.getElementById('loi_mat_khau').innerHTML = 'mật khẩu không được để trống';

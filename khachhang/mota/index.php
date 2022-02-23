@@ -52,12 +52,10 @@
 </head>
 <body>
 
-	<!-- <?php include '../small_header.php'; ?> -->
+	
 
 	<div width="10%" style="font-size:20px; margin-left: 10px;">
-		<a href="../"><i class="fas fa-arrow-left"></i>
-			<span>Quay lại</span>
-		</a>
+		<?php include '../quaylai_btn.php'; ?>
 	</div>
 	<div class="div_mota">
 		<?php 

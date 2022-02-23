@@ -10,11 +10,15 @@
 </head>
 <body>
 
+
+	<div width="100%">
+		<?php include '../quaylai_btn.php'; ?>
+		<div width="90%"><h1 align="center" style=" font-weight: 600;">Giỏ hàng</h1></div>
+	</div>
+	<br>
 	<?php  
 	session_start();
 	require '../../admin/connect.php' ;
-
-	include 'goback_btn.php';
 	
 
 	if (empty($_SESSION['cart'])) { 

@@ -11,7 +11,7 @@
 	<?php 
 	include '../header.php';
 	?>
-	<?php include '../quaylai_btn.php' ?>
+	<a href="../nhanvien" class="a_back"><i class="fas fa-arrow-left"></i><span>Quay lại</span></a>
 	<div class="container">
 		<form action="them_process.php" method="POST">
 			<div class="form__heading">
