@@ -105,7 +105,7 @@
 	<br>
 	Người duyệt:
 	<?php 
-	$sql = "select duyet_boi from hoa_don_chi_tiet where ma_hoa_don = $ma";
+	$sql = "select duyet_boi from hoa_don where ma = $ma";
 	$result = mysqli_query($connect, $sql);
 	$row = mysqli_fetch_array($result);
 	echo $row['duyet_boi'];

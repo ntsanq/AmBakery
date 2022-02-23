@@ -36,7 +36,9 @@
 					<th>
 						Số lượng
 					</th>
-
+					<th>
+						Tổng tiền
+					</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -52,13 +54,32 @@
 							?>
 						</td>
 						<td class="div_anh">
-							<img src="<?php echo $row['anh'] ?>" height="100px">
+							<img src="<?php echo $row['anh'] ?>" height="100px" >
 						</td>
 						<td>
 							<?php echo $tung_hoa_don['so_luong'] ?>
 						</td>
+						<td>
+							<?php 
+							$tong = $row['gia']*$tung_hoa_don['so_luong'];
+							echo number_format($tong);
+							?>đ
+						</td>
 					</tr>
 				<?php } ?>
+				<tr>
+					<td colspan="3">
+						Tổng tiền đã thanh toán
+					</td>
+					<td >
+						<?php 
+						$sql= "select * from hoa_don where ma = '$ma'";
+						$result = mysqli_query($connect,$sql);
+						$row= mysqli_fetch_array($result);
+						echo number_format($row['tong_tien']);
+						?>đ
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
@@ -81,7 +102,7 @@
 	<br>
 	Người duyệt:
 	<?php 
-	$sql = "select duyet_boi from hoa_don_chi_tiet where ma_hoa_don = $ma";
+	$sql = "select duyet_boi from hoa_don where ma = $ma";
 	$result = mysqli_query($connect, $sql);
 	$row = mysqli_fetch_array($result);
 	echo $row['duyet_boi'];
