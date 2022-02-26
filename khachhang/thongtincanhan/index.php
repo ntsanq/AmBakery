@@ -43,7 +43,7 @@
 				<input type="text" name="ma">
 				<br> -->
 				<label for="ten" style="padding-top: 0 ;">Họ tên: </label>
-				<input disabled="disabled" class="input--form" type="text" name="ten" value="<?php echo $row['ten'] ?> ">
+				<input class="input--form" type="text" name="ten" value="<?php echo $row['ten'] ?> ">
 				<br>
 				<?php 
 				$checked = $row['gioi_tinh'];

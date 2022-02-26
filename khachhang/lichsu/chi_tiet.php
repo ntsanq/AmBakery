@@ -1,3 +1,19 @@
+<?php session_start(); 
+require '../../admin/connect.php';
+$ma_get = $_GET['ma'];
+$ma_ss = $_SESSION['ma_kh'];
+// lấy mã hóa đơn
+$sql = "select * from hoa_don where ma = '$ma_get'";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_array($result);
+$ma_kh = $row['ma_khach_hang'];
+if (!$ma_kh == $ma_ss ) {
+	echo "Bạn định hack à?? Không được đâu <a href='../'>Trở về</a>";
+	// header("Location: ../");
+	exit();
+}
+?>
+<?php  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +27,6 @@
 </head>
 <body>
 	<?php 
-	require '../../admin/connect.php';
 	// $sql = "select ma_hoa_don, count(*) FROM hoa_don_chi_tiet GROUP BY ma_hoa_don;";
 	$ma = $_GET['ma'];
 	$sql = "select * FROM hoa_don_chi_tiet where ma_hoa_don = '$ma'";
