@@ -35,7 +35,7 @@
 			font-weight: 500;
             position: absolute;
             right: 210px;
-            bottom: 75px;
+            bottom: 110px;
 			border: none;
 			background-color: transparent;
 			border-bottom: 2px solid #fe8777;
