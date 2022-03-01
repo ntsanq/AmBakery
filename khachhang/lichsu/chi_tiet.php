@@ -8,12 +8,12 @@ $result = mysqli_query($connect, $sql);
 $row = mysqli_fetch_array($result);
 $ma_kh = $row['ma_khach_hang'];
 if (!$ma_kh == $ma_ss ) {
-	echo "Bạn định hack à?? Không được đâu <a href='../'>Trở về</a>";
-	// header("Location: ../");
+	// echo "Bạn định hack à?? Không được đâu <a href='../'>Trở về</a>";
+	header("Location: ../");
 	exit();
 }
 ?>
-<?php  ?>
+<?php  $tong_tien = 0?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -78,49 +78,67 @@ if (!$ma_kh == $ma_ss ) {
 							<?php 
 							$tong = $row['gia']*$tung_hoa_don['so_luong'];
 							echo number_format($tong);
-							?>đ
-						</td>
-					</tr>
-				<?php } ?>
-				<tr>
-					<td colspan="3">
-						Tổng tiền đã thanh toán
-					</td>
-					<td >
-						<?php 
-						$sql= "select * from hoa_don where ma = '$ma'";
-						$result = mysqli_query($connect,$sql);
-						$row= mysqli_fetch_array($result);
-						echo number_format($row['tong_tien']);
+							$tong_tien += $tong;
 						?>đ
 					</td>
 				</tr>
-			</tbody>
-		</table>
-	</div>
-	
-	Người đặt:
-	<?php 
-	$sql = "select ma_khach_hang FROM hoa_don where ma = '$ma'";
-	$result = mysqli_query($connect, $sql);
-	$row = mysqli_fetch_array($result);	
-	$ma_kh = $row['ma_khach_hang'];
-	$sql = "select ten FROM khach_hang where ma = '$ma_kh'";
-	$result = mysqli_query($connect, $sql);
-	$row = mysqli_fetch_array($result);	
-	if (empty($row['ten'])) {
-		echo "khách vãng lai";
-	}else{
-		echo $row['ten'];
-	}
-	?>
-	<br>
-	Người duyệt:
-	<?php 
-	$sql = "select duyet_boi from hoa_don where ma = $ma";
-	$result = mysqli_query($connect, $sql);
-	$row = mysqli_fetch_array($result);
-	echo $row['duyet_boi'];
-	?>
+			<?php } ?>
+			
+			<tr>
+				<td colspan="3">Tổng tiền hóa đơn</td>
+				<td ><?php echo number_format($tong_tien) ?>đ</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					Tổng tiền đã thanh toán 
+				</td>
+				<td >
+					<?php 
+					$sql= "select * from hoa_don where ma = '$ma'";
+					$result = mysqli_query($connect,$sql);
+					$row= mysqli_fetch_array($result);
+					echo number_format($row['tong_tien']);
+				?>đ
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">Số tiền đã giảm 
+				<?php 
+				$giam = 0;
+				$giam = 100 - $row['tong_tien']/$tong_tien*100;
+				echo '('.$giam.'%)';
+				?>
+			</td>
+			<td>
+				<?php echo number_format($tong_tien - $row['tong_tien']).'đ'; ?>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+Người đặt:
+<?php 
+$sql = "select ma_khach_hang FROM hoa_don where ma = '$ma'";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_array($result);	
+$ma_kh = $row['ma_khach_hang'];
+$sql = "select ten FROM khach_hang where ma = '$ma_kh'";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_array($result);	
+if (empty($row['ten'])) {
+	echo "khách vãng lai";
+}else{
+	echo $row['ten'];
+}
+?>
+<br>
+Người duyệt:
+<?php 
+$sql = "select duyet_boi from hoa_don where ma = $ma";
+$result = mysqli_query($connect, $sql);
+$row = mysqli_fetch_array($result);
+echo $row['duyet_boi'];
+?>
 </body>
 </html>

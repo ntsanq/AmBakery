@@ -109,7 +109,7 @@
 		}
 
 		let email = document.getElementById('email').value;
-		if(email.length === 0 || email == '' ){
+		if(email.length == 0 || email == '' ){
 			document.getElementById('loi_email').innerHTML = 'email không được để trống';
 			kiem_tra_loi = true;
 		}else{
@@ -123,11 +123,11 @@
 		}
 
 		let sdt = document.getElementById('sdt').value;
-		if(sdt.length === 0 ){
+		if(sdt.length == 0 || sdt == ''){
 			document.getElementById('loi_sdt').innerHTML = 'số điện thoại không được để trống';
 			kiem_tra_loi = true;
 		}else{
-			let phoneExp = /^(^\+251|^251|^0)?9\d{8}$/;
+			let regex_sdt =/((09|03|07|08|05)+([0-9]{8})\b)/g;
 			if (regex_sdt.test(sdt)==false) {
 				document.getElementById('loi_sdt').innerHTML = "Số điện thoại không hợp lệ";
 				kiem_tra_loi= true;
@@ -137,24 +137,24 @@
 		}
 
 		let dia_chi = document.getElementById('dia_chi').value;
-		if(sdt.length === 0 ){
+		if(dia_chi.length == 0 || dia_chi == ''){
 			document.getElementById('loi_dia_chi').innerHTML = 'địa chỉ không được để trống';
 			kiem_tra_loi = true;
 		}else{
 			document.getElementById('loi_dia_chi').innerHTML = "";
 		}
 		let mat_khau = document.getElementById('mat_khau').value;
-		if(mat_khau.length === 0 ){
+		if(mat_khau.length == 0 || mat_khau == '' ){
 			document.getElementById('loi_mat_khau').innerHTML = 'mật khẩu không được để trống';
 			kiem_tra_loi = true;
 		}else if(mat_khau.length<8){
-			document.getElementById('loi_mat_khau').innerHTML = "mật khẩu ngắn quá";
+			document.getElementById('loi_mat_khau').innerHTML = "mật khẩu phải dài hơn 8 ký tự";
 			kiem_tra_loi = true;
 		}else{
 			document.getElementById('loi_mat_khau').innerHTML = "";
 		}
 
-		if(kiem_tra_loi){
+		if(kiem_tra_loi == true){
 			return false;
 		}
 	}
