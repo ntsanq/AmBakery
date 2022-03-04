@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 12, 2022 at 01:15 PM
+-- Generation Time: Mar 04, 2022 at 06:52 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -38,7 +38,7 @@ CREATE TABLE `giam_gia` (
 --
 
 INSERT INTO `giam_gia` (`phan_tram`, `ma_cap_do`, `ghi_chu`) VALUES
-('50', 1, 'khách hàng có tài khoản');
+('20', 1, 'khách hàng có tài khoản');
 
 -- --------------------------------------------------------
 
@@ -55,18 +55,31 @@ CREATE TABLE `hoa_don` (
   `dia_chi_giao_hang` varchar(100) NOT NULL,
   `ghi_chu` text NOT NULL,
   `trang_thai` tinyint(1) NOT NULL,
-  `tong_tien` int(11) NOT NULL
+  `tong_tien` int(11) NOT NULL,
+  `duyet_boi` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `hoa_don`
 --
 
-INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `thoi_gian_dat`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_giao_hang`, `ghi_chu`, `trang_thai`, `tong_tien`) VALUES
-(14, 33, '2022-01-27 12:45:54', 'Edogawa Conan', '0983259334', 'Tokyo, JP', 'toi dang  làm nhiệm vụ', 1, 20000),
-(31, 33, '2022-02-03 06:09:45', 'Edogawa Conan', '0983259334', 'Tokyo, JP', '', 1, 104000),
-(32, 0, '2022-02-09 08:29:30', 'Vendy Võ', '0914319328', '123D Mậu Thân, An Hòa, Cần Thơ', 'dw123123', 0, 70000),
-(33, 34, '2022-02-09 12:39:04', 'Vendy', '0932234342', 'Vĩnh Long', 'tôi đang đói quá', 1, 150000);
+INSERT INTO `hoa_don` (`ma`, `ma_khach_hang`, `thoi_gian_dat`, `ten_nguoi_nhan`, `sdt_nguoi_nhan`, `dia_chi_giao_hang`, `ghi_chu`, `trang_thai`, `tong_tien`, `duyet_boi`) VALUES
+(14, 33, '2022-01-27 12:45:54', 'Edogawa Conan', '0983259334', 'Tokyo, JP', 'tôi đang điều tra một vụ án nên rất đói', 1, 20000, 'Nguyễn Thanh Sang'),
+(31, 33, '2022-02-03 06:09:45', 'Edogawa Conan', '0983259334', 'Tokyo, JP', '', 1, 104000, 'Nguyễn Thanh Sang'),
+(34, 0, '2022-02-14 07:15:27', 'Nguyễn Lộc', '09221312312', 'Hậu Giang', 'nhanh lên cho tôi', 1, 176000, 'Nguyễn Thanh Sang'),
+(35, 34, '2022-02-20 15:59:53', 'Vendy', '0932234342', 'Vĩnh Long', 'ship nhanh nhé shop', 1, 44500, 'Nguyễn Thanh Sang'),
+(36, 35, '2022-02-20 16:12:42', 'Sha Da', '0923423482', 'Bạc Liêu', 'ship nhanh cho toi', 1, 49500, 'Nguyễn Thanh Sang'),
+(37, 35, '2022-02-20 16:16:25', 'Sha Da', '0923423482', 'Bạc Liêu', 'ít đường thôi ạ', 1, 54000, 'Nguyễn Thanh Sang'),
+(38, 35, '2022-02-20 17:44:15', 'Sha Da', '0923423482', 'Bạc Liêu', 'nhiều đá', 1, 76000, 'Nguyễn Thanh Sang'),
+(39, 35, '2022-02-22 12:51:11', 'Shada', '0923423482', 'Bạc Liêu', 'đừng để đá cho tôi', 1, 128000, 'Nguyễn Thanh Sang'),
+(41, 0, '2022-02-22 14:51:34', 'Huỳnh Thị Maaiiii', '0914319328', '123 assdfsd', '1/3 đường', 1, 130000, 'Nguyễn Thanh Sang'),
+(42, 34, '2022-02-23 08:16:56', 'Vendy Nguyễn', '0932234342', 'Vĩnh Long', '', 1, 197600, 'Nguyễn Thanh Sang'),
+(43, 34, '2022-02-23 08:43:25', 'Vendy Nguyễn', '0932234342', 'Vĩnh Long', '', 0, 78400, ''),
+(46, 35, '2022-02-23 14:15:07', 'Shada', '0923423482', 'Bạc Liêu', '', 0, 311200, ''),
+(47, 34, '2022-02-26 13:19:53', 'Vendy', '0932234342', 'Vĩnh Long', '', 1, 223200, 'Nguyễn Nam Long'),
+(48, 42, '2022-03-01 08:41:38', 'Tôi Tên Là Sang', '0933123123', '123 Hậu Giang', '', 0, 153000, ''),
+(49, 34, '2022-03-01 12:52:01', 'Vendy', '0932234342', 'Vĩnh Long', 'tôi đang đói', 1, 176800, 'Nguyễn Nam Long'),
+(51, 34, '2022-03-01 13:22:59', 'Vendy', '0932234342', 'Vĩnh Long', 'nhanh lên ạ', 1, 167400, 'Nguyễn Nam Long');
 
 -- --------------------------------------------------------
 
@@ -88,9 +101,32 @@ INSERT INTO `hoa_don_chi_tiet` (`ma_hoa_don`, `ma_san_pham`, `so_luong`) VALUES
 (14, 18, 1),
 (31, 14, 2),
 (31, 24, 1),
-(32, 5, 1),
-(32, 13, 1),
-(33, 5, 10);
+(34, 13, 3),
+(34, 28, 1),
+(35, 14, 1),
+(36, 27, 1),
+(37, 26, 6),
+(38, 5, 1),
+(38, 13, 1),
+(38, 25, 1),
+(39, 22, 1),
+(39, 33, 1),
+(41, 13, 1),
+(41, 33, 1),
+(42, 10, 1),
+(42, 14, 1),
+(42, 33, 1),
+(43, 5, 1),
+(43, 10, 1),
+(46, 14, 1),
+(46, 18, 2),
+(47, 27, 1),
+(47, 33, 2),
+(48, 33, 2),
+(49, 13, 1),
+(49, 28, 3),
+(51, 5, 1),
+(51, 18, 1);
 
 -- --------------------------------------------------------
 
@@ -115,11 +151,14 @@ CREATE TABLE `khach_hang` (
 --
 
 INSERT INTO `khach_hang` (`ma`, `ten`, `gioi_tinh`, `ngay_sinh`, `email`, `sdt`, `dia_chi`, `mat_khau`, `cap_do`) VALUES
-(31, 'Mori Ran', 0, '2022-01-05', 'morri@gg.com', '0934293422', '1234 SW, JP', '123123123123', 1),
-(33, 'Edogawa Conan', 1, '2021-12-27', 'conan@gmail.com', '0983259334', 'Tokyo, JP', '123123123', 1),
-(34, 'Vendy', 0, '2001-08-06', 'vy@gg.com', '0932234342', 'Vĩnh Long', '123123123', 1),
-(35, 'Sha Da', 0, '2019-01-15', 'sanda@gg.com', '0923423482', 'Bạc Liêu', '123123123123', 1),
-(36, 'Nguyễn Nam Long', 1, '2006-01-01', 'longhacker@gg.com', '0966888111', '26, Sơn La', '123', 1);
+(31, 'Mori Ran', 0, '2022-01-05', 'mori@gg.com', '0934293422', '1234 SW, JP', '123', 1),
+(33, 'Edogawa Conan', 1, '2021-12-27', 'conan@gg.com', '0983259334', 'Tokyo, JP', '123', 1),
+(34, 'Vendy', 0, '2001-08-06', 'vy@gg.com', '0932234342', 'Vĩnh Long', '123', 1),
+(35, 'Shada', 0, '2019-01-15', 'shada@gg.com', '0923423482', 'Bạc Liêu', '123', 1),
+(36, 'Nguyễn Nam Long', 1, '2006-01-01', 'longhacker@gg.com', '0966888111', '26, Sơn La', '123', 1),
+(39, 'Hà Chi', 0, '2000-08-24', 'chi@gg.com', '0913423422', '1231 Hà Giang', '123', 1),
+(40, 'Sa Ngu', 0, '2022-02-03', 'sda@gg.com', '09543', '', '', 1),
+(42, 'Tôi Tên Là Sang', 0, '2000-01-24', 'sang@gg.com', '0933123123', '123 Hậu Giang', '123123123', 1);
 
 -- --------------------------------------------------------
 
@@ -143,7 +182,7 @@ CREATE TABLE `nhan_vien` (
 
 INSERT INTO `nhan_vien` (`ma`, `ten`, `dia_chi`, `sdt`, `email`, `mat_khau`, `cap_do`) VALUES
 (7, 'Nguyễn Thanh Sang', 'Cần Thơ', '0966979243', 'sang@gg.com', '123', 0),
-(12, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1);
+(19, 'Nguyễn Nam Long', 'Hà Nội', '0914319328', 'longhacker@gg.com', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -171,13 +210,14 @@ INSERT INTO `san_pham` (`ma`, `ten_san_pham`, `mo_ta`, `anh`, `gia`, `ma_the_loa
 (13, 'FRENCH BREAD', 'Chiếc bánh Pháp rộng và dài hơn bánh mì baguette, với lớp vỏ mềm hơn nhiều. Nó không yêu cầu bất kỳ thiết bị đặc biệt nào để làm và nó linh hoạt như một chiếc bánh mì baguette, nhưng bên ngoài mềm mại của nó khiến nó trở nên hoàn hảo cho món bánh mì nướng hoặc bánh mì tỏi.\r\n', 'https://www.tasteofhome.com/wp-content/uploads/2021/02/whole-wheat-baguettes-sliced-895088696.jpg?re', 40000, 1),
 (14, 'CARAMEL MACCHIATO', 'Thỏa mãn cơn thèm ngọt! Ly cà phê Caramel Macchiato bắt đầu từ dòng sữa tươi và lớp bọt sữa béo ngậy, sau đó hòa quyện cùng cà phê espresso đậm đà và sốt caramel ngọt ngào. Thông qua bàn tay điêu luyện của các chuyên gia pha chế, mọi thứ hoàn toàn được nâng tầm thành nghệ thuật!', 'https://vietblend.vn/wp-content/uploads/2018/12/caramel-macchiato_830x550.jpg', 89000, 2),
 (18, 'FRENCH CAKES', 'Hãy thưởng thức những vị khách của bạn với một trong những chiếc bánh độc đáo này.\r\nMon Petit Choux cung cấp một loạt các loại bánh kỷ niệm lấy cảm hứng từ tiệm bánh thực sự của Pháp.', 'http://www.monpetitchouxfrenchbakery.com.au/wp-content/uploads/2018/06/menu-cake-tilev2.jpg', 150000, 1),
-(22, 'CAFÉ MOCHA', 'Cafe Mocha là một loại thức uống với sự kết hợp của Espresso, sữa nóng và hương vị sauce chocolate rất quyến rũ. Chính những thành phần này đã tạo nên một hỗn hợp hoàn hảo nhất, đó là vị đắng của cà phê kết hợp với cảm giác lắng đọng của chocolate.', 'https://file.hstatic.net/1000059704/article/mocha_master.jpg', 70000, 2),
+(22, 'CAFÉ MOCHA', 'Cafe Mocha là một loại thức uống với sự kết hợp của Espresso, sữa nóng và hương vị sauce chocolate rất quyến rũ. Chính những thành phần này đã tạo nên một hỗn hợp hoàn hảo nhất, đó là vị đắng của cà phê kết hợp với cảm giác lắng đọng của chocolate.', 'https://vietblend.vn/wp-content/uploads/2018/12/cach-lam-mocha-nong.jpg', 70000, 2),
 (24, 'FOO FOO', ' Foo Foo vẫn tuyệt vời vì chúng rất lạ mắt, với giá cả phải chăng. Mang hơi hướng cổ điển, nhà bếp chế biến ra những đĩa bánh semifreddo phủ trái cây xinh xắn với đế bánh hạnh nhân, bánh táo kết hợp với kem xoài tiêu đen, bánh tres bí đỏ và bánh tráng trộn với kem cà phê caramel muối.', 'https://media-cdn.tripadvisor.com/media/photo-s/0c/fd/f0/83/foo-foo.jpg', 30000, 16),
 (25, 'KIND KONES', ' Kind Kones đi theo con đường lành mạnh với dừa và sữa hạt được làm từ các nguyên liệu tự nhiên, chưa qua chế biến như đường mía và mật mía chưa tinh chế. Bên cạnh việc không có trứng và sữa, nó còn có các lựa chọn không chứa gluten như kem chuối thanh long, bánh khúc bạch bạc hà, chuối óc chó, mè đen và vani than.', 'https://coconuts.co/wp-content/uploads/2019/08/kind-kones-kl.jpg', 25000, 16),
 (26, '   MADHATTER', 'Cái tên đằng sau tiệm bánh kỳ lạ này là Marcus Low, còn được gọi là “Vua tráng miệng” trên MasterChef Asia (anh ấy đã về nhì mùa giải đầu tiên năm 2015). Giống như anh ấy đã thổi bay các giám khảo trong cuộc thi nấu ăn trên truyền hình, Low đã nghĩ ra những công thức nấu ăn độc đáo và cải tiến những sáng tạo lấy cảm hứng từ địa phương trong nhà bếp của anh ấy trong hai năm qua.', 'https://coconuts.co/wp-content/uploads/2019/08/madhatter-desserts-kl.jpg', 18000, 16),
 (27, 'SOUKA', 'Souka là loại bánh ra đời vào năm 2008. Thành phần \r\ngồm bánh ngọt, chuối caramel, bánh nướng và bánh tart sô cô la caramel mặn và đặc biệt có cả bánh quy', 'https://coconuts.co/wp-content/uploads/2019/08/souka-cakes-kl.jpg', 99000, 16),
 (28, 'BRIOCHE', 'Một chiếc bánh brioche thích hợp chắc chắn mang một vị đậm đà như bánh ngọt, với phần vụn và kết cấu của bánh mì ”. Nó có được hương vị và kết cấu từ lớp bột mịn như nhung, có chứa sữa, trứng và rất nhiều bơ. Brioche cuộn là sự lựa chọn hàng đầu của chúng tôi để làm bánh mì kẹp thịt và chúng tôi thích sử dụng một lát dày cho bánh mì nướng kiểu Pháp.', 'https://www.tasteofhome.com/wp-content/uploads/2021/02/french-brioche-175421595.jpg?resize=696,696', 56000, 1),
-(29, 'BLACKOUT CHOCOLATE CAKE', 'Bánh kem có hình khúc cây', 'https://assets.bonappetit.com/photos/59c924dc32e4b84f5a9e437a/8:5/w_4279,h_2674,c_limit/1017%20WEB%2', 230000, 16);
+(32, 'ANADAMA BREAD', 'Bánh mì Anadama là một loại bánh mì men truyền thống của vùng New England, Hoa Kỳ được làm từ bột mì, bột ngô, mật đường và đôi khi là bột lúa mạch đen.', 'http://www.ouichefnetwork.com/images/old/6a01156ed76240970c012875b2bbf9970c-pi.jpg', 50000, 1),
+(33, 'GERMAN RYE BREAD', 'Bánh mỳ Đức sẫm màu, đặc và có kết cấu gần giống, được làm từ hạt lúa mạch đen nguyên hạt nghiền hoặc xay, thường không có bột mì, được nướng trong thời gian dài ở nhiệt độ thấp trong một hộp thiếc được đậy kín.', 'https://img.theculturetrip.com/wp-content/uploads/2017/09/rye-bread.jpg', 90000, 1);
 
 -- --------------------------------------------------------
 
@@ -259,31 +299,31 @@ ALTER TABLE `the_loai`
 -- AUTO_INCREMENT for table `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `the_loai`
 --
 ALTER TABLE `the_loai`
-  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
